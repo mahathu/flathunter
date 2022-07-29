@@ -47,7 +47,7 @@ BASE_PAYLOAD_DATA = {
     }
 }
 
-def apply_to_property(company, property_id, n_times=1):
+def apply_to_property(company, property_id, email_set):
     print(company, property_id, end=' ', flush=True)
 
     company_id = COMPANIES[company]['company_id']
@@ -57,8 +57,7 @@ def apply_to_property(company, property_id, n_times=1):
     url = f"https://app.wohnungshelden.de/api/applicationFormEndpoint/3.0/form/create-application/{company_id}/{property_id}"
     request_headers = BASE_HEADERS | {'referer': f'https://app.wohnungshelden.de/public/listings/{property_id}/application?c={company_id}'}
 
-    for i in range(n_times):
-        mail = f'martin.hoffmann98+{i}@systemli.org'
+    for mail in email_set:
         BASE_PAYLOAD_DATA['defaultApplicantFormDataTO']['email'] = mail
 
         try:
@@ -72,11 +71,12 @@ def apply_to_property(company, property_id, n_times=1):
             return 1
 
         print('✅', 
-            end = '' if i<n_times-1 else '\n', 
+            end = '\n' if mail==email_set[-1] else '', 
             flush = True)
     
     return 0
 
 if __name__ == '__main__':
-    # apply_to_property('degewo', 'W1400-51907-0112-0502')
-    apply_to_property('gewobag', '0100-01032-1101-0270', n_times=5)
+    # testing playground
+    EMAIL_SET = [f"BLABsLA+{i+1}@af.org" for i in range(4)]
+    apply_to_property('gewobag', '0100%2F01032%2F1101%2F0270', EMAIL_SET)
