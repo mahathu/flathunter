@@ -5,8 +5,8 @@ import time
 DISTRICT_BLACKLIST = ['Rudow', 'Waidmannslust', 'Staaken', 'Marzahn']
 TITLE_BLACKLIST = ['Senior', 'Selbstrenovierer', 'mit WBS']
 SEEN_FILE_URL = 'seen_properties.txt'
-SLEEP_LEN = 60
-N_APPLICATIONS = 40 # applications per ad
+SLEEP_LEN = 45
+N_APPLICATIONS = 60 # applications per ad
 EMAIL_SET = [f"martin.hoffmann98+{i+1}@systemli.org" for i in range(N_APPLICATIONS)]
 
 scrapers = [
@@ -21,7 +21,7 @@ def result_filter(result):
 
     if any([word in result['title'] for word in TITLE_BLACKLIST]):
         return False
-    
+
     if any([district in result['address'] for district in DISTRICT_BLACKLIST]):
         return False
 
@@ -29,7 +29,7 @@ def result_filter(result):
 
 
 def log(line):
-    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {line}")
+    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {line}", flush=True)
 
 
 if __name__ == '__main__':
@@ -37,17 +37,15 @@ if __name__ == '__main__':
         seen_properties = [line.rstrip() for line in f.readlines()]
 
     while True:
-        new_properties = []
         for scraper in scrapers:
             for property in filter(result_filter, scraper.get_items()):
-                new_properties.append(property['url'])
+                seen_properties.append(property['url'])
                 log(f"Neues Angebot gefunden: {property['title']}: {property['address']}")
 
                 apply_to_property(property['company'], property['id'], EMAIL_SET)
 
-        with open(SEEN_FILE_URL, 'a') as f:
-            for line in new_properties:
-                f.write(f"{line}\n")
+                with open(SEEN_FILE_URL, 'a') as f:
+                    f.write(f"{property['url']}\n")
 
-        log(f"Added {len(new_properties)} new ads to {SEEN_FILE_URL}")
+        log(f"Sleeping for {SLEEP_LEN} seconds.")
         time.sleep(SLEEP_LEN)
