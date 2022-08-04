@@ -1,6 +1,6 @@
 import requests
 import json
-from random import randint
+import time
 
 COMPANIES = {
     'degewo': {
@@ -51,8 +51,6 @@ def apply_to_property(company, property_id, email_set):
     print(company, property_id, end=' ', flush=True)
 
     company_id = COMPANIES[company]['company_id']
-    # this is handled in scraper already
-    # property_id = COMPANIES[company]['property_id_transformer'](property_id)
 
     url = f"https://app.wohnungshelden.de/api/applicationFormEndpoint/3.0/form/create-application/{company_id}/{property_id}"
     request_headers = BASE_HEADERS | {'referer': f'https://app.wohnungshelden.de/public/listings/{property_id}/application?c={company_id}'}

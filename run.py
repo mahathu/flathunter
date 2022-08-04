@@ -3,9 +3,9 @@ from send_requests import apply_to_property
 import time
 
 DISTRICT_BLACKLIST = ['Rudow', 'Waidmannslust', 'Staaken', 'Marzahn']
-TITLE_BLACKLIST = ['Senior', 'Selbstrenovierer']
+TITLE_BLACKLIST = ['Senior', 'Selbstrenovierer', 'mit WBS']
 SEEN_FILE_URL = 'seen_properties.txt'
-SLEEP_LEN = 45
+SLEEP_LEN = 60
 N_APPLICATIONS = 40 # applications per ad
 EMAIL_SET = [f"martin.hoffmann98+{i+1}@systemli.org" for i in range(N_APPLICATIONS)]
 

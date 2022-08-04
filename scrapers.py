@@ -47,3 +47,49 @@ class DegewoScraper(Scraper):
         ]
 
         return results
+
+
+class HowogeScraper(Scraper):
+    # Howoge verwendet ein merkwürdiges system, Anfragen werden per POST request geschickt
+    # ggf später drum kümmern
+    def get_items(self):
+        response = requests.get(self.url)
+        properties = response.json()['immoobjects']
+
+        results = [
+            {
+                'company': 'howoge',
+                'address': property['title'],
+                'title': property['notice'],
+                'url': 'https://immosuche.degewo.de' + property['link'],
+                'id': property['link'].split('/')[-1].removesuffix('.html')
+            } for property in properties
+        ]
+
+        for result in results:
+            print(result)
+        return results
+
+
+class StadtUndLandScraper(Scraper):
+    def get_items(self):
+        response = requests.get(self.url)
+        properties = response.json()['immoobjects']
+
+        results = [
+            {
+                'company': 'howoge',
+                'address': property['title'],
+                'title': property['notice'],
+                'url': 'https://immosuche.degewo.de' + property['link'],
+                'id': property['link'].split('/')[-1].removesuffix('.html')
+            } for property in properties
+        ]
+
+        for result in results:
+            print(result)
+        return results
+
+
+h = StadtUndLandScraper('https://www.stadtundland.de/Wohnungssuche/Wohnungssuche.php?form=stadtundland-expose-search-1.form&sp%3AroomsFrom%5B%5D=&sp%3AroomsTo%5B%5D=&sp%3ArentPriceFrom%5B%5D=&sp%3ArentPriceTo%5B%5D=&sp%3AareaFrom%5B%5D=&sp%3AareaTo%5B%5D=&sp%3Afeature%5B%5D=__last__&action=submit')
+h.get_items()
