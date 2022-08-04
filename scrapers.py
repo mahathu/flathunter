@@ -53,43 +53,17 @@ class HowogeScraper(Scraper):
     # Howoge verwendet ein merkwürdiges system, Anfragen werden per POST request geschickt
     # ggf später drum kümmern
     def get_items(self):
-        response = requests.get(self.url)
-        properties = response.json()['immoobjects']
-
-        results = [
-            {
-                'company': 'howoge',
-                'address': property['title'],
-                'title': property['notice'],
-                'url': 'https://immosuche.degewo.de' + property['link'],
-                'id': property['link'].split('/')[-1].removesuffix('.html')
-            } for property in properties
-        ]
-
-        for result in results:
-            print(result)
-        return results
+        pass
 
 
 class StadtUndLandScraper(Scraper):
+    # bei stadt und land müssen Anfragen per POST request gemacht werden, außerdem
+    # muss ein serverseitig generiertes token mitgeschickt werden -> scrapy?
+    # außerdem schickt SUL keine Bestätigungsmail, schwer zu überprüfen ob Anfrage erfolgreich
+    # https://stackoverflow.com/a/70640134/2349901
     def get_items(self):
-        response = requests.get(self.url)
-        properties = response.json()['immoobjects']
+        pass
 
-        results = [
-            {
-                'company': 'howoge',
-                'address': property['title'],
-                'title': property['notice'],
-                'url': 'https://immosuche.degewo.de' + property['link'],
-                'id': property['link'].split('/')[-1].removesuffix('.html')
-            } for property in properties
-        ]
-
-        for result in results:
-            print(result)
-        return results
-
-
-h = StadtUndLandScraper('https://www.stadtundland.de/Wohnungssuche/Wohnungssuche.php?form=stadtundland-expose-search-1.form&sp%3AroomsFrom%5B%5D=&sp%3AroomsTo%5B%5D=&sp%3ArentPriceFrom%5B%5D=&sp%3ArentPriceTo%5B%5D=&sp%3AareaFrom%5B%5D=&sp%3AareaTo%5B%5D=&sp%3Afeature%5B%5D=__last__&action=submit')
-h.get_items()
+# if __name__ == '__main__':
+#     s = StadtUndLandScraper('https://www.stadtundland.de/Wohnungssuche/Wohnungssuche.php?form=stadtundland-expose-search-1.form&sp%3AroomsFrom%5B%5D=&sp%3AroomsTo%5B%5D=&sp%3ArentPriceFrom%5B%5D=&sp%3ArentPriceTo%5B%5D=&sp%3AareaFrom%5B%5D=&sp%3AareaTo%5B%5D=&sp%3Afeature%5B%5D=__last__&action=submit')
+#     s.get_items()

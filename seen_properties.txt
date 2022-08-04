@@ -4,3 +4,7 @@ https://immosuche.degewo.de/de/properties/W1150-00153-0006-0501
 #https://immosuche.degewo.de/de/properties/W1150-00108-0030-8111
 https://immosuche.degewo.de/de/properties/W1150-00108-0030-8111
 https://immosuche.degewo.de/de/properties/W1150-00108-0030-8111
+#https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-75611-0102-0022/
+#https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-75611-0102-0022/
+
+https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-75611-0102-0022/
