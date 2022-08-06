@@ -3,10 +3,10 @@ from send_requests import apply_to_property
 import time
 
 DISTRICT_BLACKLIST = ['Rudow', 'Waidmannslust', 'Staaken', 'Marzahn']
-TITLE_BLACKLIST = ['Senior', 'Selbstrenovierer', 'mit WBS']
+TITLE_BLACKLIST = ['Senior', 'Selbstrenovierer', 'mit WBS', 'im Grünen']
 SEEN_FILE_URL = 'seen_properties.txt'
 SLEEP_LEN = 45
-N_APPLICATIONS = 20 # applications per ad
+N_APPLICATIONS = 50 # applications per ad
 EMAIL_SET = [f"martin.hoffmann98+{i+1}@systemli.org" for i in range(N_APPLICATIONS)]
 
 
@@ -34,8 +34,11 @@ def log(line):
 
 
 if __name__ == '__main__':
-    with open(SEEN_FILE_URL, 'r') as f:
-        seen_properties = [line.rstrip() for line in f.readlines()]
+    try:
+        with open(SEEN_FILE_URL, 'r') as f:
+            seen_properties = [line.rstrip() for line in f.readlines()]
+    except IOError:
+        seen_properties = []
 
     while True:
         try:
@@ -46,7 +49,7 @@ if __name__ == '__main__':
 
                     apply_to_property(property['company'], property['id'], EMAIL_SET)
 
-                    with open(SEEN_FILE_URL, 'a') as f:
+                    with open(SEEN_FILE_URL, 'a') as f: # will create file if not exists
                         f.write(f"{property['url']}\n")
 
         except Exception as e: #this shouldn't catch KeyboardInterrupts I think
