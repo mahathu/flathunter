@@ -48,15 +48,15 @@ BASE_PAYLOAD_DATA = {
 
 
 def send_application(mail, url, request_headers, use_proxy=True):
-    print(f"sending application with {mail}")
     BASE_PAYLOAD_DATA["defaultApplicantFormDataTO"]["email"] = mail
+    proxy_headers = {f"Spb-{key}": value for key, value in request_headers.items()}
 
     try:
-        url_params = {"api_key": API_KEY, "url": url, "keep_headers": "true"}
+        url_params = {"api_key": API_KEY, "url": url, "forward_headers": "true"}
         response = requests.post(
-            url="http://api.scraperapi.com" if use_proxy else url,
+            url="https://app.scrapingbee.com/api/v1" if use_proxy else url,
             params=url_params if use_proxy else url,
-            headers=request_headers,
+            headers=proxy_headers if use_proxy else request_headers,
             data=json.dumps(BASE_PAYLOAD_DATA),
         )
 
