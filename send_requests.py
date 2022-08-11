@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import yaml
+from random import randint
 
 COMPANIES = {
     "degewo": "6e18d067-8058-4485-99a4-5b659bd8ad01",
@@ -50,8 +51,7 @@ def apply_to_property(company, property_id, email_set, use_proxy=True):
 
     company_id = COMPANIES[company]
 
-    api_url = f"https://app.wohnungshelden.de/api/applicationFormEndpoint/3.0/form/create-application/{company_id}/{property_id}"
-    proxy_url = PROXY_URL.format(api_key=API_KEY, url=api_url)
+    url = f"https://app.wohnungshelden.de/api/applicationFormEndpoint/3.0/form/create-application/{company_id}/{property_id}"
 
     request_headers = BASE_HEADERS | {
         "referer": f"https://app.wohnungshelden.de/public/listings/{property_id}/application?c={company_id}"
@@ -61,12 +61,14 @@ def apply_to_property(company, property_id, email_set, use_proxy=True):
         BASE_PAYLOAD_DATA["defaultApplicantFormDataTO"]["email"] = mail
 
         try:
-            response = requests.request(
-                "POST",
-                proxy_url if use_proxy else api_url,
+            url_params = {"api_key": API_KEY, "url": url, "keep_headers": "true"}
+            response = requests.post(
+                "http://api.scraperapi.com",
+                params=url_params,
                 headers=request_headers,
                 data=json.dumps(BASE_PAYLOAD_DATA),
             )
+
         except ConnectionResetError:
             print("ConnectionResetError!")
             continue
@@ -96,9 +98,8 @@ def apply_to_stadtundland(property_id):
 with open("secrets.yml", "r") as secrets_file:
     secrets = yaml.safe_load(secrets_file)
     API_KEY = secrets["scraper-api-key"]
-    PROXY_URL = "http://api.scraperapi.com?api_key={api_key}&url={url}"
 
 if __name__ == "__main__":
     # testing playground
-    EMAIL_SET = [f"m.hoffmann+{i+98}@systemli.org" for i in range(3)]
-    apply_to_property("gewobag", "1000%2F00479%2F0102%2F0023", EMAIL_SET, use_proxy=False)
+    EMAIL_SET = [f"test2{randint(100,10000)}@systemli.org"]
+    apply_to_property("gewobag", "0100%2F01929%2F0301%2F0063", EMAIL_SET)
