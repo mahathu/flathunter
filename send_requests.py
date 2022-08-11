@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import yaml
+import time
 from random import randint
 
 COMPANIES = {
@@ -46,6 +47,34 @@ BASE_PAYLOAD_DATA = {
 }
 
 
+def send_application(mail, url, request_headers, use_proxy=True):
+    print(f"sending application with {mail}")
+    BASE_PAYLOAD_DATA["defaultApplicantFormDataTO"]["email"] = mail
+
+    try:
+        url_params = {"api_key": API_KEY, "url": url, "keep_headers": "true"}
+        response = requests.post(
+            url="http://api.scraperapi.com" if use_proxy else url,
+            params=url_params if use_proxy else url,
+            headers=request_headers,
+            data=json.dumps(BASE_PAYLOAD_DATA),
+        )
+
+    except ConnectionResetError:
+        print("CONNECTIONRESETERROR", end="", flush=True)  # this shouldn't ever happen
+        return False
+
+    if response.status_code == 500:
+        return False
+
+    elif response.status_code != 200:
+        # unknown error, need to manually add error handling
+        print(response.status_code, response.text)
+        return False
+
+    return True
+
+
 def apply_to_property(company, property_id, email_set, use_proxy=True):
     print(f"Requesting {property_id} from {company} >", end=" ", flush=True)
 
@@ -57,33 +86,25 @@ def apply_to_property(company, property_id, email_set, use_proxy=True):
         "referer": f"https://app.wohnungshelden.de/public/listings/{property_id}/application?c={company_id}"
     }
 
-    for mail in email_set:
-        BASE_PAYLOAD_DATA["defaultApplicantFormDataTO"]["email"] = mail
+    i = 0
+    failed_attempts = 0
+    start_time = time.time()
 
-        try:
-            url_params = {"api_key": API_KEY, "url": url, "keep_headers": "true"}
-            response = requests.post(
-                "http://api.scraperapi.com",
-                params=url_params,
-                headers=request_headers,
-                data=json.dumps(BASE_PAYLOAD_DATA),
-            )
+    while failed_attempts < 5 * len(email_set) and i < len(email_set):
+        success = send_application(email_set[i], url, request_headers)
 
-        except ConnectionResetError:
-            print("ConnectionResetError!")
-            continue
+        if success:
+            print("✅", end="", flush=True)
+            i += 1  # use the next email
 
-        if response.status_code == 500:
-            print("❌", end="")
-            continue
+        else:
+            print("❌", end="", flush=True)
+            failed_attempts += 1
 
-        if response.status_code != 200:
-            print(response.status_code, response.text)
-            return 1
-
-        print("✅", end="\n" if mail == email_set[-1] else "", flush=True)
-
-    return 0
+    delta = time.time() - start_time
+    print(
+        f"Sent {i}/{len(email_set)} applications in {delta:.1f}s ({failed_attempts} failed requests)."
+    )
 
 
 def apply_to_stadtundland(property_id):
@@ -101,5 +122,5 @@ with open("secrets.yml", "r") as secrets_file:
 
 if __name__ == "__main__":
     # testing playground
-    EMAIL_SET = [f"test2{randint(100,10000)}@systemli.org"]
+    EMAIL_SET = [f"test2{randint(100,10000)}@mail.org" for i in range(5)]
     apply_to_property("gewobag", "0100%2F01929%2F0301%2F0063", EMAIL_SET)
