@@ -103,7 +103,7 @@ def apply_to_property(company, property_id, email_set, use_proxy=True):
 
     delta = time.time() - start_time
     print(
-        f"Sent {i}/{len(email_set)} applications in {delta:.1f}s ({failed_attempts} failed requests)."
+        f"\nSent {i}/{len(email_set)} applications in {delta:.1f}s ({failed_attempts} failed requests)."
     )
 
 
