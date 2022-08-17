@@ -60,6 +60,7 @@ def send_application(mail, url, request_headers, use_proxy=True):
             url,
             headers=request_headers,
             data=json.dumps(BASE_PAYLOAD_DATA),
+            proxies=proxies
         )
 
     except ConnectionResetError:
