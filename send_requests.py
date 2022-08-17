@@ -49,34 +49,28 @@ BASE_PAYLOAD_DATA = {
 
 def send_application(mail, url, request_headers, use_proxy=True):
     BASE_PAYLOAD_DATA["defaultApplicantFormDataTO"]["email"] = mail
-    proxy_headers = {f"Spb-{key}": value for key, value in request_headers.items()}
-
+    # proxy_headers = {f"Spb-{key}": value for key, value in request_headers.items()}
+    proxies = {
+        "http": PROXY_URL,
+        "https": PROXY_URL,
+    }
     try:
-        url_params = {"api_key": API_KEY, "url": url, "forward_headers": "true"}
+        # url_params = {"api_key": API_KEY, "url": url, "forward_headers": "true"}
         response = requests.post(
-            url="https://app.scrapingbee.com/api/v1" if use_proxy else url,
-            params=url_params if use_proxy else url,
-            headers=proxy_headers if use_proxy else request_headers,
+            url,
+            headers=request_headers,
             data=json.dumps(BASE_PAYLOAD_DATA),
         )
 
     except ConnectionResetError:
         print("CONNECTIONRESETERROR", end="", flush=True)  # this shouldn't ever happen
-        return False
+        return -1
 
-    if response.status_code == 500:
-        return False
-
-    elif response.status_code != 200:
-        # unknown error, need to manually add error handling
-        print(response.status_code, response.text)
-        return False
-
-    return True
+    return response.status_code, response.text
 
 
 def apply_to_property(company, property_id, email_set, use_proxy=True):
-    print(f"Requesting {property_id} from {company} >", end=" ", flush=True)
+    print(f"Requesting {property_id} from {company}...")
 
     company_id = COMPANIES[company]
 
@@ -91,14 +85,19 @@ def apply_to_property(company, property_id, email_set, use_proxy=True):
     start_time = time.time()
 
     while failed_attempts < 5 * len(email_set) and i < len(email_set):
-        success = send_application(email_set[i], url, request_headers)
+        status_code, text = send_application(email_set[i], url, request_headers)
 
-        if success:
-            print("✅", end="", flush=True)
+        if status_code == 200:
+            print("✅", end="\n" if i == len(email_set)-1 else "", flush=True)
             i += 1  # use the next email
+            continue
+
+        elif status_code == 409: # Property is not available anymore
+            print(f"⚠️  {status_code}: {text}")
+            break
 
         else:
-            print("❌", end="", flush=True)
+            print(f"⚠️  {status_code}: {text}")
             failed_attempts += 1
 
     delta = time.time() - start_time
@@ -119,8 +118,9 @@ def apply_to_stadtundland(property_id):
 with open("secrets.yml", "r") as secrets_file:
     secrets = yaml.safe_load(secrets_file)
     API_KEY = secrets["scraper-api-key"]
+    PROXY_URL = secrets["proxy-url"]
 
 if __name__ == "__main__":
     # testing playground
-    EMAIL_SET = [f"test2{randint(100,10000)}@mail.org" for i in range(5)]
-    apply_to_property("gewobag", "0100%2F01929%2F0301%2F0063", EMAIL_SET)
+    EMAIL_SET = [f"test2{randint(100,10000)}@mail.org" for i in range(3)]
+    apply_to_property("gewobag", "0100%2F01033%2F0301%2F0064", EMAIL_SET)
