@@ -60,7 +60,7 @@ def send_application(mail, url, request_headers, use_proxy=True):
             url,
             headers=request_headers,
             data=json.dumps(BASE_PAYLOAD_DATA),
-            proxies=proxies
+            # proxies=proxies
         )
 
     except ConnectionResetError:
@@ -93,8 +93,9 @@ def apply_to_property(company, property_id, email_set, use_proxy=True):
             i += 1  # use the next email
             continue
 
-        elif status_code == 409: # Property is not available anymore
+        elif status_code == 409: # Property is not available anymore or already applied with given email
             print(f"⚠️  {status_code}: {text}")
+            failed_attempts += 1
             break
 
         else:
@@ -123,5 +124,11 @@ with open("secrets.yml", "r") as secrets_file:
 
 if __name__ == "__main__":
     # testing playground
-    EMAIL_SET = [f"test2{randint(100,10000)}@mail.org" for i in range(3)]
-    apply_to_property("gewobag", "0100%2F01033%2F0301%2F0064", EMAIL_SET)
+    EMAIL_SET = [f"m.hoffmann+{i}@systemli.org" for i in range(3, 60)]
+
+    def manual_apply(url):
+        property_code = url.split('/')[-2].replace('-', '%2F')
+        EMAIL_SET = [f"m.hoffmann+{i}@systemli.org" for i in range(3, 60)]
+        apply_to_property("gewobag", property_code, EMAIL_SET)
+
+    # manual_apply('https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00469-0101-0004/')
