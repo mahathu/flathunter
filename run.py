@@ -6,7 +6,7 @@ import yaml
 with open("config.yml", "r") as config_file:
     CONFIG = yaml.safe_load(config_file)
 
-DISTRICT_BLACKLIST = ["Rudow", "Waidmannslust", "Staaken", "Marzahn"]
+DISTRICT_BLACKLIST = ["Rudow", "Waidmannslust", "Staaken", "Marzahn", "Lichtenrade"]
 TITLE_BLACKLIST = [
     "Single",
     "Senior",
@@ -16,6 +16,8 @@ TITLE_BLACKLIST = [
     "WBS mit besonderem Wohnbedarf erforderlich",
     "WBS mit Besonderem Wohnbedarf erforderlich",
     "WBS erforderlich",
+    "WBS-fähigem",
+    "Rollstuhlfahrer"
 ]
 SEEN_FILE_URL = "seen_properties.txt"
 SLEEP_LEN = CONFIG["sleep-len"]
