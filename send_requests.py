@@ -101,7 +101,6 @@ def send_application(
     BASE_PAYLOAD_DATA["defaultApplicantFormDataTO"]["firstName"] = firstname
     BASE_PAYLOAD_DATA["defaultApplicantFormDataTO"]["lastName"] = lastname
 
-    # proxy_headers = {f"Spb-{key}": value for key, value in request_headers.items()}
     proxies = {
         "http": PROXY_URL,
         "https": PROXY_URL,
@@ -114,12 +113,11 @@ def send_application(
     }
 
     try:
-        # url_params = {"api_key": API_KEY, "url": url, "forward_headers": "true"}
         response = requests.post(
             url,
             headers=request_headers,
             data=json.dumps(BASE_PAYLOAD_DATA),
-            # proxies=proxies
+            proxies=proxies if use_proxy else {},
         )
 
     except ConnectionResetError:

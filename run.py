@@ -8,11 +8,14 @@ with open("config.yml", "r") as config_file:
 
 DISTRICT_BLACKLIST = ["Rudow", "Waidmannslust", "Staaken", "Marzahn"]
 TITLE_BLACKLIST = [
+    "Single",
     "Senior",
     "Selbstrenovierer",
     "mit WBS",
     "im Grünen",
     "WBS mit besonderem Wohnbedarf erforderlich",
+    "WBS mit Besonderem Wohnbedarf erforderlich",
+    "WBS erforderlich",
 ]
 SEEN_FILE_URL = "seen_properties.txt"
 SLEEP_LEN = CONFIG["sleep-len"]
