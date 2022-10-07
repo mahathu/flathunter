@@ -7,7 +7,13 @@ with open("config.yml", "r") as config_file:
     CONFIG = yaml.safe_load(config_file)
 
 DISTRICT_BLACKLIST = ["Rudow", "Waidmannslust", "Staaken", "Marzahn"]
-TITLE_BLACKLIST = ["Senior", "Selbstrenovierer", "mit WBS", "im Grünen", "WBS mit besonderem Wohnbedarf erforderlich"]
+TITLE_BLACKLIST = [
+    "Senior",
+    "Selbstrenovierer",
+    "mit WBS",
+    "im Grünen",
+    "WBS mit besonderem Wohnbedarf erforderlich",
+]
 SEEN_FILE_URL = "seen_properties.txt"
 SLEEP_LEN = CONFIG["sleep-len"]
 N_APPLICATIONS = CONFIG["n-applications"]  # applications per ad

@@ -1,9 +1,11 @@
+import email
 from bs4 import BeautifulSoup
+from util import get_lines_as_list, generate_fake_email
 import requests
 import json
 import yaml
 import time
-from random import randint
+import random
 
 COMPANIES = {
     "degewo": "6e18d067-8058-4485-99a4-5b659bd8ad01",
@@ -29,8 +31,6 @@ BASE_HEADERS = {
 BASE_PAYLOAD_DATA = {
     "defaultApplicantFormDataTO": {
         "applicantMessage": None,
-        "firstName": "Martin",
-        "lastName": "Hoffmann",
         "phoneNumber": None,
         "salutation": "MR",
         "street": None,
@@ -47,13 +47,72 @@ BASE_PAYLOAD_DATA = {
 }
 
 
-def send_application(mail, url, request_headers, use_proxy=True):
+def apply_to_property(
+    company, property_id, email_set, include_fakes=True, use_proxy=True
+):
+    """
+    apply_to_property() is the main function that should be called once per
+    property. it will call send_application() multiple times, both with the
+    provided email_set and with a number of fake personas.
+    """
+    print(f"Applying to {property_id} from {company}...")
+
+    i = 0
+    failed_attempts = 0
+    start_time = time.time()
+
+    while failed_attempts < 5 * len(email_set) and i < len(email_set):
+        status_code, text = send_application(
+            email_set[i], "Robert", "Kühne", company, property_id
+        )
+
+        # to obfuscate my emails with a bunch of fake emails:
+        for _ in range(random.randint(1, 4)):
+            ln = random.choice(FIRST_NAMES)
+            fn = random.choice(LAST_NAMES)
+            send_application(generate_fake_email(fn, ln), fn, ln, company, property_id)
+
+        if status_code == 200:
+            # print("✅", end="\n" if i == len(email_set)-1 else "", flush=True)
+            i += 1  # use the next email
+            continue
+
+        elif (
+            status_code == 409
+        ):  # Property is not available anymore or already applied with given email
+            # print(f"⚠️  {status_code}: {text}")
+            failed_attempts += 1
+            break
+
+        else:
+            print(f"⚠️  {status_code}: {text}")
+            failed_attempts += 1
+
+    delta = time.time() - start_time
+    print(
+        f"Sent {i}/{len(email_set)} applications in {delta:.1f}s ({failed_attempts} failed requests)."
+    )
+
+
+def send_application(
+    mail, firstname, lastname, company, property_id, use_delay=True, use_proxy=True
+):
     BASE_PAYLOAD_DATA["defaultApplicantFormDataTO"]["email"] = mail
+    BASE_PAYLOAD_DATA["defaultApplicantFormDataTO"]["firstName"] = firstname
+    BASE_PAYLOAD_DATA["defaultApplicantFormDataTO"]["lastName"] = lastname
+
     # proxy_headers = {f"Spb-{key}": value for key, value in request_headers.items()}
     proxies = {
         "http": PROXY_URL,
         "https": PROXY_URL,
     }
+
+    company_id = COMPANIES[company]
+    url = f"https://app.wohnungshelden.de/api/applicationFormEndpoint/3.0/form/create-application/{company_id}/{property_id}"
+    request_headers = BASE_HEADERS | {
+        "referer": f"https://app.wohnungshelden.de/public/listings/{property_id}/application?c={company_id}"
+    }
+
     try:
         # url_params = {"api_key": API_KEY, "url": url, "forward_headers": "true"}
         response = requests.post(
@@ -67,45 +126,24 @@ def send_application(mail, url, request_headers, use_proxy=True):
         print("CONNECTIONRESETERROR", end="", flush=True)  # this shouldn't ever happen
         return -1
 
+    delay = 0
+    if use_delay:
+        delay = random.randint(2, 4)
+    print(
+        f"{firstname} {lastname} ({mail}): {response.status_code} {f'({response.text})' if not response else ''} - sleeping {delay}s"
+    )
+    time.sleep(delay)
+
     return response.status_code, response.text
 
 
-def apply_to_property(company, property_id, email_set, use_proxy=True):
-    print(f"Requesting {property_id} from {company}...")
+def send_fake_applications(company, property_id, n=20):
+    first_names_filtered = random.choices(FIRST_NAMES, k=n)
+    last_names_filtered = random.choices(LAST_NAMES, k=n)
 
-    company_id = COMPANIES[company]
-
-    url = f"https://app.wohnungshelden.de/api/applicationFormEndpoint/3.0/form/create-application/{company_id}/{property_id}"
-
-    request_headers = BASE_HEADERS | {
-        "referer": f"https://app.wohnungshelden.de/public/listings/{property_id}/application?c={company_id}"
-    }
-
-    i = 0
-    failed_attempts = 0
-    start_time = time.time()
-
-    while failed_attempts < 5 * len(email_set) and i < len(email_set):
-        status_code, text = send_application(email_set[i], url, request_headers)
-
-        if status_code == 200:
-            print("✅", end="\n" if i == len(email_set)-1 else "", flush=True)
-            i += 1  # use the next email
-            continue
-
-        elif status_code == 409: # Property is not available anymore or already applied with given email
-            print(f"⚠️  {status_code}: {text}")
-            failed_attempts += 1
-            break
-
-        else:
-            print(f"⚠️  {status_code}: {text}")
-            failed_attempts += 1
-
-    delta = time.time() - start_time
-    print(
-        f"\nSent {i}/{len(email_set)} applications in {delta:.1f}s ({failed_attempts} failed requests)."
-    )
+    for fn, ln in zip(first_names_filtered, last_names_filtered):
+        email = generate_fake_email(fn, ln)
+        send_application(email, fn, ln, company, property_id)
 
 
 def apply_to_stadtundland(property_id):
@@ -117,18 +155,23 @@ def apply_to_stadtundland(property_id):
     csrf_token = soup.find("input", {"name": "form-token"})["value"]
 
 
+def manual_apply(url):
+    property_code = url.split("/")[-2].replace("-", "%2F")
+    EMAIL_SET = [f"martin.hoffmann98+{i}@systemli.org" for i in range(3)]
+    apply_to_property("gewobag", property_code, EMAIL_SET)
+
+
 with open("secrets.yml", "r") as secrets_file:
     secrets = yaml.safe_load(secrets_file)
     API_KEY = secrets["scraper-api-key"]
     PROXY_URL = secrets["proxy-url"]
 
+
+FIRST_NAMES = get_lines_as_list("firstnames.txt")
+LAST_NAMES = get_lines_as_list("lastnames.txt")
+
+
 if __name__ == "__main__":
-    # testing playground
-    EMAIL_SET = [f"m.hoffmann+{i}@systemli.org" for i in range(3, 60)]
-
-    def manual_apply(url):
-        property_code = url.split('/')[-2].replace('-', '%2F')
-        EMAIL_SET = [f"m.hoffmann+{i}@systemli.org" for i in range(3, 60)]
-        apply_to_property("gewobag", property_code, EMAIL_SET)
-
-    # manual_apply('https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00469-0101-0004/')
+    manual_apply(
+        "https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00483-0101-0001/"
+    )
