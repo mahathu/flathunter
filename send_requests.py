@@ -63,13 +63,13 @@ def apply_to_property(
 
     while failed_attempts < 5 * len(email_set) and i < len(email_set):
         status_code, text = send_application(
-            email_set[i], "Robert", "Kühne", company, property_id
+            email_set[i], "Martin", "Hoffmann", company, property_id
         )
 
         # to obfuscate my emails with a bunch of fake emails:
         for _ in range(random.randint(1, 4)):
-            ln = random.choice(FIRST_NAMES)
-            fn = random.choice(LAST_NAMES)
+            fn = random.choice(FIRST_NAMES)
+            ln = random.choice(LAST_NAMES)
             send_application(generate_fake_email(fn, ln), fn, ln, company, property_id)
 
         if status_code == 200:
@@ -155,7 +155,7 @@ def apply_to_stadtundland(property_id):
 
 def manual_apply(url):
     property_code = url.split("/")[-2].replace("-", "%2F")
-    EMAIL_SET = [f"martin.hoffmann98+{i}@systemli.org" for i in range(3)]
+    EMAIL_SET = [f"mhoffmannpi+{i}@gmail.com" for i in range(2)]
     apply_to_property("gewobag", property_code, EMAIL_SET)
 
 
@@ -171,5 +171,5 @@ LAST_NAMES = get_lines_as_list("lastnames.txt")
 
 if __name__ == "__main__":
     manual_apply(
-        "https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00483-0101-0001/"
+        "https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01928-0110-0400/"
     )
