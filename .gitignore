@@ -4,4 +4,4 @@ nohup.out
 *.html
 secrets.yml
 config.yml
-seen_ads.txt
+seen_properties.txt
