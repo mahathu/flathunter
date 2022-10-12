@@ -67,7 +67,7 @@ def apply_to_property(
         )
 
         # to obfuscate my emails with a bunch of fake emails:
-        for _ in range(random.randint(1, 4)):
+        for _ in range(random.randint(1, 3)):
             fn = random.choice(FIRST_NAMES)
             ln = random.choice(LAST_NAMES)
             send_application(generate_fake_email(fn, ln), fn, ln, company, property_id)

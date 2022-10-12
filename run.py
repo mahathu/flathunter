@@ -17,7 +17,8 @@ TITLE_BLACKLIST = [
     "WBS mit Besonderem Wohnbedarf erforderlich",
     "WBS erforderlich",
     "WBS-fähigem",
-    "Rollstuhlfahrer"
+    "Rollstuhlfahrer",
+    "WBS nötig",
 ]
 SEEN_FILE_URL = "seen_properties.txt"
 SLEEP_LEN = CONFIG["sleep-len"]
