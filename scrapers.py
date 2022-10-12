@@ -34,6 +34,7 @@ class GewobagScraper(Scraper):
 
 
 class DegewoScraper(Scraper):
+    # für den Link: Suche durchführen, im Netzwerk-Tab die URL des JSON-Requests kopieren.
     def get_items(self):
         response = requests.get(self.url)
         immos = response.json()["immos"]
@@ -52,6 +53,38 @@ class DegewoScraper(Scraper):
         return results
 
 
+class AdlerScraper(Scraper):
+    # https://www.adler-group.com/suche/wohnung
+    # für den richtigen Link Suche durchführen und "immoscoutgrabber" Link kopieren, der
+    # ein "geodata"-JSON-Objekt zurückschickt
+    def get_items(self):
+        response = requests.get(self.url)
+        properties = response.json()["geodata"]
+
+        results = [
+            {
+                "company": "adler",
+                "address": " ".join(
+                    v if isinstance(v, str) else ""
+                    for v in property["address"].values()
+                ),
+                "title": property["title"],
+                "url": property["link"],
+                "id": property["link"].split("?")[0].split("/")[-1],
+            }
+            for property in properties
+        ]
+
+        return results
+
+    def apply_to_property(property_id):
+        pass
+
+    # für die Bewerbung wird folgender request gesendet, das alle Angaben in der URL kodiert
+    # https://www.adler-group.com/index.php?tx_immoscoutgrabber_pi2%5B__referrer%5D%5B%40extension%5D=ImmoscoutGrabber&tx_immoscoutgrabber_pi2%5B__referrer%5D%5B%40controller%5D=ShowObjects&tx_immoscoutgrabber_pi2%5B__referrer%5D%5B%40action%5D=displaySingleExpose&tx_immoscoutgrabber_pi2%5B__referrer%5D%5Barguments%5D=YToxOntzOjI6ImlkIjtzOjk6IjEzNTgwODk4MiI7fQ%3D%3D19444e96a05922d4039645c65aa7df411736b0fb&tx_immoscoutgrabber_pi2%5B__referrer%5D%5B%40request%5D=%7B%22%40extension%22%3A%22ImmoscoutGrabber%22%2C%22%40controller%22%3A%22ShowObjects%22%2C%22%40action%22%3A%22displaySingleExpose%22%7D1ef78d7bfc1912570b7737fc000249e80b5eb13c&tx_immoscoutgrabber_pi2%5B__trustedProperties%5D=%7B%22is_mandatory%22%3A%5B1%2C1%2C1%2C1%5D%2C%22contact_firstname%22%3A1%2C%22contact_lastname%22%3A1%2C%22contact_phone%22%3A1%2C%22contact_email%22%3A1%2C%22contact_message%22%3A1%2C%22gdpr-ack%22%3A1%2C%22action%22%3A1%2C%22exposeid%22%3A1%7D5b8f74aea4017d8ee8af7d2f3f7a4f1030d56040&tx_immoscoutgrabber_pi2%5Bcontact_salutation%5D=mr&tx_immoscoutgrabber_pi2%5Bis_mandatory%5D%5B%5D=contact_salutation&tx_immoscoutgrabber_pi2%5Bcontact_firstname%5D=as&tx_immoscoutgrabber_pi2%5Bis_mandatory%5D%5B%5D=contact_firstname&tx_immoscoutgrabber_pi2%5Bcontact_lastname%5D=asd&tx_immoscoutgrabber_pi2%5Bis_mandatory%5D%5B%5D=contact_lastname&tx_immoscoutgrabber_pi2%5Bcontact_phone%5D=&tx_immoscoutgrabber_pi2%5Bcontact_email%5D=ads%40de.de&tx_immoscoutgrabber_pi2%5Bis_mandatory%5D%5B%5D=contact_email&tx_immoscoutgrabber_pi2%5Bcontact_message%5D=&tx_immoscoutgrabber_pi2%5Bgdpr-ack%5D=&tx_immoscoutgrabber_pi2%5Bgdpr-ack%5D=true&tx_immoscoutgrabber_pi2%5Baction%5D=submitForm&tx_immoscoutgrabber_pi2%5Bexposeid%5D=135808982&type=4276906
+    # Server antwortet: {success: true, errors: []} (mails werden nicht auf Duplikate gecheckt.....)
+
+
 class HowogeScraper(Scraper):
     # Howoge verwendet ein merkwürdiges system, Anfragen werden per POST request geschickt
     # ggf später drum kümmern
@@ -66,8 +99,3 @@ class StadtUndLandScraper(Scraper):
     # https://stackoverflow.com/a/70640134/2349901
     def get_items(self):
         pass
-
-
-# if __name__ == '__main__':
-#     s = StadtUndLandScraper('https://www.stadtundland.de/Wohnungssuche/Wohnungssuche.php?form=stadtundland-expose-search-1.form&sp%3AroomsFrom%5B%5D=&sp%3AroomsTo%5B%5D=&sp%3ArentPriceFrom%5B%5D=&sp%3ArentPriceTo%5B%5D=&sp%3AareaFrom%5B%5D=&sp%3AareaTo%5B%5D=&sp%3Afeature%5B%5D=__last__&action=submit')
-#     s.get_items()

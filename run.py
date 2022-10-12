@@ -1,5 +1,6 @@
-from scrapers import DegewoScraper, GewobagScraper
+from scrapers import AdlerScraper, DegewoScraper, GewobagScraper
 from send_requests import apply_to_property
+from util import log
 import time
 import yaml
 
@@ -24,10 +25,13 @@ SEEN_FILE_URL = "seen_properties.txt"
 SLEEP_LEN = CONFIG["sleep-len"]
 N_APPLICATIONS = CONFIG["n-applications"]  # applications per ad
 EMAIL_SET = [f"martin.hoffmann98+{i+1}@systemli.org" for i in range(N_APPLICATIONS)]
+EMAIL_SET_ADLER = [f"martin.hoffmann98+{i+1}@systemli.org" for i in range(25)]
 
 scrapers = [
     GewobagScraper(CONFIG["gewobag-search-url"]),
     DegewoScraper(CONFIG["degewo-search-url"]),
+    AdlerScraper(CONFIG["adler-search-url-xberg"]),
+    AdlerScraper(CONFIG["adler-search-url-nk"]),
 ]
 
 
@@ -43,10 +47,6 @@ def result_filter(result):
         return False
 
     return True
-
-
-def log(line):
-    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {line}", flush=True)
 
 
 if __name__ == "__main__":
@@ -65,7 +65,14 @@ if __name__ == "__main__":
                         f"Neues Angebot gefunden: {property['title']}: {property['address']}"
                     )
 
-                    apply_to_property(property["company"], property["id"], EMAIL_SET)
+                    if property["company"] == "adler":
+                        apply_to_property(
+                            property["company"], property["id"], EMAIL_SET_ADLER
+                        )
+                    else:
+                        apply_to_property(
+                            property["company"], property["id"], EMAIL_SET
+                        )
 
                     with open(
                         SEEN_FILE_URL, "a"
