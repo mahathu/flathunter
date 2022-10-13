@@ -123,15 +123,6 @@ def send_wohnungshelden_application(
     return response.status_code, response.text
 
 
-def send_fake_applications(company, property_id, n=20):
-    first_names_filtered = random.choices(FIRST_NAMES, k=n)
-    last_names_filtered = random.choices(LAST_NAMES, k=n)
-
-    for fn, ln in zip(first_names_filtered, last_names_filtered):
-        email = generate_fake_email(fn, ln)
-        send_wohnungshelden_application(email, fn, ln, company, property_id)
-
-
 def apply_to_stadtundland(property_id):
     base_url = "https://www.stadtundland.de/exposes/immo.{property_id}.php"
     url = base_url.format(property_id=property_id)

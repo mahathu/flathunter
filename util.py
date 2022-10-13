@@ -16,7 +16,7 @@ def generate_fake_email(fn, ln):
     fn = fn[0] if name_separator and random.random() > 0.7 else fn
     birth_year = random.randint(55, 99) if random.random() > 0.3 else ""
     mail = f"{fn.lower()}{name_separator}{ln.lower()}{birth_year}@{random.choice(_email_providers)}"
-    return mail.encode("ascii", "ignore")
+    return mail.encode("ascii", "ignore").decode("ascii")
 
 
 _email_providers = get_lines_as_list("email-providers.txt")
