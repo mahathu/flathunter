@@ -15,7 +15,6 @@ TITLE_BLACKLIST = [
     "mit WBS",
     "im Grünen",
     "WBS mit besonderem Wohnbedarf",
-    "WBS mit Besonderem Wohnbedarf",
     "WBS erforderlich",
     "WBS-fähigem",
     "Rollstuhlfahrer",
@@ -40,7 +39,7 @@ def result_filter(result):
     if result["url"] in seen_properties:
         return False
 
-    if any([word in result["title"] for word in TITLE_BLACKLIST]):
+    if any([word.lower() in result["title"].lower() for word in TITLE_BLACKLIST]):
         return False
 
     if any([district in result["address"] for district in DISTRICT_BLACKLIST]):
