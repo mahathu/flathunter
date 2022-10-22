@@ -2,5 +2,4 @@ requests
 beautifulsoup4
 lxml
 pyyaml
-fastapi
-uvicorn
+flask
