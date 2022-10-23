@@ -85,17 +85,19 @@ class AdlerScraper(Scraper):
     # Server antwortet: {success: true, errors: []} (mails werden nicht auf Duplikate gecheckt.....)
 
 
-class HowogeScraper(Scraper):
-    # Howoge verwendet ein merkwürdiges system, Anfragen werden per POST request geschickt
-    # ggf später drum kümmern
+class WBMScraper(Scraper):
     def get_items(self):
         pass
 
 
 class StadtUndLandScraper(Scraper):
-    # bei stadt und land müssen Anfragen per POST request gemacht werden, außerdem
-    # muss ein serverseitig generiertes token mitgeschickt werden -> scrapy?
+    # Anfrage wie POST-Request an 'https://www.stadtundland.de/exposes/immo.{prop_id}.php'
+    # dabei wird ein form-token mitgeschickt. das ist im HTML der seite enthalten
     # außerdem schickt SUL keine Bestätigungsmail, schwer zu überprüfen ob Anfrage erfolgreich
     # https://stackoverflow.com/a/70640134/2349901
     def get_items(self):
         pass
+
+if __name__ == '__main__':
+    s = StadtUndLandScraper('')
+    s.get_items()

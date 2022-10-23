@@ -72,6 +72,9 @@ def apply_to_property(
         if company == "adler":
             status_code, text = send_adler_application(email, fn, ln, property_id)
 
+        elif company == "stadtundland":
+            pass
+
         else:
             status_code, text = send_wohnungshelden_application(
                 email, fn, ln, company, property_id
@@ -150,9 +153,3 @@ with open("secrets.yml", "r") as secrets_file:
 
 FIRST_NAMES = get_lines_as_list("firstnames.txt")
 LAST_NAMES = get_lines_as_list("lastnames.txt")
-
-
-if __name__ == "__main__":
-    manual_apply(
-        "https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01928-0110-0400/"
-    )

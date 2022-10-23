@@ -1,0 +1,21 @@
+curl 'https://www.stadtundland.de/exposes/immo.MO_1001_5241_101.php' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'Accept-Language: en-US,en;q=0.9,de;q=0.8' \
+  -H 'Cache-Control: max-age=0' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Cookie: cookies-accepted=true; bookmarks=%5B%5D' \
+  -H 'DNT: 1' \
+  -H 'Origin: https://www.stadtundland.de' \
+  -H 'Referer: https://www.stadtundland.de/exposes/immo.MO_1001_5241_101.php' \
+  -H 'Sec-Fetch-Dest: document' \
+  -H 'Sec-Fetch-Mode: navigate' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-User: ?1' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Google Chrome";v="105", "Not)A;Brand";v="8", "Chromium";v="105"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  --data-raw 'form=stadtundland-prospectForm&title%5B%5D=mr&title%5B%5D=__last__&name%5B%5D=vor&firstname%5B%5D=nack&street%5B%5D=&zip%5B%5D=&city%5B%5D=&phone%5B%5D=12&email%5B%5D=asadas%40asdas.de&subsidized_housing%5B%5D=false&subsidized_housing%5B%5D=__last__&privacyProtectionAccepted%5B%5D=true&privacyProtectionAccepted%5B%5D=__last__&inpQuestion=&form-token=952a62e8a6b14a37eb063b19ccb506c9ca99191124449550b9b4008809ab1db34086eca1a9b1f62b788a6538eeb8cc95c340afb5a21ff46aa001c09c4d1ba4c34ef5adbfa85ec79b19bddc9d8b985173d62088a9d2b460ee39634d977f0ee5a3ea9e2c5e643b34185df937415be4a33fc2e8b6d919e479a38679f549d2631c2db49e89aa48a7b7df621ef67e073569d4&action=submit' \
+  --compressed
