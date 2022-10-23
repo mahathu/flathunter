@@ -31,22 +31,23 @@ EMAIL_SET = [f"martin.hoffmann98+{i+1}@systemli.org" for i in range(N_APPLICATIO
 EMAIL_SET_ADLER = [f"martin.hoffmann98+{i+1}@systemli.org" for i in range(25)]
 
 scrapers = [
-    GewobagScraper(CONFIG["gewobag-search-url"]),
-    DegewoScraper(CONFIG["degewo-search-url"]),
-    AdlerScraper(CONFIG["adler-search-url-xberg"]),
+    # GewobagScraper(CONFIG["gewobag-search-url"]),
+    # DegewoScraper(CONFIG["degewo-search-url"]),
+    # AdlerScraper(CONFIG["adler-search-url-xberg"]),
     AdlerScraper(CONFIG["adler-search-url-nk"]),
 ]
 
 
-def result_filter(result):
+def result_filter(property):
     """returns true if result is wanted and false otherwise"""
-    if result["url"] in seen_properties:
+    # TODO: perhaps make this part of the property class?
+    if property.url in seen_properties:
         return False
 
-    if any([word.lower() in result["title"].lower() for word in TITLE_BLACKLIST]):
+    if any([word.lower() in property.title.lower() for word in TITLE_BLACKLIST]):
         return False
 
-    if any([district in result["address"] for district in DISTRICT_BLACKLIST]):
+    if any([district in property.address for district in DISTRICT_BLACKLIST]):
         return False
 
     return True
@@ -79,16 +80,16 @@ while True:
             log(traceback.format_exc())
 
     filtered_properties = [p for p in found_properties if result_filter(p)]
-    log(f"{len(found_properties)} properties found in total ({len(filtered_properties)} new)")
+    log(
+        f"{len(found_properties)} properties found in total ({len(filtered_properties)} new)"
+    )
 
     for property in filtered_properties:
         # seen_properties.append(property["url"])
         # add_property_to_seen(SEEN_FILE_URL, property["url"])
 
-        log(
-            f"Neues Angebot gefunden: {property['title']}: {property['address']}"
-        )
-        
+        log(f"Neues Angebot: {property}")
+
         # if property["company"] == "adler":
         #     apply_to_property(
         #         property["company"], property["id"], EMAIL_SET_ADLER
