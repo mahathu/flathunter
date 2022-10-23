@@ -1,8 +1,11 @@
 from scrapers import AdlerScraper, DegewoScraper, GewobagScraper
 from send_requests import apply_to_property
-from util import log
+from util import log, add_property_to_seen
 import time
 import yaml
+import argparse
+from termcolor import colored
+import traceback
 
 with open("config.yml", "r") as config_file:
     CONFIG = yaml.safe_load(config_file)
@@ -20,6 +23,7 @@ TITLE_BLACKLIST = [
     "Rollstuhlfahrer",
     "WBS nötig",
 ]
+
 SEEN_FILE_URL = "seen_properties.txt"
 SLEEP_LEN = CONFIG["sleep-len"]
 N_APPLICATIONS = CONFIG["n-applications"]  # applications per ad
@@ -48,38 +52,50 @@ def result_filter(result):
     return True
 
 
-if __name__ == "__main__":
-    try:
-        with open(SEEN_FILE_URL, "r") as f:
-            seen_properties = [line.rstrip() for line in f.readlines()]
-    except IOError:
-        seen_properties = []
+if __name__ != "__main__":
+    exit()
 
-    while True:
+try:
+    with open(SEEN_FILE_URL, "r") as f:
+        seen_properties = [line.rstrip() for line in f.readlines()]
+except IOError:
+    seen_properties = []
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-d", action="store_true", help="Enable debug mode")
+DEBUG_ENABLED = parser.parse_args().d
+
+if DEBUG_ENABLED:
+    print(colored("Debug mode is enabled", color="red", attrs=["bold"]))
+    # EMAIL_SET = ['darklightnova@hotmail.de']
+
+while True:
+    found_properties = []
+
+    for scraper in scrapers:
         try:
-            for scraper in scrapers:
-                for property in filter(result_filter, scraper.get_items()):
-                    seen_properties.append(property["url"])
-                    log(
-                        f"Neues Angebot gefunden: {property['title']}: {property['address']}"
-                    )
+            found_properties.extend(scraper.find_properties())
+        except Exception as e:
+            log(traceback.format_exc())
 
-                    if property["company"] == "adler":
-                        apply_to_property(
-                            property["company"], property["id"], EMAIL_SET_ADLER
-                        )
-                    else:
-                        apply_to_property(
-                            property["company"], property["id"], EMAIL_SET
-                        )
+    filtered_properties = [p for p in found_properties if result_filter(p)]
+    log(f"{len(found_properties)} properties found in total ({len(filtered_properties)} new)")
 
-                    with open(
-                        SEEN_FILE_URL, "a"
-                    ) as f:  # will create file if not exists
-                        f.write(f"{property['url']}\n")
+    for property in filtered_properties:
+        # seen_properties.append(property["url"])
+        # add_property_to_seen(SEEN_FILE_URL, property["url"])
 
-        except Exception as e:  # this shouldn't catch KeyboardInterrupts I think
-            log(f"Exception: {e}")
+        log(
+            f"Neues Angebot gefunden: {property['title']}: {property['address']}"
+        )
+        
+        # if property["company"] == "adler":
+        #     apply_to_property(
+        #         property["company"], property["id"], EMAIL_SET_ADLER
+        #     )
+        # else:
+        #     apply_to_property(
+        #         property["company"], property["id"], EMAIL_SET
+        #     )
 
-        log(f"Sleeping for {SLEEP_LEN} seconds.")
-        time.sleep(SLEEP_LEN)
+    time.sleep(SLEEP_LEN)

@@ -47,9 +47,7 @@ BASE_PAYLOAD_DATA = {
 }
 
 
-def apply_to_property(
-    company, property_id, email_set, include_fakes=True, use_proxy=True
-):
+def apply_to_property(company, property_id, email_set):
     """
     apply_to_property() is the main function that should be called once per
     property. it will call send_wohnungshelden_application() multiple times, both with the
@@ -62,7 +60,7 @@ def apply_to_property(
 
     application_set = []  # list of tuples: (email, fn, ln)
     for mail in email_set:
-        application_set.append((mail, "Martin", "Hoffmann"))
+        application_set.append((mail, "Martin", "Hoffmann"))  # TODO don't hardcode this
         for _ in range(random.randint(1, 3)):
             fn = random.choice(FIRST_NAMES)
             ln = random.choice(LAST_NAMES)

@@ -3,17 +3,24 @@ import requests
 from bs4 import BeautifulSoup
 
 
+class Property():
+    pass
+
+
 class Scraper(ABC):
     def __init__(self, url) -> None:
         self.url = url
 
     @abstractmethod
-    def get_items():
+    def find_properties():
         pass
+
+    # TODO: make a default function here that gets overwritten for adler, SUL etc
+    # TODO: make property an object
 
 
 class GewobagScraper(Scraper):
-    def get_items(self):
+    def find_properties(self):
         response = requests.get(self.url)
         soup = BeautifulSoup(response.text, "lxml")
 
@@ -35,7 +42,7 @@ class GewobagScraper(Scraper):
 
 class DegewoScraper(Scraper):
     # für den Link: Suche durchführen, im Netzwerk-Tab die URL des JSON-Requests kopieren.
-    def get_items(self):
+    def find_properties(self):
         response = requests.get(self.url)
         immos = response.json()["immos"]
 
@@ -55,25 +62,27 @@ class DegewoScraper(Scraper):
 
 class AdlerScraper(Scraper):
     # https://www.adler-group.com/suche/wohnung
-    # für den richtigen Link Suche durchführen und "immoscoutgrabber" Link kopieren, der
+    # für den richtigen Link Suche durchführen und "immoscoutgrabber" Link aus devtools kopieren, der
     # ein "geodata"-JSON-Objekt zurückschickt
-    def get_items(self):
+    def find_properties(self):
         response = requests.get(self.url)
         properties = response.json()["geodata"]
 
-        results = [
-            {
+        results = []
+        for property in properties:
+            try:
+                addr = property["address"]
+                prop_addr = f'{addr["street"]} {addr["houseNumber"]} ({addr["quarter"]})'
+            except KeyError:
+                prop_addr = 'Unknown address'
+
+            results.append({
                 "company": "adler",
-                "address": " ".join(
-                    v if isinstance(v, str) else ""
-                    for v in property["address"].values()
-                ),
+                "address": prop_addr,
                 "title": property["title"],
                 "url": property["link"],
-                "id": property["link"].split("?")[0].split("/")[-1],
-            }
-            for property in properties
-        ]
+                "id": property["isid"],
+            })
 
         return results
 
@@ -86,7 +95,7 @@ class AdlerScraper(Scraper):
 
 
 class WBMScraper(Scraper):
-    def get_items(self):
+    def find_properties(self):
         pass
 
 
@@ -95,9 +104,10 @@ class StadtUndLandScraper(Scraper):
     # dabei wird ein form-token mitgeschickt. das ist im HTML der seite enthalten
     # außerdem schickt SUL keine Bestätigungsmail, schwer zu überprüfen ob Anfrage erfolgreich
     # https://stackoverflow.com/a/70640134/2349901
-    def get_items(self):
+    def find_properties(self):
         pass
 
-if __name__ == '__main__':
-    s = StadtUndLandScraper('')
-    s.get_items()
+
+if __name__ == "__main__":
+    s = StadtUndLandScraper("")
+    s.find_properties()
