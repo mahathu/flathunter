@@ -1,0 +1,34 @@
+{
+    "base_headers": {
+        "authority": "app.wohnungshelden.de",
+        "accept": "application/json, text/plain, */*",
+        "accept-language": "en-US,en;q=0.9,de;q=0.8",
+        "content-type": "application/json",
+        "dnt": "1",
+        "origin": "https://app.wohnungshelden.de",
+        "sec-ch-ua": "\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+    },
+    "base_payload_data": {
+        "defaultApplicantFormDataTO": {
+            "applicantMessage": null,
+            "phoneNumber": null,
+            "salutation": "MR",
+            "street": null,
+            "houseNumber": null,
+            "zipCode": null,
+            "city": null
+        },
+        "saveFormDataTO": {
+            "formData": {
+                "numberPersonsTotal": "1"
+            },
+            "files": []
+        }
+    }
+}

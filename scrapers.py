@@ -2,21 +2,7 @@ from abc import ABC, abstractmethod
 import requests
 from bs4 import BeautifulSoup
 from typing import List
-
-
-class Property(object):
-    def __init__(self, company, address, title, url, id) -> None:
-        self.company = company
-        self.address = address
-        self.title = title
-        self.url = url
-        self.id = id
-
-    def __str__(self) -> str:
-        return f"[{self.company.upper()}] {self.title} ({self.address})"
-
-    def apply(self):
-        pass
+from properties import Property, AdlerProperty, WHProperty
 
 
 class Scraper(ABC):
@@ -27,9 +13,6 @@ class Scraper(ABC):
     def find_properties(self) -> List[Property]:
         pass
 
-    # TODO: make a default function here that gets overwritten for adler, SUL etc
-    # TODO: make property an object
-
 
 class GewobagScraper(Scraper):
     def find_properties(self):
@@ -37,7 +20,7 @@ class GewobagScraper(Scraper):
         soup = BeautifulSoup(response.text, "lxml")
 
         return [
-            Property(
+            WHProperty(
                 company="gewobag",
                 address=item.find("address").text.strip(),
                 title=item.find("h3", {"class": "angebot-title"}).text.strip(),
@@ -57,7 +40,7 @@ class DegewoScraper(Scraper):
         immos = response.json()["immos"]
 
         return [
-            Property(
+            WHProperty(
                 company="degewo",
                 address=property["address"],
                 title=property["headline"],
@@ -87,7 +70,7 @@ class AdlerScraper(Scraper):
                 prop_addr = "Unknown address"
 
             results.append(
-                Property(
+                AdlerProperty(
                     company="adler",
                     address=prop_addr,
                     title=property["title"],
@@ -98,13 +81,10 @@ class AdlerScraper(Scraper):
 
         return results
 
-    def apply_to_property(property_id):
-        pass
-
 
 class WBMScraper(Scraper):
     def find_properties(self):
-        pass
+        raise NotImplementedError
 
 
 class StadtUndLandScraper(Scraper):
@@ -113,9 +93,4 @@ class StadtUndLandScraper(Scraper):
     # außerdem schickt SUL keine Bestätigungsmail, schwer zu überprüfen ob Anfrage erfolgreich
     # https://stackoverflow.com/a/70640134/2349901
     def find_properties(self):
-        print("hi")
-
-
-if __name__ == "__main__":
-    s = StadtUndLandScraper("")
-    s.find_properties()
+        raise NotImplementedError

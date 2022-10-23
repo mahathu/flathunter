@@ -6,7 +6,7 @@ python3.9 -m venv <environment_name>
 source <environment_name>/bin/activate
 pip install -r requirements.txt
 ```
-- Create a file called `secrets.yml` and enter the API key:
+- Create a file called `secrets.yml` and enter the API key: (TODO: rewrite README, instead add proxy urls)
 ```
 ---
 scraper-api-key: '<API_KEY>'
