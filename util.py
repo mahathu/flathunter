@@ -19,9 +19,4 @@ def generate_fake_email(fn, ln):
     return mail.encode("ascii", "ignore").decode("ascii")
 
 
-def add_property_to_seen(fn, prop_url):
-    with open(fn, "a") as f:  # will create file if not exists
-        f.write(f"{prop_url}\n")
-
-
-_email_providers = get_lines_as_list("email-providers.txt")
+_email_providers = get_lines_as_list("data/email-providers.txt")

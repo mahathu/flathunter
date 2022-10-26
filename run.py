@@ -1,12 +1,12 @@
 from scrapers import AdlerScraper, DegewoScraper, GewobagScraper
 from properties import Identity
-from send_requests import apply_to_property
-from util import log, add_property_to_seen
+from util import log
 import time
 import yaml
 import argparse
 from termcolor import colored
 import traceback
+import random
 
 
 if __name__ != "__main__":
@@ -20,7 +20,7 @@ if DEBUG_ENABLED:
     print(colored("Debug mode is enabled", color="red", attrs=["bold"]))
     # load alternative config here
 
-with open("config.yml", "r") as config_file:
+with open("data/config.yml", "r") as config_file:
     CONFIG = yaml.safe_load(config_file)
 
 SEEN_FILE_URL = "seen_properties.txt"
@@ -30,10 +30,10 @@ EMAIL_SET = [f"martin.hoffmann98+{i+1}@systemli.org" for i in range(N_APPLICATIO
 EMAIL_SET_ADLER = [f"martin.hoffmann98+{i+1}@systemli.org" for i in range(25)]
 
 scrapers = [
-    # GewobagScraper(CONFIG["gewobag-search-url"]),
-    DegewoScraper("https://immosuche.degewo.de/de/search.json?utf8=%E2%9C%93&property_type_id=1&categories%5B%5D=1&property_number=&address%5Braw%5D=&address%5Bstreet%5D=&address%5Bcity%5D=&address%5Bzipcode%5D=&address%5Bdistrict%5D=&district=&price_switch=false&price_switch=on&price_from=&price_to=&price_from=&price_to=&price_radio=null&price_from=&price_to=&qm_radio=null&qm_from=&qm_to=&rooms_radio=null&rooms_from=&rooms_to=&features%5B%5D=&wbs_required=&order=rent_total_without_vat_asc&"),
-    # AdlerScraper(CONFIG["adler-search-url-xberg"]),
-    # AdlerScraper(CONFIG["adler-search-url-nk"]),
+    GewobagScraper(CONFIG["gewobag-search-url"]),
+    DegewoScraper(CONFIG["degewo-search-url"]),
+    AdlerScraper(CONFIG["adler-search-url-xberg"]),
+    AdlerScraper(CONFIG["adler-search-url-nk"]),
 ]
 
 try:
@@ -41,6 +41,34 @@ try:
         seen_properties = [line.rstrip() for line in f.readlines()]
 except IOError:
     seen_properties = []
+
+
+def apply_to_property(property, use_fakes=True):
+    start_time = time.time()
+
+    # generate a list of real and fake identities to apply with:
+    application_set = []
+    application_set.append(Identity("Martin", "Hoffmann", "martin.hoffmann@charite.de"))
+    application_set.append(Identity("Martin", "Hoffmann", "m.hoffmann@systemli.org"))
+    application_set.append(Identity("Martin", "Hoffmann", "hoffmann47@uni-potsdam.de"))
+
+    for i in range(N_APPLICATIONS):
+        email = f"martin.hoffmann98+{i+1}@systemli.org"
+        application_set.append(Identity("Martin", "Hoffmann", email))
+
+        if not use_fakes:
+            continue
+        for _ in range(random.randint(1, 2)):
+            application_set.append(Identity())  # add some fake identities
+
+    # apply with the given identities:
+    for id in application_set:
+        status_code, status_text = property.apply(id)
+        log(f"{id} {property.id} {status_code} {status_text}")
+        time.sleep(random.randint(2, 5))
+
+    delta = time.time() - start_time
+    log(f"Sent {len(application_set)} applications in {delta:.1f}s.")
 
 
 while True:
@@ -61,12 +89,13 @@ while True:
 
     for property in filtered_properties:
         seen_properties.append(property.url)
-        # add_property_to_seen(SEEN_FILE_URL, property.url)
+        with open(SEEN_FILE_URL, "a") as f:  # will create file if not exists
+            f.write(f"{property.url}\n")
 
         log(f"Neues Angebot: {property}")
-        id = Identity("Johanna", "Schreiber")
-        # status_code, status_text = property.apply(id)
-        # log(f"{id} {property.id} {status_code} {status_text}")
+        apply_to_property(property, use_fakes=True)
 
-    exit()
+    if DEBUG_ENABLED:
+        exit()
+
     time.sleep(SLEEP_LEN)
