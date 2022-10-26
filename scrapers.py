@@ -63,9 +63,6 @@ class DegewoScraper(Scraper):
 
 
 class AdlerScraper(Scraper):
-    # https://www.adler-group.com/suche/wohnung
-    # für den richtigen Link Suche durchführen und "immoscoutgrabber" Link aus devtools kopieren, der
-    # ein "geodata"-JSON-Objekt zurückschickt
     def find_properties(self):
         response = requests.get(self.url)
         properties = response.json()["geodata"]

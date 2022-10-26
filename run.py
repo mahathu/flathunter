@@ -1,3 +1,4 @@
+from distutils.debug import DEBUG
 from scrapers import AdlerScraper, DegewoScraper, GewobagScraper
 from properties import Identity
 from util import log
@@ -34,6 +35,7 @@ scrapers = [
     DegewoScraper(CONFIG["degewo-search-url"]),
     AdlerScraper(CONFIG["adler-search-url-xberg"]),
     AdlerScraper(CONFIG["adler-search-url-nk"]),
+    AdlerScraper(CONFIG["adler-search-url-pberg"]),
 ]
 
 try:
@@ -47,10 +49,12 @@ def apply_to_property(property, use_fakes=True):
     start_time = time.time()
 
     # generate a list of real and fake identities to apply with:
-    application_set = []
-    application_set.append(Identity("Martin", "Hoffmann", "martin.hoffmann@charite.de"))
-    application_set.append(Identity("Martin", "Hoffmann", "m.hoffmann@systemli.org"))
-    application_set.append(Identity("Martin", "Hoffmann", "hoffmann47@uni-potsdam.de"))
+    application_set = [
+        Identity("Martin", "Hoffmann", "martin.hoffmann@charite.de"),
+        Identity("Martin", "Hoffmann", "m.hoffmann@systemli.org"),
+        Identity("Martin", "Hoffmann", "martin.hoffmann@uni-potsdam.de"),
+        Identity("Martin", "Hoffmann", "hoffmann47@uni-potsdam.de"),
+    ]
 
     for i in range(N_APPLICATIONS):
         email = f"martin.hoffmann98+{i+1}@systemli.org"
@@ -58,7 +62,7 @@ def apply_to_property(property, use_fakes=True):
 
         if not use_fakes:
             continue
-        for _ in range(random.randint(1, 2)):
+        for _ in range(random.randint(1, 3)):
             application_set.append(Identity())  # add some fake identities
 
     # apply with the given identities:
@@ -88,6 +92,10 @@ while True:
     )
 
     for property in filtered_properties:
+        if DEBUG_ENABLED:
+            print(colored(f"Debug mode is enabled, not applying to: {property}", color="red"))
+            continue
+
         seen_properties.append(property.url)
         with open(SEEN_FILE_URL, "a") as f:  # will create file if not exists
             f.write(f"{property.url}\n")
