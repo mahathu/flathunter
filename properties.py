@@ -61,8 +61,11 @@ class Property(object):
         if (
             any([word.lower() in self.title.lower() for word in TITLE_BLACKLIST])
             or any([d.lower() in self.address.lower() for d in DISTRICT_BLACKLIST])
-            or self.zip_code.startswith("123")
-        ):  # Süden Neuköllns
+            or self.zip_code.startswith("123") # Süden Neuköllns
+            or self.zip_code.startswith("130") # Norden Pankows
+            or self.zip_code.startswith("131") # Norden Pankows
+            or self.zip_code.startswith("134") # Norden Pankows
+        ):
             self.is_desired = False
 
     def __str__(self) -> str:
@@ -93,7 +96,7 @@ class WHProperty(Property):
     def apply(self, identity: Identity) -> Tuple[int, str]:
         """This function uses default data from request_data.json,
         modifies it and makes a request to the Wohnungshelden API."""
-        with open("request_data.json", "r") as f:
+        with open("data/request_data.json", "r") as f:
             request_data = json.load(f)
 
         BASE_PAYLOAD_DATA = request_data["base_payload_data"]

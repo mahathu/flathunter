@@ -21,7 +21,7 @@ if DEBUG_ENABLED:
     print(colored("Debug mode is enabled", color="red", attrs=["bold"]))
     # load alternative config here
 
-with open("data/config.yml", "r") as config_file:
+with open("data/config-prod.yml", "r") as config_file:
     CONFIG = yaml.safe_load(config_file)
 
 SEEN_FILE_URL = "seen_properties.txt"
