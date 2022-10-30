@@ -4,6 +4,7 @@ import yaml
 from util import generate_fake_email, get_lines_as_list
 from urllib.parse import quote
 from typing import Tuple
+from util import log
 import json
 import random
 
@@ -15,7 +16,6 @@ with open("data/secrets.yml", "r") as secrets_file:
         "https": PROXY_URL,
     }
 
-DISTRICT_BLACKLIST = ["Rudow", "Waidmannslust", "Staaken", "Marzahn", "Lichtenrade"]
 TITLE_BLACKLIST = [
     "Single",
     "Senior",
@@ -28,6 +28,8 @@ TITLE_BLACKLIST = [
     "WBS-fähigem",
     "Rollstuhlfahrer",
     "WBS nötig",
+    "Rollstuhlfahrer",
+    "zwingend erforderlich",
 ]
 
 FIRST_NAMES = get_lines_as_list("data/firstnames.txt")
@@ -49,6 +51,8 @@ class Identity:
 
 
 class Property(object):
+    zip_code: int
+
     def __init__(self, company, address, zip_code, title, url, id) -> None:
         self.company = company
         self.address = address
@@ -58,13 +62,11 @@ class Property(object):
         self.id = id
 
         self.is_desired = True
+        # filter out if any of these conditions match:
         if (
-            any([word.lower() in self.title.lower() for word in TITLE_BLACKLIST])
-            or any([d.lower() in self.address.lower() for d in DISTRICT_BLACKLIST])
-            or self.zip_code.startswith("123") # Süden Neuköllns
-            or self.zip_code.startswith("130") # Norden Pankows
-            or self.zip_code.startswith("131") # Norden Pankows
-            or self.zip_code.startswith("134") # Norden Pankows
+            any([word.lower() in title.lower() for word in TITLE_BLACKLIST])
+            or 12105 <= zip_code <= 12399  # Süden Neuköllns, Tempelhof
+            or 13000 <= zip_code <= 13599  # Norden Pankows, Spandau...
         ):
             self.is_desired = False
 

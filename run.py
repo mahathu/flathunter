@@ -87,13 +87,18 @@ while True:
     filtered_properties = [
         p for p in found_properties if p.is_desired and p.url not in seen_properties
     ]
+
     log(
-        f"{len(found_properties)} properties found in total ({len(filtered_properties)} new)"
+        f"{len(found_properties)} properties seen in total ({len(filtered_properties)} new)"
     )
 
     for property in filtered_properties:
         if DEBUG_ENABLED:
-            print(colored(f"Debug mode is enabled, not applying to: {property}", color="red"))
+            print(
+                colored(
+                    f"Debug mode is enabled, not applying to: {property}", color="red"
+                )
+            )
             continue
 
         seen_properties.append(property.url)
