@@ -20,6 +20,7 @@ TITLE_BLACKLIST = [
     "Single",
     "Senior",
     "Selbstrenovierer",
+    "Erstbezug",
     "mit WBS",
     "im Grünen",
     "WBS mit besonderem Wohnbedarf",
@@ -64,15 +65,17 @@ class Property(object):
 
         self.is_desired = True
         # filter out if any of these conditions match:
+        # TODO: filter by these prefixes: 102 104 105 107 108 109 120 121 133
         if (
             any([word.lower() in title.lower() for word in TITLE_BLACKLIST])
             or 12105 <= zip_code <= 12399  # Süden Neuköllns, Tempelhof
-            or 13000 <= zip_code <= 13599  # Norden Pankows, Spandau...
+            or 13000 <= zip_code <= 13199  # Norden Pankows
+            or 13400 <= zip_code <= 13699  # Charlottenburg
         ):
             self.is_desired = False
 
         if ("erforderlich" in title.lower() and "nicht" not in title.lower()):
-            log(f"{self.title} filtered due to new rule.")
+            # log(f"{self.title} filtered due to new rule.")
             self.is_desired = False
 
     def __str__(self) -> str:
