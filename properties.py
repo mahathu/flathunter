@@ -30,6 +30,7 @@ TITLE_BLACKLIST = [
     "WBS nötig",
     "Rollstuhlfahrer",
     "zwingend erforderlich",
+    "Einkommen", #"WBS-fähiges Einkommen"
 ]
 
 FIRST_NAMES = get_lines_as_list("data/firstnames.txt")
@@ -68,6 +69,10 @@ class Property(object):
             or 12105 <= zip_code <= 12399  # Süden Neuköllns, Tempelhof
             or 13000 <= zip_code <= 13599  # Norden Pankows, Spandau...
         ):
+            self.is_desired = False
+
+        if ("erforderlich" in title.lower() and "nicht" not in title.lower()):
+            log(f"{self.title} filtered due to new rule.")
             self.is_desired = False
 
     def __str__(self) -> str:
