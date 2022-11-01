@@ -27,15 +27,11 @@ with open("data/config-prod.yml", "r") as config_file:
 SEEN_FILE_URL = "seen_properties.txt"
 SLEEP_LEN = CONFIG["sleep-len"]
 N_APPLICATIONS = CONFIG["n-applications"]  # applications per ad
-EMAIL_SET = [f"martin.hoffmann98+{i+1}@systemli.org" for i in range(N_APPLICATIONS)]
-EMAIL_SET_ADLER = [f"martin.hoffmann98+{i+1}@systemli.org" for i in range(25)]
 
 scrapers = [
     GewobagScraper(CONFIG["gewobag-search-url"]),
     DegewoScraper(CONFIG["degewo-search-url"]),
-    AdlerScraper(CONFIG["adler-search-url-xberg"]),
-    AdlerScraper(CONFIG["adler-search-url-nk"]),
-    AdlerScraper(CONFIG["adler-search-url-pberg"]),
+    AdlerScraper(CONFIG["adler-search-url"]),
 ]
 
 try:
@@ -92,23 +88,16 @@ while True:
         f"{len(found_properties)} properties seen in total ({len(filtered_properties)} new)"
     )
 
-    for property in filtered_properties:
-        if DEBUG_ENABLED:
-            print(
-                colored(
-                    f"Debug mode is enabled, not applying to: {property}", color="red"
-                )
-            )
-            continue
+    if DEBUG_ENABLED:
+        print('\n'.join([p.url for p in filtered_properties]))
+        exit()
 
+    for property in filtered_properties:
         seen_properties.append(property.url)
         with open(SEEN_FILE_URL, "a") as f:  # will create file if not exists
             f.write(f"{property.url}\n")
 
         log(f"Neues Angebot: {property}")
         apply_to_property(property, use_fakes=True)
-
-    if DEBUG_ENABLED:
-        exit()
 
     time.sleep(SLEEP_LEN)
