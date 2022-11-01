@@ -25,7 +25,7 @@ class GewobagScraper(Scraper):
         results = []
         for property in soup.select(".filtered-mietangebote article"):
             addr = property.find("address").text.strip()
-            zip = int(addr.split(", ")[1].split(" ")[0])
+            zip = addr.split(", ")[1].split(" ")[0]
             url = property.select("table.angebot-info a")[0]["href"]
             id = url.split("/")[-2].replace("-", "%2F")
 
@@ -53,7 +53,7 @@ class DegewoScraper(Scraper):
             WHProperty(
                 company="degewo",
                 address=property["address"],
-                zip_code=int(property["zipcode"]),
+                zip_code=property["zipcode"],
                 title=property["headline"],
                 url="https://immosuche.degewo.de" + property["property_path"],
                 id=property["id"].replace("-", ".", 2),
@@ -74,11 +74,11 @@ class AdlerScraper(Scraper):
                 prop_addr = (
                     f'{addr["street"]} {addr["houseNumber"]} ({addr["quarter"]})'
                 )
-                prop_zipcode = int(addr["postcode"])
+                prop_zipcode = addr["postcode"]
 
             except KeyError:
                 prop_addr = "Unknown address"
-                prop_zipcode = -1
+                prop_zipcode = "00000"
 
             results.append(
                 AdlerProperty(

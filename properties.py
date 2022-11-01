@@ -5,6 +5,7 @@ from util import generate_fake_email, get_lines_as_list
 from urllib.parse import quote
 from typing import Tuple
 from util import log
+from termcolor import colored
 import json
 import random
 
@@ -16,22 +17,19 @@ with open("data/secrets.yml", "r") as secrets_file:
         "https": PROXY_URL,
     }
 
-TITLE_BLACKLIST = [
+with open("data/config-prod.yml", "r") as config_file:
+    config = yaml.safe_load(config_file)
+    ZIP_WHITELIST = config["zip-prefixes-whitelist"]
+    ZIP_BLACKLIST = config["zip-prefixes-blacklist"]
+
+TITLE_BLACKLIST = [  # TODO: can this be replaced by the "easier" WBS filter?
     "Single",
     "Senior",
-    "Selbstrenovierer",
     "Erstbezug",
-    "mit WBS",
     "im Grünen",
-    "WBS mit besonderem Wohnbedarf",
-    "WBS-Berechtigung erforderlich",
-    "WBS erforderlich",
-    "WBS-fähigem",
     "Rollstuhlfahrer",
-    "WBS nötig",
     "Rollstuhlfahrer",
-    "zwingend erforderlich",
-    "Einkommen", #"WBS-fähiges Einkommen"
+    "Einkommen",  # "WBS-fähiges Einkommen"
 ]
 
 FIRST_NAMES = get_lines_as_list("data/firstnames.txt")
@@ -53,8 +51,6 @@ class Identity:
 
 
 class Property(object):
-    zip_code: int
-
     def __init__(self, company, address, zip_code, title, url, id) -> None:
         self.company = company
         self.address = address
@@ -65,17 +61,17 @@ class Property(object):
 
         self.is_desired = True
         # filter out if any of these conditions match:
-        # TODO: filter by these prefixes: 102 104 105 107 108 109 120 121 133
         if (
             any([word.lower() in title.lower() for word in TITLE_BLACKLIST])
-            or 12105 <= zip_code <= 12399  # Süden Neuköllns, Tempelhof
-            or 13000 <= zip_code <= 13199  # Norden Pankows
-            or 13400 <= zip_code <= 13699  # Charlottenburg
+            or (
+                ("wbs" in title.lower() or "wohnberechtigungsschein" in title.lower())
+                and "nicht" not in title.lower()
+                and "kein wbs" not in title.lower()
+                and "ohne wbs" not in title.lower()
+            )
+            or not any([zip_code.startswith(str(p)) for p in ZIP_WHITELIST])
+            or any([zip_code.startswith(str(p)) for p in ZIP_BLACKLIST])
         ):
-            self.is_desired = False
-
-        if ("erforderlich" in title.lower() and "nicht" not in title.lower()):
-            # log(f"{self.title} filtered due to new rule.")
             self.is_desired = False
 
     def __str__(self) -> str:
@@ -150,3 +146,16 @@ class SULProperty(Property):
         response = requests.get(url)
         soup = BeautifulSoup(response.text, "lxml")
         csrf_token = soup.find("input", {"name": "form-token"})["value"]
+
+
+if __name__ == "__main__":
+    for zip_code in [10409, 10100, 10247, 13350]:
+        assert Property("", "", str(zip_code), "", "", "").is_desired
+    for zip_code in [10303, 12057]:  # (1) wrong prefix (2) blacklisted
+        assert not Property("", "", str(zip_code), "", "", "").is_desired
+    for title in ["kein WBS erforderlich", "WBS nicht erforderlich", "ohne WBS", ""]:
+        assert Property("", "", "10409", title, "", "").is_desired
+    for title in ["nur mit WBS", "WBS", "WBS zwingend erforderlich", "Mieter mit WBS-fähigem Einkommen"]:
+        assert not Property("", "", "10409", title, "", "").is_desired
+
+    print(colored("All tests passed!", "green"))
