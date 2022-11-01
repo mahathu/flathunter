@@ -155,7 +155,7 @@ if __name__ == "__main__":
         assert not Property("", "", str(zip_code), "", "", "").is_desired
     for title in ["kein WBS erforderlich", "WBS nicht erforderlich", "ohne WBS", ""]:
         assert Property("", "", "10409", title, "", "").is_desired
-    for title in ["nur mit WBS", "WBS", "WBS zwingend erforderlich", "Mieter mit WBS-fähigem Einkommen"]:
+    for title in ["im Erdgeschoss, WBS 100 für 2 Räume erforderlich", "nur mit WBS", "WBS", "WBS zwingend erforderlich", "Mieter mit WBS-fähigem Einkommen"]:
         assert not Property("", "", "10409", title, "", "").is_desired
 
     print(colored("All tests passed!", "green"))
