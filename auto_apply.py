@@ -89,7 +89,7 @@ while True:
     )
 
     if DEBUG_ENABLED:
-        print('\n'.join([p.url for p in filtered_properties]))
+        print("\n".join([f"{p.title} {p.url}" for p in filtered_properties]))
         exit()
 
     for property in filtered_properties:

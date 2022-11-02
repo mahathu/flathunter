@@ -21,6 +21,7 @@ with open("data/config-prod.yml", "r") as config_file:
     config = yaml.safe_load(config_file)
     ZIP_WHITELIST = config["zip-prefixes-whitelist"]
     ZIP_BLACKLIST = config["zip-prefixes-blacklist"]
+    MIN_SQM = config["min-sqm"]
 
 TITLE_BLACKLIST = [  # TODO: can this be replaced by the "easier" WBS filter?
     "Single",
@@ -51,16 +52,18 @@ class Identity:
 
 
 class Property(object):
-    def __init__(self, company, address, zip_code, title, url, id) -> None:
+    def __init__(self, company, address, zip_code, sqm, title, url, id) -> None:
         self.company = company
         self.address = address
         self.zip_code = zip_code
+        self.sqm = sqm
         self.title = title
         self.url = url
         self.id = id
 
         self.is_desired = True
         # filter out if any of these conditions match:
+        # TODO: make is_desired an enum or something to differentiate between is_not_desired states
         if (
             any([word.lower() in title.lower() for word in TITLE_BLACKLIST])
             or (
@@ -71,11 +74,12 @@ class Property(object):
             )
             or not any([zip_code.startswith(str(p)) for p in ZIP_WHITELIST])
             or any([zip_code.startswith(str(p)) for p in ZIP_BLACKLIST])
+            or sqm < MIN_SQM
         ):
             self.is_desired = False
 
     def __str__(self) -> str:
-        return f"[{self.company.upper()}] {self.title} ({self.address})"
+        return f"[{self.company.upper()}] {self.title} ({self.url})"
 
     def apply(self, identity: Identity) -> Tuple[int, str]:
         """Sends a single application to a given property and returns the status code
@@ -150,12 +154,22 @@ class SULProperty(Property):
 
 if __name__ == "__main__":
     for zip_code in [10409, 10100, 10247, 13350]:
-        assert Property("", "", str(zip_code), "", "", "").is_desired
+        assert Property("", "", str(zip_code), 100, "", "", "").is_desired
     for zip_code in [10303, 12057]:  # (1) wrong prefix (2) blacklisted
-        assert not Property("", "", str(zip_code), "", "", "").is_desired
+        assert not Property("", "", str(zip_code), 100, "", "", "").is_desired
     for title in ["kein WBS erforderlich", "WBS nicht erforderlich", "ohne WBS", ""]:
-        assert Property("", "", "10409", title, "", "").is_desired
-    for title in ["im Erdgeschoss, WBS 100 für 2 Räume erforderlich", "nur mit WBS", "WBS", "WBS zwingend erforderlich", "Mieter mit WBS-fähigem Einkommen"]:
-        assert not Property("", "", "10409", title, "", "").is_desired
+        assert Property("", "", "10409", 100, title, "", "").is_desired
+    for title in [
+        "für Singles",
+        "im Erdgeschoss, WBS 100 erforderlich",
+        "nur mit WBS",
+        "WBS",
+        "WBS zwingend erforderlich",
+        "Mieter mit WBS-fähigem Einkommen",
+    ]:
+        assert not Property("", "", "10409", 100, title, "", "").is_desired
 
+    # test square footage:
+    assert Property("", "", "10409", 50, "", "", "").is_desired
+    assert not Property("", "", "10409", 35, "", "", "").is_desired
     print(colored("All tests passed!", "green"))

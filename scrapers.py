@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from typing import List
 from properties import Property, AdlerProperty, WHProperty
+from util import log
 
 
 class Scraper(ABC):
@@ -29,11 +30,23 @@ class GewobagScraper(Scraper):
             url = property.select("table.angebot-info a")[0]["href"]
             id = url.split("/")[-2].replace("-", "%2F")
 
+            try:
+                sqm = float(
+                    property.select("tr.angebot-area td")[0]
+                    .text.split("| ")[-1]
+                    .split(" ")[0]
+                    .replace(",", ".")
+                )
+            except (IndexError, ValueError) as e:
+                log(f"EXCEPTION parsing sqm on gewobag property: {e}")
+                sqm = 1000  # when in doubt, just apply to it anyways
+
             results.append(
                 WHProperty(
                     company="gewobag",
                     address=addr,
                     zip_code=zip,
+                    sqm=sqm,
                     title=property.find("h3", {"class": "angebot-title"}).text.strip(),
                     url=url,
                     id=id,
@@ -54,6 +67,7 @@ class DegewoScraper(Scraper):
                 company="degewo",
                 address=property["address"],
                 zip_code=property["zipcode"],
+                sqm=property["living_space"],
                 title=property["headline"],
                 url="https://immosuche.degewo.de" + property["property_path"],
                 id=property["id"].replace("-", ".", 2),
@@ -85,6 +99,7 @@ class AdlerScraper(Scraper):
                     company="adler",
                     address=prop_addr,
                     zip_code=prop_zipcode,
+                    sqm=property["livingSpace"],
                     title=property["title"],
                     url=property["link"],
                     id=property["isid"],
