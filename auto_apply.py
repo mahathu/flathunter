@@ -58,7 +58,7 @@ def apply_to_property(property, use_fakes=True):
 
         if not use_fakes:
             continue
-        for _ in range(random.randint(1, 3)):
+        for _ in range(random.randint(0, 2)):
             application_set.append(Identity())  # add some fake identities
 
     # apply with the given identities:
