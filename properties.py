@@ -8,6 +8,7 @@ from util import log
 from termcolor import colored
 import json
 import random
+from requests.exceptions import ProxyError
 
 with open("data/secrets.yml", "r") as secrets_file:
     secrets = yaml.safe_load(secrets_file)
@@ -130,12 +131,19 @@ class WHProperty(Property):
             "referer": f"https://app.wohnungshelden.de/public/listings/{self.id}/application?c={company_id}"
         }
 
-        response = requests.post(
-            url,
-            headers=request_headers,
-            data=json.dumps(BASE_PAYLOAD_DATA),
-            proxies=PROXIES,
-        )
+        try: response = requests.post(
+                url,
+                headers=request_headers,
+                data=json.dumps(BASE_PAYLOAD_DATA),
+                proxies=PROXIES,
+            )
+        except ProxyError:
+            log("Proxy error")
+            response = requests.post(
+                url,
+                headers=request_headers,
+                data=json.dumps(BASE_PAYLOAD_DATA),
+            )
 
         return response.status_code, response.text
 

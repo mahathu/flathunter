@@ -48,6 +48,7 @@ def apply_to_property(property, use_fakes=True):
     application_set = [
         Identity("Martin", "Hoffmann", "martin.hoffmann@charite.de"),
         Identity("Martin", "Hoffmann", "m.hoffmann@systemli.org"),
+        Identity("Edwin", "Hoffmann", "edwinhoffmann49@t-online.de"),
         Identity("Martin", "Hoffmann", "martin.hoffmann@uni-potsdam.de"),
         Identity("Martin", "Hoffmann", "hoffmann47@uni-potsdam.de"),
     ]
