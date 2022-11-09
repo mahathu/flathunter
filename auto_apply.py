@@ -1,4 +1,3 @@
-from distutils.debug import DEBUG
 from scrapers import AdlerScraper, DegewoScraper, GewobagScraper
 from properties import Identity
 from util import log
@@ -48,7 +47,7 @@ def apply_to_property(property, use_fakes=True):
     application_set = [
         Identity("Martin", "Hoffmann", "martin.hoffmann@charite.de"),
         Identity("Martin", "Hoffmann", "m.hoffmann@systemli.org"),
-        Identity("Edwin", "Hoffmann", "edwinhoffmann49@t-online.de"),
+#        Identity("Edwin", "Hoffmann", "edwinhoffmann49@t-online.de"),
         Identity("Martin", "Hoffmann", "martin.hoffmann@uni-potsdam.de"),
         Identity("Martin", "Hoffmann", "hoffmann47@uni-potsdam.de"),
     ]
@@ -59,7 +58,7 @@ def apply_to_property(property, use_fakes=True):
 
         if not use_fakes:
             continue
-        for _ in range(random.randint(0, 2)):
+        for _ in range(random.randint(0, 1)):
             application_set.append(Identity())  # add some fake identities
 
     # apply with the given identities:
