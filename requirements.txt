@@ -5,3 +5,4 @@ pyyaml
 flask
 termcolor
 black
+pandas

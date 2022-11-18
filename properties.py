@@ -9,6 +9,7 @@ from termcolor import colored
 import json
 import random
 from requests.exceptions import ProxyError
+from datetime import datetime
 
 with open("data/secrets.yml", "r") as secrets_file:
     secrets = yaml.safe_load(secrets_file)
@@ -62,25 +63,42 @@ class Property(object):
         self.url = url
         self.id = id
 
-        self.is_desired = True
+        self.found_at = datetime.now()
+        self.filter_status = "OK"
         # filter out if any of these conditions match:
         # TODO: make is_desired an enum or something to differentiate between is_not_desired states
+        if any([word.lower() in title.lower() for word in TITLE_BLACKLIST]):
+            self.filter_status = "Blacklisted title"
+
         if (
-            any([word.lower() in title.lower() for word in TITLE_BLACKLIST])
-            or (
-                ("wbs" in title.lower() or "wohnberechtigungsschein" in title.lower())
-                and "nicht" not in title.lower()
-                and "kein wbs" not in title.lower()
-                and "ohne wbs" not in title.lower()
-            )
-            or not any([zip_code.startswith(str(p)) for p in ZIP_WHITELIST])
-            or any([zip_code.startswith(str(p)) for p in ZIP_BLACKLIST])
-            or sqm < MIN_SQM
+            ("wbs" in title.lower() or "wohnberechtigungsschein" in title.lower())
+            and "nicht" not in title.lower()
+            and "kein wbs" not in title.lower()
+            and "ohne wbs" not in title.lower()
         ):
-            self.is_desired = False
+            self.filter_status = "WBS_REQUIRED"
+        if not any([zip_code.startswith(str(p)) for p in ZIP_WHITELIST]):
+            self.filter_status = "ZIP_NOT_WHITELISTED"
+        if not any([zip_code.startswith(str(p)) for p in ZIP_BLACKLIST]):
+            self.filter_status = "ZIP_BLACKLISTED"
+        if sqm < MIN_SQM:
+            self.filter_status = "TOO_SMALL"
+
+    def as_dict(self) -> dict:
+        return {
+            "company": self.company,
+            "address": self.address,
+            "zip_code": self.zip_code,
+            "sqm": self.sqm,
+            "title": self.title,
+            "url": self.url,
+            "id": self.id,
+            "found_at": self.found_at,
+            "filter_status": self.filter_status,
+        }
 
     def __str__(self) -> str:
-        return f"[{self.company.upper()}] {self.title} ({self.url})"
+        return f"{self.company.upper()}/{self.title[:80]}"
 
     def apply(self, identity: Identity) -> Tuple[int, str]:
         """Sends a single application to a given property and returns the status code
@@ -100,7 +118,7 @@ class AdlerProperty(Property):
             response = requests.get(request_url, proxies=PROXIES)
         except ProxyError:
             log("Proxy error")
-            return 0, 'Proxy error'
+            return 0, "Proxy error"
 
         return response.status_code, response.text
 
@@ -135,7 +153,8 @@ class WHProperty(Property):
             "referer": f"https://app.wohnungshelden.de/public/listings/{self.id}/application?c={company_id}"
         }
 
-        try: response = requests.post(
+        try:
+            response = requests.post(
                 url,
                 headers=request_headers,
                 data=json.dumps(BASE_PAYLOAD_DATA),
@@ -143,7 +162,7 @@ class WHProperty(Property):
             )
         except ProxyError:
             log("Proxy error")
-            return 0, 'Proxy error'
+            return 0, "Proxy error"
 
         return response.status_code, response.text
 

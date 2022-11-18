@@ -4,6 +4,7 @@ from util import log
 import time
 import yaml
 import argparse
+import pandas as pd
 from termcolor import colored
 import traceback
 import random
@@ -12,18 +13,19 @@ import random
 if __name__ != "__main__":
     exit()
 
+config_path = "data/config-prod.yml"
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", action="store_true", help="Enable debug mode")
 DEBUG_ENABLED = parser.parse_args().d
 
 if DEBUG_ENABLED:
+    config_path = "data/config-debug.yml"
     print(colored("Debug mode is enabled", color="red", attrs=["bold"]))
-    # load alternative config here
 
-with open("data/config-prod.yml", "r") as config_file:
+with open(config_path, "r") as config_file:
     CONFIG = yaml.safe_load(config_file)
+    log(f"Loaded config from {config_path}")
 
-SEEN_FILE_URL = "seen_properties.txt"
 SLEEP_LEN = CONFIG["sleep-len"]
 N_APPLICATIONS = CONFIG["n-applications"]  # applications per ad
 
@@ -33,12 +35,7 @@ scrapers = [
     AdlerScraper(CONFIG["adler-search-url"]),
 ]
 
-try:
-    with open(SEEN_FILE_URL, "r") as f:
-        seen_properties = [line.rstrip() for line in f.readlines()]
-except IOError:
-    seen_properties = []
-
+seen_ads_df = pd.read_csv("data/seen_ads.csv")
 
 def apply_to_property(property, use_fakes=True):
     start_time = time.time()
@@ -47,7 +44,7 @@ def apply_to_property(property, use_fakes=True):
     application_set = [
         Identity("Martin", "Hoffmann", "martin.hoffmann@charite.de"),
         Identity("Martin", "Hoffmann", "m.hoffmann@systemli.org"),
-#        Identity("Edwin", "Hoffmann", "edwinhoffmann49@t-online.de"),
+        Identity("Edwin", "Hoffmann", "edwinhoffmann49@t-online.de"),
         Identity("Martin", "Hoffmann", "martin.hoffmann@uni-potsdam.de"),
         Identity("Martin", "Hoffmann", "hoffmann47@uni-potsdam.de"),
     ]
@@ -80,24 +77,26 @@ while True:
         except Exception as e:
             log(traceback.format_exc())
 
-    filtered_properties = [
-        p for p in found_properties if p.is_desired and p.url not in seen_properties
-    ]
-
-    log(
-        f"{len(found_properties)} properties seen in total ({len(filtered_properties)} new)"
-    )
+    new_properties = [p for p in found_properties if p.url not in seen_ads_df["url"].values]
 
     if DEBUG_ENABLED:
-        print("\n".join([f"{p.title} {p.url}" for p in filtered_properties]))
+        print(f"The following {len(new_properties)} new properties were found:")
+        for p in new_properties:
+            print(p)
         exit()
 
-    for property in filtered_properties:
-        seen_properties.append(property.url)
-        with open(SEEN_FILE_URL, "a") as f:  # will create file if not exists
-            f.write(f"{property.url}\n")
+    seen_ads_df = seen_ads_df.append([p.as_dict() for p in new_properties], ignore_index=True)
+    seen_ads_df.to_csv("data/seen_ads.csv", index=False)
 
-        log(f"Neues Angebot: {property}")
+    log(
+        f"{len(found_properties)} ads currently online (new: {len(new_properties)}, total: {len(seen_ads_df)})"
+    )
+
+    for property in new_properties:
+        if property.filter_status != "OK":
+            log(f"Skipping {property} because: {property.filter_status}")
+            continue
+
         apply_to_property(property, use_fakes=True)
 
     time.sleep(SLEEP_LEN)
