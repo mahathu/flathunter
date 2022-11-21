@@ -38,6 +38,7 @@ scrapers = [
 seen_ads_df = pd.read_csv("data/seen_ads.csv")
 
 def apply_to_property(property, use_fakes=True):
+    print("apply_to_prop")
     start_time = time.time()
 
     # generate a list of real and fake identities to apply with:
@@ -55,7 +56,7 @@ def apply_to_property(property, use_fakes=True):
 
         if not use_fakes:
             continue
-        for _ in range(random.randint(0, 1)):
+        for _ in range(random.randint(0, 2)):
             application_set.append(Identity())  # add some fake identities
 
     # apply with the given identities:
@@ -99,4 +100,5 @@ while True:
 
         apply_to_property(property, use_fakes=True)
 
+    log(f"Sleeping for {SLEEP_LEN} seconds.")
     time.sleep(SLEEP_LEN)

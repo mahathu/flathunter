@@ -26,12 +26,15 @@
         },
         "saveFormDataTO": {
             "formData": {
-                "numberPersonsTotal": "2",
-                "gewobag_gesamtzahl_der_einziehenden_personen_erwachsene_und_kinder": "2",
-                "gewobag_fuer_wen_wird_die_wohnungsanfrage_gestellt": "Für mich selbst oder meine Angehörigen",
-                "gewobag_datenschutzhinweis_bestaetigt": true
+                "numberPersonsTotal": "2"
             },
             "files": []
         }
+    },
+    "gewobag_formdata": {
+        "numberPersonsTotal": "2",
+        "gewobag_gesamtzahl_der_einziehenden_personen_erwachsene_und_kinder": "2",
+        "gewobag_fuer_wen_wird_die_wohnungsanfrage_gestellt": "Für mich selbst oder meine Angehörigen",
+        "gewobag_datenschutzhinweis_bestaetigt": true
     }
 }
