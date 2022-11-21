@@ -77,12 +77,16 @@ class Property(object):
             and "ohne wbs" not in title.lower()
         ):
             self.filter_status = "WBS_REQUIRED"
+            return
         if not any([zip_code.startswith(str(p)) for p in ZIP_WHITELIST]):
             self.filter_status = "ZIP_NOT_WHITELISTED"
-        if not any([zip_code.startswith(str(p)) for p in ZIP_BLACKLIST]):
+            return
+        if any([zip_code.startswith(str(p)) for p in ZIP_BLACKLIST]):
             self.filter_status = "ZIP_BLACKLISTED"
+            return
         if sqm < MIN_SQM:
             self.filter_status = "TOO_SMALL"
+            return
 
     def as_dict(self) -> dict:
         return {
@@ -153,6 +157,8 @@ class WHProperty(Property):
             "referer": f"https://app.wohnungshelden.de/public/listings/{self.id}/application?c={company_id}"
         }
 
+        
+        
         try:
             response = requests.post(
                 url,

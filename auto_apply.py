@@ -94,7 +94,7 @@ while True:
 
     for property in new_properties:
         if property.filter_status != "OK":
-            log(f"Skipping {property} because: {property.filter_status}")
+            log(f"Skipping {property} because: {property.filter_status} {property.zip_code}")
             continue
 
         apply_to_property(property, use_fakes=True)
