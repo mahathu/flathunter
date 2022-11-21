@@ -1,6 +1,5 @@
 __pycache__/
 .venv/
 nohup.out
-*.html
 data/secrets.yml
 seen_properties.txt
