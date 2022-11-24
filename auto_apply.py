@@ -43,7 +43,6 @@ def apply_to_property(property, use_fakes=True):
 
     # generate a list of real and fake identities to apply with:
     application_set = [
-        Identity("Martin", "Hoffmann", "martin.hoffmann@charite.de"),
         Identity("Martin", "Hoffmann", "m.hoffmann@systemli.org"),
         Identity("Edwin", "Hoffmann", "edwinhoffmann49@t-online.de"),
         Identity("Martin", "Hoffmann", "martin.hoffmann@uni-potsdam.de"),
