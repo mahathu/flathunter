@@ -161,7 +161,9 @@ class WHProperty(Property):
             # gewobag added some new fields to their application form
             # in order to not send them to degewo properties by accident
             # we add them in here manually
-            BASE_PAYLOAD_DATA['saveFormDataTO']['formData'] = request_data["gewobag_formdata"]
+            BASE_PAYLOAD_DATA["saveFormDataTO"]["formData"] = request_data[
+                "gewobag_formdata"
+            ]
 
         try:
             response = requests.post(

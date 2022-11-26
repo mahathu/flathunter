@@ -37,8 +37,8 @@ scrapers = [
 
 seen_ads_df = pd.read_csv("data/seen_ads.csv")
 
-def apply_to_property(property, use_fakes=True):
-    print("apply_to_prop")
+
+def batch_apply(property, use_fakes=True):
     start_time = time.time()
 
     # generate a list of real and fake identities to apply with:
@@ -77,7 +77,9 @@ while True:
         except Exception as e:
             log(traceback.format_exc())
 
-    new_properties = [p for p in found_properties if p.url not in seen_ads_df["url"].values]
+    new_properties = [
+        p for p in found_properties if p.url not in seen_ads_df["url"].values
+    ]
 
     if DEBUG_ENABLED:
         print(f"The following {len(new_properties)} new properties were found:")
@@ -85,7 +87,9 @@ while True:
             print(p)
         exit()
 
-    seen_ads_df = seen_ads_df.append([p.as_dict() for p in new_properties], ignore_index=True)
+    seen_ads_df = seen_ads_df.append(
+        [p.as_dict() for p in new_properties], ignore_index=True
+    )
     seen_ads_df.to_csv("data/seen_ads.csv", index=False)
 
     log(
@@ -94,10 +98,12 @@ while True:
 
     for property in new_properties:
         if property.filter_status != "OK":
-            log(f"Skipping {property} because: {property.filter_status} {property.zip_code}")
+            log(
+                f"Skipping {property} because: {property.filter_status} {property.zip_code}"
+            )
             continue
 
-        apply_to_property(property, use_fakes=True)
+        batch_apply(property, use_fakes=True)
 
     log(f"Sleeping for {SLEEP_LEN} seconds.")
     time.sleep(SLEEP_LEN)
