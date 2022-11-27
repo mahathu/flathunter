@@ -1,228 +1,235 @@
-company,address,zip_code,sqm,title,url,id,found_at,filter_status
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00536-0039-0201,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00554-0049-0103,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00558-0196-0401,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W3110-00537-0058-0303,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-70701-0102-0073/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-70701-0602-0038/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77547-0102-0014/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00641-0016-0303,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00690-0083-0102,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02132-0101-0065/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00641-0011-0203,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00571-0072-0201,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00574-0026-0402,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00233-0101-0009/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00529-0288-2512,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1500-00726-0001-0101,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1100-12207-0031-0203,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1100-12202-0195-0905,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01320-0306-0682/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01320-0205-0334/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01832-0101-0018/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1500-00948-0011-8111,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-71808-0102-0010/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W3110-00619-0335-0201,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1500-00984-0017-8121,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1500-00769-1001-0102,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1150-00501-0057-0301,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00554-0131-0201,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00521-0209-0201,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01320-0301-0583/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01320-0213-0508/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01320-0112-0231/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W3110-00619-0358-0401,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1150-00122-0055-0305,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1150-00178-0030-8334,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W3110-00193-0004-0202,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1500-00709-0027-0201,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00551-0008-0203,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1100-12202-0059-1003,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1100-12207-0205-0203,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02131-0101-0050/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1500-00706-0007-0202,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02132-0101-0088/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01737-0101-0004/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00469-0101-0004/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00157-0304-0095/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00157-0105-0284/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1100-12201-0328-0601,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00526-0377-0203,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00362-0101-0006/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00271-0110-0014/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02201-0101-0123/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02229-0101-0016/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02225-0106-0116/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00600-0201-0012/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0101-0036/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0101-0038/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0101-0007/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0101-0004/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0101-0003/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0101-0001/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00483-0101-0001/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00638-0522-0303,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00160-0103-0026/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00481-0101-0004/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00156-0303-0345/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1100-12202-0211-1105,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02219-0201-0118/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02216-0101-0004/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02225-0105-0100/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-76605-0102-0148/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02508-0101-0013/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00182-0104-0025/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00157-0204-0136/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00610-0142-0401,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00558-0068-0502,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00125-0102-0023/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00552-0004-0202,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00541-0052-0102https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00180-0101-0047/,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00541-0052-0102,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1150-00385-0040-0401,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1150-00145-0003-0301,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00523-0321-0312,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1100-12201-0080-1702,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1140-00558-0094-0401,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00472-0211-0121/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-40504-0104-0089/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-40504-0104-0113/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01610-0101-0041/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00277-0109-0174/,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137069950?cHash=f494e8897164e53f1d3df32f15b961eb,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137287735?cHash=5344a52ecf5e9fdb5d4a17d59c8d08eb,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137291481?cHash=bf9f93da5d65b51a0453604194f70115,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137292977?cHash=f0bf26bed74686789d113fd8e60243db,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00476-0101-0005/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01118-0501-0659/,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137528869?cHash=8a5f9db06490eccfec148690ce862de8,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01607-0601-0202/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01602-1305-0515/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00227-0101-0013/,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/135905641?cHash=f7cc2afe8b75a498d1e461a0fd1d7231,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137099746?cHash=f5fb7a65c726aefa14078ac98bb1c33c,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137294994?cHash=edd04044cd2704fb6214f492f2219875,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137476918?cHash=169c2dc6173186fbcf5f560f19f3c058,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137532168?cHash=56c9af31d13610beadcf08dc3eee1b2a,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00153-0501-0071/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00153-0203-0177/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-40504-0102-0037/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00804-0103-0025/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-75924-0101-0005/,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-76129-0101-0001/,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137655932?cHash=60d0ef7279935ac92797bf5f38fbc547,,,UNKNOWN
-,,,,,https://immosuche.degewo.de/de/properties/W1500-00731-0018-0202,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137752037?cHash=68f08fa01f359fac1d27e7359c23607d,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137768452?cHash=c208d326679843f494bf12be5b54f152,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02566-0101-0009/,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/135922582?cHash=68ddf1a6232084ddfef0a498924e3d04,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01738-0101-0007/,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/136394176?cHash=f194f91afe6b5335434c7a5a47f7807d,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137856347?cHash=2212367905798d42a3c4bc59344074b2,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137861713?cHash=5194ffc33778f1a0ad07770dfd061ed7,,,UNKNOWN
-,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0103-0034/,,,UNKNOWN
-,,,,,https://www.adler-group.com/expose/137924487?cHash=e4f8ada4640af79e5487e4b3c820ffc7,,,UNKNOWN
-degewo,Friedrich-Kayßler-Weg 1 | Neukölln,12353.0,52.27,* ERSTBEZUG * NEUBAU IM SÜDEN BERLINS,https://immosuche.degewo.de/de/properties/W1140-11802-0108-1507,W1140.11802.0108-1507,2022-11-18 04:21:32.638009,ZIP_BLACKLISTED
-adler,Buckower Damm 257 (Buckow (Neukölln)),12349.0,78.0,Ihr neues Zuhause mit viel Potenzial! Ab sofort!,https://www.adler-group.com/expose/137406558?cHash=f2d325d0a4dc2bb4a12f20a544078436,137406558,2022-11-18 04:21:32.979578,ZIP_BLACKLISTED
-adler,Heideläuferweg 32 (Buckow (Neukölln)),12353.0,63.17,2-Zimmer-Wohnung mit riesiger Terrasse zu vermieten! Ab sofort!,https://www.adler-group.com/expose/137414845?cHash=5f09c6951163940be248bf7c6ac3fd86,137414845,2022-11-18 04:21:32.979617,ZIP_BLACKLISTED
-adler,Buckower Damm 257 (Buckow (Neukölln)),12349.0,50.98,H&uuml;bsche 2-Zimmer-Wohnung zu vermieten! Ab sofort!,https://www.adler-group.com/expose/137415185?cHash=683659ebb23bd874f35f121303d2a09b,137415185,2022-11-18 04:21:32.979640,ZIP_BLACKLISTED
-adler,Pillnitzer Weg 16 (Staaken (Spandau)),13593.0,52.95,Schicke 2-Zimmer Wohnung mit Balkon in Staaken sucht Mieter mit Handwerksgeschick!,https://www.adler-group.com/expose/137571875?cHash=5f455ba0966ed7fb5a55bfd2dc8bc497,137571875,2022-11-18 04:21:32.979662,ZIP_BLACKLISTED
-adler,Pillnitzer Weg 27 (Staaken (Spandau)),13593.0,76.23,Helle 3-Zimmer Wohnung mit Balkon in Staaken,https://www.adler-group.com/expose/137571911?cHash=6070bd56810c349e199113335a9a1053,137571911,2022-11-18 04:21:32.979684,ZIP_BLACKLISTED
-adler,Pillnitzer Weg 29 (Staaken (Spandau)),13593.0,52.01,2-Zimmerwohnung mit viel Potenzial im Staaken zu vermieten!,https://www.adler-group.com/expose/137571925?cHash=97c8c7a086a007d9182ae01df398dbd9,137571925,2022-11-18 04:21:32.979704,ZIP_BLACKLISTED
-adler,Pillnitzer Weg 25 (Staaken (Spandau)),13593.0,86.03,Helle 4-Zimmer Wohnung mit Balkon &amp; Wanne,https://www.adler-group.com/expose/137571956?cHash=15a845538d12da848f89d52831e4c72b,137571956,2022-11-18 04:21:32.979726,ZIP_BLACKLISTED
-adler,Pillnitzer Weg 14 (Staaken (Spandau)),13593.0,72.64,Schicke 3-Zimmer Wohnung mit Balkon in Staaken sucht Mieter mit Handwerksgeschick!,https://www.adler-group.com/expose/137571981?cHash=a172f72517762deb6c26f201a0536d63,137571981,2022-11-18 04:21:32.979746,ZIP_BLACKLISTED
-adler,Pillnitzer Weg 26 (Staaken (Spandau)),13593.0,59.09,Gem&uuml;tliche 2-Zimmer Wohnung mit Balkon,https://www.adler-group.com/expose/137571990?cHash=a761551e6a815ab456696ca7f1479f52,137571990,2022-11-18 04:21:32.979767,ZIP_BLACKLISTED
-adler,Pillnitzer Weg 24 (Staaken (Spandau)),13593.0,75.62,3-Zimmer Wohnung im 8. OG mit Balkon ab sofort!,https://www.adler-group.com/expose/137572014?cHash=f261220ec2db5c3059ed4985559a1431,137572014,2022-11-18 04:21:32.979787,ZIP_BLACKLISTED
-adler,Pillnitzer Weg 24 (Staaken (Spandau)),13593.0,75.8,3-Zimmer Wohnung in Staaken - ab sofort!,https://www.adler-group.com/expose/137572027?cHash=e90976864605537a2fb2c956b82478bc,137572027,2022-11-18 04:21:32.979809,ZIP_BLACKLISTED
-adler,Pillnitzer Weg 22 (Staaken (Spandau)),13593.0,59.09,2-Zimmer Wohnung mit Balkon in Staaken sucht Mieter mit Handwerksgeschick!,https://www.adler-group.com/expose/137572040?cHash=54fa8ac7d2d896a8d6c90eebfdf359a9,137572040,2022-11-18 04:21:32.979830,ZIP_BLACKLISTED
-adler,Pillnitzer Weg 41 (Staaken (Spandau)),13593.0,69.19,Gepflegte 3-Zimmer Wohnung mit Balkon in Staaken,https://www.adler-group.com/expose/137572053?cHash=cabe08464fa0339bbda8dd03f2f0f244,137572053,2022-11-18 04:21:32.979851,ZIP_BLACKLISTED
-adler,Pillnitzer Weg 20 (Staaken (Spandau)),13593.0,59.09,Gem&uuml;tliche 2-Zimmer Wohnung mit Balkon &amp; Badewanne!,https://www.adler-group.com/expose/137572075?cHash=5173a42b81983a7e13781a4fb7f8be16,137572075,2022-11-18 04:21:32.979871,ZIP_BLACKLISTED
-adler,Pillnitzer Weg 16 (Staaken (Spandau)),13593.0,61.57,2-Zimmer Wohnung mit viel Potenzial in Staaken,https://www.adler-group.com/expose/137572082?cHash=6906325c9920dde586791386452186ee,137572082,2022-11-18 04:21:32.979892,ZIP_BLACKLISTED
-adler,Cosmarweg 33 (Staaken (Spandau)),13591.0,76.23,3-Zimmer Wohnung in Staaken sucht Mieter mit Handwerksgeschick!,https://www.adler-group.com/expose/137572118?cHash=6691e58ef983b2d03136f4cca79a3ea5,137572118,2022-11-18 04:21:32.979913,ZIP_BLACKLISTED
-adler,Cosmarweg 37 (Staaken (Spandau)),13591.0,69.19,3-Zimmer Wohnung mit Balkon in Staaken - ab sofort!,https://www.adler-group.com/expose/137572125?cHash=0b1b58fae3977837b4ccc2a49b76493e,137572125,2022-11-18 04:21:32.979934,ZIP_BLACKLISTED
-adler,Cosmarweg 55 (Staaken (Spandau)),13591.0,87.42,4-Zimmer Wohnung zum selbst gestalten - ab sofort in Staaken!,https://www.adler-group.com/expose/137572135?cHash=4c595255e309a29781e8b767c40ed800,137572135,2022-11-18 04:21:32.979955,ZIP_BLACKLISTED
-adler,Cosmarweg 51a (Staaken (Spandau)),13591.0,75.8,3-Zimmer Wohnung sucht Mieter mit Handwerksgeschick!,https://www.adler-group.com/expose/137572190?cHash=d4b1db8c60596de5aace443033077853,137572190,2022-11-18 04:21:32.979976,ZIP_BLACKLISTED
-adler,Cosmarweg 59 (Staaken (Spandau)),13591.0,76.09,3-Zimmer Wohnung in Staaken - ab sofort,https://www.adler-group.com/expose/137572195?cHash=63f43b833a1d4975b74cf135a227f29b,137572195,2022-11-18 04:21:32.979997,ZIP_BLACKLISTED
-adler,Veitstraße 4 b - (Tegel (Reinickendorf)),13507.0,81.26,Zentrale 2-Zimmer Wohnung neben den Hallen Am Borsigturm,https://www.adler-group.com/expose/137882018?cHash=b5a773658852cd3b8e5247086cd85a74,137882018,2022-11-18 04:21:32.980039,ZIP_BLACKLISTED
-adler,Schönwalder Straße 15 (Spandau (Spandau)),13585.0,83.0,3-Zimmer Wohnung mit Altbaucharme &amp; viel Potenzial,https://www.adler-group.com/expose/137898559?cHash=66b6bcad0db0fcfbc4b986a9852f0e87,137898559,2022-11-18 04:21:32.980061,ZIP_BLACKLISTED
-adler,Falkenseer Chaussee 170 (Spandau (Spandau)),13589.0,75.37,3-Zimmer Wohnung wartet von Ihnen gestaltet zu werden,https://www.adler-group.com/expose/137901389?cHash=eec524d01b978257343fa3ed77747888,137901389,2022-11-18 04:21:32.980082,ZIP_BLACKLISTED
-adler,Kirchhofstraße 26 (Spandau (Spandau)),13585.0,47.13,Moderne 2-Zimmer Wohnung in Spandau - sucht SIE!,https://www.adler-group.com/expose/137902033?cHash=5bc16f34a4bea073ee7aa367f6bdce38,137902033,2022-11-18 04:21:32.980103,ZIP_BLACKLISTED
-adler,Veitstraße 4 b - (Tegel (Reinickendorf)),13507.0,179.23,"Gro&szlig;z&uuml;gige, moderne 5-Zimmer Wohnung nahe dem Tegeler See!",https://www.adler-group.com/expose/137902436?cHash=5f1d2155347b6f0c9cb88d4da9981a2b,137902436,2022-11-18 04:21:32.980124,ZIP_BLACKLISTED
-adler,Friedrichsruher Straße 32 (Schmargendorf (Wilmersdorf)),14193.0,70.91,"Sonnige 2,5-Zimmer-Wohnung in der City-West nahe S-Bhf. Hohenzollerndamm",https://www.adler-group.com/expose/137912803?cHash=0d534214775781d895234c41128f5910,137912803,2022-11-18 04:21:32.980146,ZIP_BLACKLISTED
-adler,Friedrichsruher Straße 18 (Grunewald (Wilmersdorf)),14193.0,63.73,Schicke Wohnung mit Balkon nahe S-Bahnhof Hohenzollerndamm,https://www.adler-group.com/expose/137913317?cHash=2b5eeb545d51a91a8b299678efd32a64,137913317,2022-11-18 04:21:32.980168,ZIP_BLACKLISTED
-adler,Wilmersdorfer Straße 165 (Charlottenburg (Charlottenburg)),10585.0,98.86,Gro&szlig;e 3-Zimmer-Altbauwohnung in der Wilmersdorfer Stra&szlig;e,https://www.adler-group.com/expose/137914017?cHash=3f00c69a119c4e2febf7ed9aa85c7761,137914017,2022-11-18 04:21:32.980218,OK
-adler,Schildhornstraße 73 a - (Steglitz (Steglitz)),12163.0,75.89,Ihre neue ger&auml;umige Wohnung mit Wintergarten nahe Schlo&szlig;stra&szlig;e Steglitz,https://www.adler-group.com/expose/137914665?cHash=d0b0b2d91911bc5b5e7c3da043853599,137914665,2022-11-18 04:21:32.980253,OK
-adler,Chausseestraße 6 (Wannsee (Zehlendorf)),14109.0,48.7,Moderne und schicke Souterrain-Wohnung im sch&ouml;nen Wannsee zu vermieten,https://www.adler-group.com/expose/137915715?cHash=78da8bf4c3d0f7ad9e6f428238d59c2e,137915715,2022-11-18 04:21:32.980277,ZIP_BLACKLISTED
-adler,Salvador-Allende-Str. 76 S (Köpenick (Köpenick)),12559.0,86.01,WBS BEN&Ouml;TIGT - Perfekt ausgestattet! 4 Zimmer auf 86m&sup2; mit gem&uuml;tlichem Balkon,https://www.adler-group.com/expose/136656733?cHash=0590610d438742057671837a312698d9,136656733,2022-11-18 04:21:32.980298,ZIP_BLACKLISTED
-adler,Salvador-Allende-Str. 76 M (Köpenick (Köpenick)),12559.0,85.36,WBS MIT BESONDEREM WOHNBEDARF BEN&Ouml;TIGT - 4-Zimmer-Whg mit EBK und zwei Terrassen + Loggia,https://www.adler-group.com/expose/136656701?cHash=0fa36bef1a53e185c492d4e9ec30edc3,136656701,2022-11-18 04:21:32.980324,ZIP_BLACKLISTED
-adler,Salvador-Allende-Str. 76 B (Köpenick (Köpenick)),12559.0,60.01,WBS MIT BESONDEREM WOHNBEDARF BEN&Ouml;TIGT - Lichtdurchflutete Etagenwohnung mit Einbauk&uuml;che + Loggia!!,https://www.adler-group.com/expose/136656695?cHash=51bcb9c0d5cf0bf00e7c6cef0ba0c9b9,136656695,2022-11-18 04:21:32.980350,ZIP_BLACKLISTED
-gewobag,"Neptunstr. 22, 13409 Berlin/Reinickendorf",13409.0,87.41,Wohnen im Lette Kiez,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-73710-0102-0033/,7100%2F73710%2F0102%2F0033,2022-11-21 02:43:13.194169,ZIP_BLACKLISTED
-gewobag,"Dora-Mendler-Str. 10, 12355 Berlin/Rudow",12355.0,66.91,WBS mit besonderem Wohnbedarf zwingend erforderlich – 2-Zimmer-Wohnung sucht Selbstrenovierer,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01711-0203-0085/,0100%2F01711%2F0203%2F0085,2022-11-21 02:43:13.195181,ZIP_BLACKLISTED
-degewo,Elly-Heuss-Knapp-Straße 50 | Neukölln,12355.0,55.38,Schöne 2. Zimmerwohnung sucht Sie - mit direktem Blick ins Grüne!,https://immosuche.degewo.de/de/properties/W1140-00690-0100-0305,W1140.00690.0100-0305,2022-11-21 02:43:13.442298,ZIP_BLACKLISTED
-gewobag,"Obstallee 43, 13593 Berlin/Spandau",13593.0,78.51,Familiengerecht mit WBS!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01920-0124-0512/,0100%2F01920%2F0124%2F0512,2022-11-21 09:47:00.195691,ZIP_BLACKLISTED
-degewo,Osloer Straße 107 | Mitte,13359.0,98.3,Helle Familienwohnung mit WBS mit BESONDEREM Wohnbedarf!,https://immosuche.degewo.de/de/properties/W1500-00784-0059-0502,W1500.00784.0059-0502,2022-11-21 11:49:02.787318,ZIP_BLACKLISTED
-degewo,Am Straßenbahnhof 50B | Neukölln,12347.0,52.99,Pärchenwohnung sucht neue Mieter mit WBS-fähigem Einkommen!,https://immosuche.degewo.de/de/properties/W3110-00619-0332-0302,W3110.00619.0332-0302,2022-11-21 12:53:06.279324,ZIP_BLACKLISTED
-degewo,Friedrich-Kayßler-Weg 1 | Neukölln,12353.0,52.22,* ERSTBEZUG * NEUBAU IM SÜDEN BERLINS,https://immosuche.degewo.de/de/properties/W1140-11802-0134-1901,W1140.11802.0134-1901,2022-11-21 13:37:20.193651,ZIP_BLACKLISTED
-gewobag,"Galenstr. 25, 13597 Berlin/Spandau",13597.0,53.49,Altstadtnah mit WBS,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01108-1803-0534/,0100%2F01108%2F1803%2F0534,2022-11-21 15:07:14.183240,ZIP_BLACKLISTED
-gewobag,"Kemmannweg 23A, 13583 Berlin/Spandau",13583.0,71.27,Handwerkerobjekt mit WBS,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01108-0402-0084/,0100%2F01108%2F0402%2F0084,2022-11-21 15:11:48.307657,ZIP_BLACKLISTED
-gewobag,"Neuhausweg 2, 13583 Berlin/Spandau",13583.0,53.51,Kleine Familie mit WBS gesucht,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01108-2103-0622/,0100%2F01108%2F2103%2F0622,2022-11-21 15:11:48.308903,ZIP_BLACKLISTED
-gewobag,"Wustermarker Str. 15, 13583 Berlin/Spandau",13583.0,53.58,Altstadtnah mit Holzdielen,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01119-0101-0001/,0100%2F01119%2F0101%2F0001,2022-11-21 15:11:48.310039,ZIP_BLACKLISTED
-gewobag,"Heideläuferweg 69, 12353 Berlin/Buckow",12353.0,78.32,Schicker neuer Dachaufbau mit Fußbodenheizung und offener Küche,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77701-0403-1007/,7100%2F77701%2F0403%2F1007,2022-11-21 15:16:23.209502,ZIP_BLACKLISTED
-gewobag,"Zillertalstr. 57, 13187 Berlin/Pankow",13187.0,62.25,3.OG ohne Aufzug für Selbstrenovierer,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02550-0101-0009/,0100%2F02550%2F0101%2F0009,2022-11-21 15:27:03.160057,ZIP_BLACKLISTED
-gewobag,"Schwedter Str. 34, 10435 Berlin/Prenzlauer Berg",10435.0,36.6,Nachmieter mit WBS zum 16.12. gesucht,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00160-0205-0115/,1000%2F00160%2F0205%2F0115,2022-11-21 15:27:03.161148,TOO_SMALL
-gewobag,"Driesener Str. 26, 10439 Berlin/Prenzlauer Berg",10439.0,62.86,Nur mit WBS: Barrierefrei zum 1.Januar,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00225-0101-0008/,1000%2F00225%2F0101%2F0008,2022-11-21 15:27:03.162186,ZIP_BLACKLISTED
-gewobag,"Pappelallee 32A, 10437 Berlin/Prenzlauer Berg",10437.0,53.59,"Nur mit WBS zum 15.12., teilweise Kohleofen",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00449-0201-0017/,1000%2F00449%2F0201%2F0017,2022-11-21 15:27:03.163212,ZIP_BLACKLISTED
-gewobag,"Heideläuferweg 69, 12353 Berlin/Buckow",12353.0,50.56,Schicker neuer Dachaufbau mit Fußbodenheizung und offener Küche,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77701-0403-1006/,7100%2F77701%2F0403%2F1006,2022-11-21 15:34:07.165026,ZIP_BLACKLISTED
-gewobag,"Heideläuferweg 69, 12353 Berlin/Buckow",12353.0,47.41,Schicker neuer Dachaufbau mit Fußbodenheizung und offener Küche – WBS bis 180 erforderlich!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77701-0403-1005/,7100%2F77701%2F0403%2F1005,2022-11-21 15:34:07.166075,ZIP_BLACKLISTED
-gewobag,"Heideläuferweg 69, 12353 Berlin/Buckow",12353.0,47.99,Schicker neuer Dachaufbau mit Fußbodenheizung und offener Küche,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77701-0403-1001/,7100%2F77701%2F0403%2F1001,2022-11-21 15:40:01.738923,ZIP_BLACKLISTED
-gewobag,"Heideläuferweg 69, 12353 Berlin/Buckow",12353.0,33.69,Schicker neuer Dachaufbau mit Fußbodenheizung und offener Küche – WBS bis 180 erforderlich!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77701-0403-1003/,7100%2F77701%2F0403%2F1003,2022-11-21 15:40:01.739963,TOO_SMALL
-gewobag,"Heideläuferweg 69, 12353 Berlin/Buckow",12353.0,34.39,Schicker neuer Dachaufbau mit Fußbodenheizung und offener Küche – WBS bis180 erforderlich!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77701-0403-1002/,7100%2F77701%2F0403%2F1002,2022-11-21 15:40:01.741230,TOO_SMALL
-gewobag,"Reichweindamm 13, 13627 Berlin/Charlottenburg",13627.0,46.28,"Gepflegte 1,5 Zimmerwohnung im 4. OG ( ohne Aufzug ) WBS 100 mit besonderem Wohnbedarf erforderlich",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01629-1402-0124/,0100%2F01629%2F1402%2F0124,2022-11-21 15:41:19.375742,ZIP_BLACKLISTED
-adler,Perleberger Str. 17 (Tiergarten (Tiergarten)),10559.0,78.71,Gem&uuml;tliche 3-ZI-Wohnung mit Tageslichtbad!!,https://www.adler-group.com/expose/137999135?cHash=184cf4bebcff5eaded5e4d9c1a76d24e,137999135,2022-11-21 15:53:51.421797,OK
-gewobag,"Zillertalstr. 59, 13187 Berlin/Pankow",13187.0,71.61,Hochparterre mit Dielenboden,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02550-0102-0022/,0100%2F02550%2F0102%2F0022,2022-11-21 15:54:02.708437,OK
-adler,Kolberger Str. 14 (Wedding (Wedding)),13357.0,49.94,2-Zimmer-Wohnung auf 49m&sup2;,https://www.adler-group.com/expose/137999146?cHash=5f5b3a2ac008ba916c980dab649f6fcc,137999146,2022-11-21 16:04:35.928218,OK
-adler,Luise-Zietz-Str. 107 (Marzahn (Marzahn)),12681.0,47.45,SELBSTGESTALTER aufgepasst - gem&uuml;tliche 2-Zimmer-Whg auf 47 m&sup2; mit Balkon,https://www.adler-group.com/expose/138002160?cHash=699214ba12c9fc636fa80ac5625e5003,138002160,2022-11-21 16:50:42.648609,ZIP_NOT_WHITELISTED
-gewobag,"Schwielowseestr. 38, 13599 Berlin/Haselhorst",13599.0,88.09,Schickes Dachgeschoss mit Wasserblick sucht netten Nachmieter ab Februar,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01032-0501-0117/,0100%2F01032%2F0501%2F0117,2022-11-21 21:01:16.671064,ZIP_NOT_WHITELISTED
-gewobag,"Nogatstraße 23, 12051 Berlin/Neukölln",12051.0,39.8,WBS erforderlich. Für Singles im Körner-Kiez,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00602-0102-0039/,1000%2F00602%2F0102%2F0039,2022-11-22 08:46:12.794742,WBS_REQUIRED
-degewo,Walter-Franck-Zeile 9 | Neukölln,12353.0,67.75,2-Zimmerwohnung - mit WBS!,https://immosuche.degewo.de/de/properties/W1140-00649-0123-0401,W1140.00649.0123-0401,2022-11-22 12:11:26.802754,WBS_REQUIRED
-degewo,Osloer Straße 105B | Mitte,13359.0,77.52,Wohnung im Erdgeschoss mit großer Küche für WBS Inhaber!,https://immosuche.degewo.de/de/properties/W1500-00784-0085-0102,W1500.00784.0085-0102,2022-11-22 13:00:08.659006,WBS_REQUIRED
-gewobag,"Strünckweg 9, 13627 Berlin/Charlottenburg",13627.0,61.32,"Gepflegte 2 Zimmerwohnung im EG, WBS für 2 Räume erforderlich, frei ab sofort",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01609-1302-0473/,0100%2F01609%2F1302%2F0473,2022-11-22 15:02:08.102788,WBS_REQUIRED
-gewobag,"Klausingring 15, 13627 Berlin/Charlottenburg",13627.0,77.16,"Gepflegte 3 Zimmerwohnung im 1.OG, WBS 100 für 3 Räume erforderlich, frei ab sofort",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01607-0201-0048/,0100%2F01607%2F0201%2F0048,2022-11-22 15:02:08.103771,WBS_REQUIRED
-gewobag,"Heilmannring 26A, 13627 Berlin/Charlottenburg",13627.0,53.12,"Renovierungsbedürftige 2 Zimmerwohnung im 1.OG, WBS100  für 2 Räume erforderlich, frei ab sofort",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01602-1002-0340/,0100%2F01602%2F1002%2F0340,2022-11-22 15:02:08.104736,WBS_REQUIRED
-gewobag,"Kiefholzstr. 403 A, 12435 Berlin/Alt-Treptow",12435.0,46.55,1 Zimmerwohnung im Neubau sucht neunen Mieter ab sofort,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02551-0102-0029/,0100%2F02551%2F0102%2F0029,2022-11-22 15:37:12.518903,ZIP_NOT_WHITELISTED
-gewobag,"Reichweindamm 24, 13627 Berlin/Charlottenburg",13627.0,78.32,"Renovierungsbedürftige 3 Zimmerwohnung im 2. OG, frei ab sofort",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01611-1901-0721/,0100%2F01611%2F1901%2F0721,2022-11-22 15:41:46.543979,ZIP_NOT_WHITELISTED
-gewobag,"Schluchseestr. 13, 13469 Berlin/Waidmannslust",13469.0,88.28,Familienwohnung in Waidmannslust zu vermieten,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01241-0501-0112/,0100%2F01241%2F0501%2F0112,2022-11-22 16:21:24.002886,ZIP_NOT_WHITELISTED
-gewobag,"Titiseestr. 41, 13469 Berlin/Waidmannslust",13469.0,41.22,Singlewohnung in Waidmannslust zu vermieten,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01239-0402-0076/,0100%2F01239%2F0402%2F0076,2022-11-22 16:27:29.375660,ZIP_NOT_WHITELISTED
-gewobag,"Schluchseestr. 71, 13469 Berlin/Waidmannslust",13469.0,64.05,Gut geschnittene Wohnung in Waidmannslust zu vermieten,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01238-0210-0427/,0100%2F01238%2F0210%2F0427,2022-11-22 16:42:43.120367,ZIP_NOT_WHITELISTED
-gewobag,"Schluchseestr. 77, 13469 Berlin/Waidmannslust",13469.0,43.6,Singlewohnung in Waidmannslust sucht Mieter,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01238-0303-0628/,0100%2F01238%2F0303%2F0628,2022-11-22 16:47:17.315803,ZIP_NOT_WHITELISTED
-gewobag,"Steegerstr. 18a, 13359 Berlin/Wedding",13359.0,54.06,Zweizimmerwohnung mit Dielen im Wedding – WBS erforderlich,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02101-0502-0183/,0100%2F02101%2F0502%2F0183,2022-11-22 16:51:51.424320,WBS_REQUIRED
-gewobag,"Zabel-Krüger-Damm 24, 13469 Berlin/Waidmannslust",13469.0,75.44,Familienwohnung an WBS Inhaber zu vermieten,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01242-0102-0031/,0100%2F01242%2F0102%2F0031,2022-11-22 17:07:06.118034,WBS_REQUIRED
-gewobag,"Schloßstr. 2H, 14059 Berlin/Charlottenburg",14059.0,69.77,Zweizimmerwohnung mit kleiner Terrasse – Nachmieter zum 01.12. gesucht,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-76120-0106-0071/,7100%2F76120%2F0106%2F0071,2022-11-22 17:22:26.502977,ZIP_NOT_WHITELISTED
-degewo,Lipschitzallee 45 | Neukölln,12353.0,93.65,Kleine Familie gesucht!,https://immosuche.degewo.de/de/properties/W1100-12104-0113-1301,W1100.12104.0113-1301,2022-11-23 09:19:21.142003,ZIP_NOT_WHITELISTED
-adler,Ernst-Bumm-Weg 4a (Charlottenburg (Charlottenburg)),14059.0,41.9,Helle 2-Zimmer-Wohnung mit Balkon in ruhiger Lage am Schloss Charlottenburg,https://www.adler-group.com/expose/138041174?cHash=9c76d10a34c1b001a27f1246fd889303,138041174,2022-11-23 13:27:31.939028,ZIP_NOT_WHITELISTED
-adler,Babelsberger Str. 50 (Wilmersdorf (Wilmersdorf)),10715.0,65.16,Charmante Altbauwohnung am Bayerischen Platz,https://www.adler-group.com/expose/138041682?cHash=30be0c38ee95d122b431900ae96ca4fa,138041682,2022-11-23 13:27:31.939035,OK
-adler,Flemmingstr. 7 (Steglitz (Steglitz)),12163.0,52.42,Die Einkaufsmeile Schlo&szlig;stra&szlig;e direkt um die Ecke,https://www.adler-group.com/expose/138042140?cHash=bd6a4c15918a2342150815d75e5908e8,138042140,2022-11-23 13:27:31.939047,ZIP_BLACKLISTED
-gewobag,"Bülowstr. 95, 10783 Berlin/Schöneberg",10783.0,45.45,WBS erforderlich. Seniorenwohnung für Mieter*innen ab 60 Jahre,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77007-0101-0026/,7100%2F77007%2F0101%2F0026,2022-11-23 15:02:26.547547,WBS_REQUIRED
-gewobag,"Dolgenseestr. 8c, 10319 Berlin/Friedrichsfelde",10319.0,67.97,Barrierefrei ins 9.OG an der S3,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02571-0104-0231/,0100%2F02571%2F0104%2F0231,2022-11-23 16:41:37.114194,ZIP_NOT_WHITELISTED
-gewobag,"Belßstr. 2- 4, 12277 Berlin/Marienfelde",12277.0,28.44,Singlebude in Marienfelde sucht Nachmieter für sofort,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-76400-0101-0060/,7100%2F76400%2F0101%2F0060,2022-11-24 12:21:49.050322,ZIP_NOT_WHITELISTED
-gewobag,"Steegerstr. 15c, 13359 Berlin/Wedding",13359.0,55.54,Zweizimmerwohnung im Wedding – WBS erforderlich,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02101-0204-0103/,0100%2F02101%2F0204%2F0103,2022-11-24 15:17:35.146458,WBS_REQUIRED
-gewobag,"Müllerstr. 160, 13353 Berlin/Wedding",13353.0,76.78,Zentral im Wedding – WBS erforderlich,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-79016-0101-0007/,7100%2F79016%2F0101%2F0007,2022-11-24 15:17:35.147492,WBS_REQUIRED
-gewobag,"Klausenerplatz 6, 14059 Berlin/Charlottenburg",14059.0,73.41,Altbauwohnung am Klausenerplatz,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-75915-0102-0016/,7100%2F75915%2F0102%2F0016,2022-11-24 15:17:35.148358,ZIP_NOT_WHITELISTED
-gewobag,"Meydenbauerweg 49, 13593 Berlin/Staaken",13593.0,65.9,Gut geschnittene Wohnung mit Dusche ab sofort frei,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01936-0401-0260/,0100%2F01936%2F0401%2F0260,2022-11-24 15:26:44.422715,ZIP_NOT_WHITELISTED
-gewobag,"Simon-Bolivar-Str. 42B, 13055 Berlin/Alt-Hohenschönhausen",13055.0,38.45,Hochparterrewohnung mit Balkon in Alt-Hohenschönhausen ab sofort zu vermieten – WBS erforderlich !,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02520-0802-0485/,0100%2F02520%2F0802%2F0485,2022-11-24 17:16:33.909626,WBS_REQUIRED
-gewobag,"Karl-Marx-Allee 74, 10243 Berlin/Friedrichshain",10243.0,71.03,"Friedrichshainer ""Stalinbau"" sucht neuen Mieter noch vor Weihnachten – WBS erforderlich !",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02509-0102-0029/,0100%2F02509%2F0102%2F0029,2022-11-24 17:16:33.910656,WBS_REQUIRED
-gewobag,"Landsberger Allee 81, 10407 Berlin/Prenzlauer Berg",10407.0,55.25,Wohnung in Prenzlauer Berg bereits VORZEITIG ab SOFORT neu zu vermieten – WBS erforderlich !,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00182-0103-0142/,1000%2F00182%2F0103%2F0142,2022-11-24 17:16:33.911646,WBS_REQUIRED
-gewobag,"Burscheider Weg 3B, 13599 Berlin/Haselhorst",13599.0,56.01,Großer Balkon – Nachmieter zum 01.01.23 gesucht – WBS-Berechtigung erforderlich,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01006-0303-0239/,0100%2F01006%2F0303%2F0239,2022-11-24 17:36:22.316302,WBS_REQUIRED
-gewobag,"Winterfeldtstr. 70, 10781 Berlin/Schöneberg",10781,41.53,Schöne Seniorenwohnung für Mieter*innen ab 60 Jahre,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-71600-0101-0005/,7100%2F71600%2F0101%2F0005,2022-11-24 18:16:11.166128,TOO_SMALL
-adler,Pillnitzer Weg 39 (Staaken (Spandau)),13593,59.09,F&uuml;r Selbstgestalter - Schicke 2-Zimmer auf 59m&sup2; mit Balkon in Berlin-Spandau!,https://www.adler-group.com/expose/138077831?cHash=d6163c334b5b4d8bd90531a47c00a2d2,138077831,2022-11-25 10:10:06.440173,ZIP_NOT_WHITELISTED
-adler,Loschwitzer Weg 4 (Staaken (Spandau)),13593,74.03,F&uuml;r Selbstgestalter - Perfekt geschnittene 3-Zimmer-Wohnung!,https://www.adler-group.com/expose/138077841?cHash=580bf99719d69af0f852222113895722,138077841,2022-11-25 10:10:06.440181,ZIP_NOT_WHITELISTED
-adler,Cosmarweg 51 (Staaken (Spandau)),13591,87.42,"F&uuml;r Selbstgestalter - Gro&szlig;z&uuml;giger Schnitt! 4-Zimmer, 87m&sup2;, Balkon",https://www.adler-group.com/expose/138077846?cHash=23f8ea834b9f8a847169e9a24e0f3ca1,138077846,2022-11-25 10:10:06.440188,ZIP_NOT_WHITELISTED
-adler,Pillnitzer Weg 39 (Staaken (Spandau)),13593,75.88,"F&uuml;r Selbstgestalter - Wohnen in Berlin-Spandau: 3ZI, 75m&sup2; mit Balkon!",https://www.adler-group.com/expose/138077855?cHash=e1b73a8fad6f0365e8ea09806feeb077,138077855,2022-11-25 10:10:06.440196,ZIP_NOT_WHITELISTED
-gewobag,"Lichtenrader Damm 163, 12305 Berlin/Lichtenrade",12305,82.07,WBS erforderlich – Geräumige 3-Zimmer-Wohnung sucht neue Mieter,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01713-0101-0006/,0100%2F01713%2F0101%2F0006,2022-11-25 12:16:42.732797,WBS_REQUIRED
-gewobag,"Ringstr. 72, 12105 Berlin/Mariendorf",12105,62.86,WBS-Berechtigung erforderlich – sanierte 2-Zimmer-Wohnung sucht neue Mieter,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01320-0211-0471/,0100%2F01320%2F0211%2F0471,2022-11-25 12:31:55.281089,WBS_REQUIRED
-gewobag,"Bottroper Weg 12, 13507 Berlin/Tegel",13507,33.96,Über den Dächern von Tegel Süd mit Wohnberechtigungsschein,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01217-0101-0144/,0100%2F01217%2F0101%2F0144,2022-11-25 12:36:29.110638,WBS_REQUIRED
-gewobag,"Schwielowseestr. 38, 13599 Berlin/Haselhorst",13599,73.84,Gut geschnittene Wohnung mit Fußbodenheizung und Wasserlage,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01032-0501-0111/,0100%2F01032%2F0501%2F0111,2022-11-25 13:02:23.985930,ZIP_NOT_WHITELISTED
-adler,Hedwig-Porschütz-Straße 14 (Tiergarten (Tiergarten)),10557,100.49,"Fantastische 3-Zimmer-Wohnung auf 100m&sup2; mit zwei sch&ouml;nen Balkonen, EBK und Tageslichtbad",https://www.adler-group.com/expose/138081769?cHash=350b94877aab236c3dd053b58c5499cf,138081769,2022-11-25 13:13:05.112005,OK
-gewobag,"Zweibrücker Str. 14, 13583 Berlin/Spandau",13583,54.02,Wohnen in freundlicher Umgebung! Nur mit WBS für min. 2 Räume oder WBS-Berechtigung!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01114-1001-0346/,0100%2F01114%2F1001%2F0346,2022-11-25 16:06:40.803381,WBS_REQUIRED
-gewobag,"Pichelsdorfer Str. 129, 13595 Berlin/Wilhelmstadt",13595,56.0,Ihr neues Glück von den eigenen vier Wänden!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01926-0201-0016/,0100%2F01926%2F0201%2F0016,2022-11-25 16:06:40.804283,ZIP_NOT_WHITELISTED
-gewobag,"Pichelsdorfer Str. 129, 13595 Berlin/Wilhelmstadt",13595,97.0,Die Familie unter einem Dach!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01926-0101-0001/,0100%2F01926%2F0101%2F0001,2022-11-25 16:06:40.805225,ZIP_NOT_WHITELISTED
+company,address,zip_code,sqm,title,url,id,found_at,filter_status,rent
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00536-0039-0201,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00554-0049-0103,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00558-0196-0401,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W3110-00537-0058-0303,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-70701-0102-0073/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-70701-0602-0038/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77547-0102-0014/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00641-0016-0303,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00690-0083-0102,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02132-0101-0065/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00641-0011-0203,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00571-0072-0201,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00574-0026-0402,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00233-0101-0009/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00529-0288-2512,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1500-00726-0001-0101,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1100-12207-0031-0203,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1100-12202-0195-0905,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01320-0306-0682/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01320-0205-0334/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01832-0101-0018/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1500-00948-0011-8111,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-71808-0102-0010/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W3110-00619-0335-0201,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1500-00984-0017-8121,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1500-00769-1001-0102,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1150-00501-0057-0301,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00554-0131-0201,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00521-0209-0201,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01320-0301-0583/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01320-0213-0508/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01320-0112-0231/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W3110-00619-0358-0401,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1150-00122-0055-0305,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1150-00178-0030-8334,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W3110-00193-0004-0202,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1500-00709-0027-0201,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00551-0008-0203,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1100-12202-0059-1003,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1100-12207-0205-0203,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02131-0101-0050/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1500-00706-0007-0202,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02132-0101-0088/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01737-0101-0004/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00469-0101-0004/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00157-0304-0095/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00157-0105-0284/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1100-12201-0328-0601,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00526-0377-0203,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00362-0101-0006/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00271-0110-0014/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02201-0101-0123/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02229-0101-0016/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02225-0106-0116/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00600-0201-0012/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0101-0036/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0101-0038/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0101-0007/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0101-0004/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0101-0003/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0101-0001/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00483-0101-0001/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00638-0522-0303,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00160-0103-0026/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00481-0101-0004/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00156-0303-0345/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1100-12202-0211-1105,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02219-0201-0118/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02216-0101-0004/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02225-0105-0100/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-76605-0102-0148/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02508-0101-0013/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00182-0104-0025/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00157-0204-0136/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00610-0142-0401,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00558-0068-0502,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00125-0102-0023/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00552-0004-0202,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00541-0052-0102https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00180-0101-0047/,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00541-0052-0102,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1150-00385-0040-0401,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1150-00145-0003-0301,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00523-0321-0312,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1100-12201-0080-1702,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1140-00558-0094-0401,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00472-0211-0121/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-40504-0104-0089/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-40504-0104-0113/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01610-0101-0041/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00277-0109-0174/,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137069950?cHash=f494e8897164e53f1d3df32f15b961eb,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137287735?cHash=5344a52ecf5e9fdb5d4a17d59c8d08eb,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137291481?cHash=bf9f93da5d65b51a0453604194f70115,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137292977?cHash=f0bf26bed74686789d113fd8e60243db,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00476-0101-0005/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01118-0501-0659/,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137528869?cHash=8a5f9db06490eccfec148690ce862de8,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01607-0601-0202/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01602-1305-0515/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00227-0101-0013/,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/135905641?cHash=f7cc2afe8b75a498d1e461a0fd1d7231,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137099746?cHash=f5fb7a65c726aefa14078ac98bb1c33c,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137294994?cHash=edd04044cd2704fb6214f492f2219875,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137476918?cHash=169c2dc6173186fbcf5f560f19f3c058,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137532168?cHash=56c9af31d13610beadcf08dc3eee1b2a,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00153-0501-0071/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00153-0203-0177/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-40504-0102-0037/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00804-0103-0025/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-75924-0101-0005/,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-76129-0101-0001/,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137655932?cHash=60d0ef7279935ac92797bf5f38fbc547,,,UNKNOWN,
+,,,,,https://immosuche.degewo.de/de/properties/W1500-00731-0018-0202,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137752037?cHash=68f08fa01f359fac1d27e7359c23607d,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137768452?cHash=c208d326679843f494bf12be5b54f152,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02566-0101-0009/,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/135922582?cHash=68ddf1a6232084ddfef0a498924e3d04,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01738-0101-0007/,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/136394176?cHash=f194f91afe6b5335434c7a5a47f7807d,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137856347?cHash=2212367905798d42a3c4bc59344074b2,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137861713?cHash=5194ffc33778f1a0ad07770dfd061ed7,,,UNKNOWN,
+,,,,,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02533-0103-0034/,,,UNKNOWN,
+,,,,,https://www.adler-group.com/expose/137924487?cHash=e4f8ada4640af79e5487e4b3c820ffc7,,,UNKNOWN,
+degewo,Friedrich-Kayßler-Weg 1 | Neukölln,12353.0,52.27,* ERSTBEZUG * NEUBAU IM SÜDEN BERLINS,https://immosuche.degewo.de/de/properties/W1140-11802-0108-1507,W1140.11802.0108-1507,2022-11-18 04:21:32.638009,ZIP_BLACKLISTED,
+adler,Buckower Damm 257 (Buckow (Neukölln)),12349.0,78.0,Ihr neues Zuhause mit viel Potenzial! Ab sofort!,https://www.adler-group.com/expose/137406558?cHash=f2d325d0a4dc2bb4a12f20a544078436,137406558,2022-11-18 04:21:32.979578,ZIP_BLACKLISTED,
+adler,Heideläuferweg 32 (Buckow (Neukölln)),12353.0,63.17,2-Zimmer-Wohnung mit riesiger Terrasse zu vermieten! Ab sofort!,https://www.adler-group.com/expose/137414845?cHash=5f09c6951163940be248bf7c6ac3fd86,137414845,2022-11-18 04:21:32.979617,ZIP_BLACKLISTED,
+adler,Buckower Damm 257 (Buckow (Neukölln)),12349.0,50.98,H&uuml;bsche 2-Zimmer-Wohnung zu vermieten! Ab sofort!,https://www.adler-group.com/expose/137415185?cHash=683659ebb23bd874f35f121303d2a09b,137415185,2022-11-18 04:21:32.979640,ZIP_BLACKLISTED,
+adler,Pillnitzer Weg 16 (Staaken (Spandau)),13593.0,52.95,Schicke 2-Zimmer Wohnung mit Balkon in Staaken sucht Mieter mit Handwerksgeschick!,https://www.adler-group.com/expose/137571875?cHash=5f455ba0966ed7fb5a55bfd2dc8bc497,137571875,2022-11-18 04:21:32.979662,ZIP_BLACKLISTED,
+adler,Pillnitzer Weg 27 (Staaken (Spandau)),13593.0,76.23,Helle 3-Zimmer Wohnung mit Balkon in Staaken,https://www.adler-group.com/expose/137571911?cHash=6070bd56810c349e199113335a9a1053,137571911,2022-11-18 04:21:32.979684,ZIP_BLACKLISTED,
+adler,Pillnitzer Weg 29 (Staaken (Spandau)),13593.0,52.01,2-Zimmerwohnung mit viel Potenzial im Staaken zu vermieten!,https://www.adler-group.com/expose/137571925?cHash=97c8c7a086a007d9182ae01df398dbd9,137571925,2022-11-18 04:21:32.979704,ZIP_BLACKLISTED,
+adler,Pillnitzer Weg 25 (Staaken (Spandau)),13593.0,86.03,Helle 4-Zimmer Wohnung mit Balkon &amp; Wanne,https://www.adler-group.com/expose/137571956?cHash=15a845538d12da848f89d52831e4c72b,137571956,2022-11-18 04:21:32.979726,ZIP_BLACKLISTED,
+adler,Pillnitzer Weg 14 (Staaken (Spandau)),13593.0,72.64,Schicke 3-Zimmer Wohnung mit Balkon in Staaken sucht Mieter mit Handwerksgeschick!,https://www.adler-group.com/expose/137571981?cHash=a172f72517762deb6c26f201a0536d63,137571981,2022-11-18 04:21:32.979746,ZIP_BLACKLISTED,
+adler,Pillnitzer Weg 26 (Staaken (Spandau)),13593.0,59.09,Gem&uuml;tliche 2-Zimmer Wohnung mit Balkon,https://www.adler-group.com/expose/137571990?cHash=a761551e6a815ab456696ca7f1479f52,137571990,2022-11-18 04:21:32.979767,ZIP_BLACKLISTED,
+adler,Pillnitzer Weg 24 (Staaken (Spandau)),13593.0,75.62,3-Zimmer Wohnung im 8. OG mit Balkon ab sofort!,https://www.adler-group.com/expose/137572014?cHash=f261220ec2db5c3059ed4985559a1431,137572014,2022-11-18 04:21:32.979787,ZIP_BLACKLISTED,
+adler,Pillnitzer Weg 24 (Staaken (Spandau)),13593.0,75.8,3-Zimmer Wohnung in Staaken - ab sofort!,https://www.adler-group.com/expose/137572027?cHash=e90976864605537a2fb2c956b82478bc,137572027,2022-11-18 04:21:32.979809,ZIP_BLACKLISTED,
+adler,Pillnitzer Weg 22 (Staaken (Spandau)),13593.0,59.09,2-Zimmer Wohnung mit Balkon in Staaken sucht Mieter mit Handwerksgeschick!,https://www.adler-group.com/expose/137572040?cHash=54fa8ac7d2d896a8d6c90eebfdf359a9,137572040,2022-11-18 04:21:32.979830,ZIP_BLACKLISTED,
+adler,Pillnitzer Weg 41 (Staaken (Spandau)),13593.0,69.19,Gepflegte 3-Zimmer Wohnung mit Balkon in Staaken,https://www.adler-group.com/expose/137572053?cHash=cabe08464fa0339bbda8dd03f2f0f244,137572053,2022-11-18 04:21:32.979851,ZIP_BLACKLISTED,
+adler,Pillnitzer Weg 20 (Staaken (Spandau)),13593.0,59.09,Gem&uuml;tliche 2-Zimmer Wohnung mit Balkon &amp; Badewanne!,https://www.adler-group.com/expose/137572075?cHash=5173a42b81983a7e13781a4fb7f8be16,137572075,2022-11-18 04:21:32.979871,ZIP_BLACKLISTED,
+adler,Pillnitzer Weg 16 (Staaken (Spandau)),13593.0,61.57,2-Zimmer Wohnung mit viel Potenzial in Staaken,https://www.adler-group.com/expose/137572082?cHash=6906325c9920dde586791386452186ee,137572082,2022-11-18 04:21:32.979892,ZIP_BLACKLISTED,
+adler,Cosmarweg 33 (Staaken (Spandau)),13591.0,76.23,3-Zimmer Wohnung in Staaken sucht Mieter mit Handwerksgeschick!,https://www.adler-group.com/expose/137572118?cHash=6691e58ef983b2d03136f4cca79a3ea5,137572118,2022-11-18 04:21:32.979913,ZIP_BLACKLISTED,
+adler,Cosmarweg 37 (Staaken (Spandau)),13591.0,69.19,3-Zimmer Wohnung mit Balkon in Staaken - ab sofort!,https://www.adler-group.com/expose/137572125?cHash=0b1b58fae3977837b4ccc2a49b76493e,137572125,2022-11-18 04:21:32.979934,ZIP_BLACKLISTED,
+adler,Cosmarweg 55 (Staaken (Spandau)),13591.0,87.42,4-Zimmer Wohnung zum selbst gestalten - ab sofort in Staaken!,https://www.adler-group.com/expose/137572135?cHash=4c595255e309a29781e8b767c40ed800,137572135,2022-11-18 04:21:32.979955,ZIP_BLACKLISTED,
+adler,Cosmarweg 51a (Staaken (Spandau)),13591.0,75.8,3-Zimmer Wohnung sucht Mieter mit Handwerksgeschick!,https://www.adler-group.com/expose/137572190?cHash=d4b1db8c60596de5aace443033077853,137572190,2022-11-18 04:21:32.979976,ZIP_BLACKLISTED,
+adler,Cosmarweg 59 (Staaken (Spandau)),13591.0,76.09,3-Zimmer Wohnung in Staaken - ab sofort,https://www.adler-group.com/expose/137572195?cHash=63f43b833a1d4975b74cf135a227f29b,137572195,2022-11-18 04:21:32.979997,ZIP_BLACKLISTED,
+adler,Veitstraße 4 b - (Tegel (Reinickendorf)),13507.0,81.26,Zentrale 2-Zimmer Wohnung neben den Hallen Am Borsigturm,https://www.adler-group.com/expose/137882018?cHash=b5a773658852cd3b8e5247086cd85a74,137882018,2022-11-18 04:21:32.980039,ZIP_BLACKLISTED,
+adler,Schönwalder Straße 15 (Spandau (Spandau)),13585.0,83.0,3-Zimmer Wohnung mit Altbaucharme &amp; viel Potenzial,https://www.adler-group.com/expose/137898559?cHash=66b6bcad0db0fcfbc4b986a9852f0e87,137898559,2022-11-18 04:21:32.980061,ZIP_BLACKLISTED,
+adler,Falkenseer Chaussee 170 (Spandau (Spandau)),13589.0,75.37,3-Zimmer Wohnung wartet von Ihnen gestaltet zu werden,https://www.adler-group.com/expose/137901389?cHash=eec524d01b978257343fa3ed77747888,137901389,2022-11-18 04:21:32.980082,ZIP_BLACKLISTED,
+adler,Kirchhofstraße 26 (Spandau (Spandau)),13585.0,47.13,Moderne 2-Zimmer Wohnung in Spandau - sucht SIE!,https://www.adler-group.com/expose/137902033?cHash=5bc16f34a4bea073ee7aa367f6bdce38,137902033,2022-11-18 04:21:32.980103,ZIP_BLACKLISTED,
+adler,Veitstraße 4 b - (Tegel (Reinickendorf)),13507.0,179.23,"Gro&szlig;z&uuml;gige, moderne 5-Zimmer Wohnung nahe dem Tegeler See!",https://www.adler-group.com/expose/137902436?cHash=5f1d2155347b6f0c9cb88d4da9981a2b,137902436,2022-11-18 04:21:32.980124,ZIP_BLACKLISTED,
+adler,Friedrichsruher Straße 32 (Schmargendorf (Wilmersdorf)),14193.0,70.91,"Sonnige 2,5-Zimmer-Wohnung in der City-West nahe S-Bhf. Hohenzollerndamm",https://www.adler-group.com/expose/137912803?cHash=0d534214775781d895234c41128f5910,137912803,2022-11-18 04:21:32.980146,ZIP_BLACKLISTED,
+adler,Friedrichsruher Straße 18 (Grunewald (Wilmersdorf)),14193.0,63.73,Schicke Wohnung mit Balkon nahe S-Bahnhof Hohenzollerndamm,https://www.adler-group.com/expose/137913317?cHash=2b5eeb545d51a91a8b299678efd32a64,137913317,2022-11-18 04:21:32.980168,ZIP_BLACKLISTED,
+adler,Wilmersdorfer Straße 165 (Charlottenburg (Charlottenburg)),10585.0,98.86,Gro&szlig;e 3-Zimmer-Altbauwohnung in der Wilmersdorfer Stra&szlig;e,https://www.adler-group.com/expose/137914017?cHash=3f00c69a119c4e2febf7ed9aa85c7761,137914017,2022-11-18 04:21:32.980218,OK,
+adler,Schildhornstraße 73 a - (Steglitz (Steglitz)),12163.0,75.89,Ihre neue ger&auml;umige Wohnung mit Wintergarten nahe Schlo&szlig;stra&szlig;e Steglitz,https://www.adler-group.com/expose/137914665?cHash=d0b0b2d91911bc5b5e7c3da043853599,137914665,2022-11-18 04:21:32.980253,OK,
+adler,Chausseestraße 6 (Wannsee (Zehlendorf)),14109.0,48.7,Moderne und schicke Souterrain-Wohnung im sch&ouml;nen Wannsee zu vermieten,https://www.adler-group.com/expose/137915715?cHash=78da8bf4c3d0f7ad9e6f428238d59c2e,137915715,2022-11-18 04:21:32.980277,ZIP_BLACKLISTED,
+adler,Salvador-Allende-Str. 76 S (Köpenick (Köpenick)),12559.0,86.01,WBS BEN&Ouml;TIGT - Perfekt ausgestattet! 4 Zimmer auf 86m&sup2; mit gem&uuml;tlichem Balkon,https://www.adler-group.com/expose/136656733?cHash=0590610d438742057671837a312698d9,136656733,2022-11-18 04:21:32.980298,ZIP_BLACKLISTED,
+adler,Salvador-Allende-Str. 76 M (Köpenick (Köpenick)),12559.0,85.36,WBS MIT BESONDEREM WOHNBEDARF BEN&Ouml;TIGT - 4-Zimmer-Whg mit EBK und zwei Terrassen + Loggia,https://www.adler-group.com/expose/136656701?cHash=0fa36bef1a53e185c492d4e9ec30edc3,136656701,2022-11-18 04:21:32.980324,ZIP_BLACKLISTED,
+adler,Salvador-Allende-Str. 76 B (Köpenick (Köpenick)),12559.0,60.01,WBS MIT BESONDEREM WOHNBEDARF BEN&Ouml;TIGT - Lichtdurchflutete Etagenwohnung mit Einbauk&uuml;che + Loggia!!,https://www.adler-group.com/expose/136656695?cHash=51bcb9c0d5cf0bf00e7c6cef0ba0c9b9,136656695,2022-11-18 04:21:32.980350,ZIP_BLACKLISTED,
+gewobag,"Neptunstr. 22, 13409 Berlin/Reinickendorf",13409.0,87.41,Wohnen im Lette Kiez,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-73710-0102-0033/,7100%2F73710%2F0102%2F0033,2022-11-21 02:43:13.194169,ZIP_BLACKLISTED,
+gewobag,"Dora-Mendler-Str. 10, 12355 Berlin/Rudow",12355.0,66.91,WBS mit besonderem Wohnbedarf zwingend erforderlich – 2-Zimmer-Wohnung sucht Selbstrenovierer,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01711-0203-0085/,0100%2F01711%2F0203%2F0085,2022-11-21 02:43:13.195181,ZIP_BLACKLISTED,
+degewo,Elly-Heuss-Knapp-Straße 50 | Neukölln,12355.0,55.38,Schöne 2. Zimmerwohnung sucht Sie - mit direktem Blick ins Grüne!,https://immosuche.degewo.de/de/properties/W1140-00690-0100-0305,W1140.00690.0100-0305,2022-11-21 02:43:13.442298,ZIP_BLACKLISTED,
+gewobag,"Obstallee 43, 13593 Berlin/Spandau",13593.0,78.51,Familiengerecht mit WBS!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01920-0124-0512/,0100%2F01920%2F0124%2F0512,2022-11-21 09:47:00.195691,ZIP_BLACKLISTED,
+degewo,Osloer Straße 107 | Mitte,13359.0,98.3,Helle Familienwohnung mit WBS mit BESONDEREM Wohnbedarf!,https://immosuche.degewo.de/de/properties/W1500-00784-0059-0502,W1500.00784.0059-0502,2022-11-21 11:49:02.787318,ZIP_BLACKLISTED,
+degewo,Am Straßenbahnhof 50B | Neukölln,12347.0,52.99,Pärchenwohnung sucht neue Mieter mit WBS-fähigem Einkommen!,https://immosuche.degewo.de/de/properties/W3110-00619-0332-0302,W3110.00619.0332-0302,2022-11-21 12:53:06.279324,ZIP_BLACKLISTED,
+degewo,Friedrich-Kayßler-Weg 1 | Neukölln,12353.0,52.22,* ERSTBEZUG * NEUBAU IM SÜDEN BERLINS,https://immosuche.degewo.de/de/properties/W1140-11802-0134-1901,W1140.11802.0134-1901,2022-11-21 13:37:20.193651,ZIP_BLACKLISTED,
+gewobag,"Galenstr. 25, 13597 Berlin/Spandau",13597.0,53.49,Altstadtnah mit WBS,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01108-1803-0534/,0100%2F01108%2F1803%2F0534,2022-11-21 15:07:14.183240,ZIP_BLACKLISTED,
+gewobag,"Kemmannweg 23A, 13583 Berlin/Spandau",13583.0,71.27,Handwerkerobjekt mit WBS,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01108-0402-0084/,0100%2F01108%2F0402%2F0084,2022-11-21 15:11:48.307657,ZIP_BLACKLISTED,
+gewobag,"Neuhausweg 2, 13583 Berlin/Spandau",13583.0,53.51,Kleine Familie mit WBS gesucht,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01108-2103-0622/,0100%2F01108%2F2103%2F0622,2022-11-21 15:11:48.308903,ZIP_BLACKLISTED,
+gewobag,"Wustermarker Str. 15, 13583 Berlin/Spandau",13583.0,53.58,Altstadtnah mit Holzdielen,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01119-0101-0001/,0100%2F01119%2F0101%2F0001,2022-11-21 15:11:48.310039,ZIP_BLACKLISTED,
+gewobag,"Heideläuferweg 69, 12353 Berlin/Buckow",12353.0,78.32,Schicker neuer Dachaufbau mit Fußbodenheizung und offener Küche,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77701-0403-1007/,7100%2F77701%2F0403%2F1007,2022-11-21 15:16:23.209502,ZIP_BLACKLISTED,
+gewobag,"Zillertalstr. 57, 13187 Berlin/Pankow",13187.0,62.25,3.OG ohne Aufzug für Selbstrenovierer,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02550-0101-0009/,0100%2F02550%2F0101%2F0009,2022-11-21 15:27:03.160057,ZIP_BLACKLISTED,
+gewobag,"Schwedter Str. 34, 10435 Berlin/Prenzlauer Berg",10435.0,36.6,Nachmieter mit WBS zum 16.12. gesucht,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00160-0205-0115/,1000%2F00160%2F0205%2F0115,2022-11-21 15:27:03.161148,TOO_SMALL,
+gewobag,"Driesener Str. 26, 10439 Berlin/Prenzlauer Berg",10439.0,62.86,Nur mit WBS: Barrierefrei zum 1.Januar,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00225-0101-0008/,1000%2F00225%2F0101%2F0008,2022-11-21 15:27:03.162186,ZIP_BLACKLISTED,
+gewobag,"Pappelallee 32A, 10437 Berlin/Prenzlauer Berg",10437.0,53.59,"Nur mit WBS zum 15.12., teilweise Kohleofen",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00449-0201-0017/,1000%2F00449%2F0201%2F0017,2022-11-21 15:27:03.163212,ZIP_BLACKLISTED,
+gewobag,"Heideläuferweg 69, 12353 Berlin/Buckow",12353.0,50.56,Schicker neuer Dachaufbau mit Fußbodenheizung und offener Küche,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77701-0403-1006/,7100%2F77701%2F0403%2F1006,2022-11-21 15:34:07.165026,ZIP_BLACKLISTED,
+gewobag,"Heideläuferweg 69, 12353 Berlin/Buckow",12353.0,47.41,Schicker neuer Dachaufbau mit Fußbodenheizung und offener Küche – WBS bis 180 erforderlich!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77701-0403-1005/,7100%2F77701%2F0403%2F1005,2022-11-21 15:34:07.166075,ZIP_BLACKLISTED,
+gewobag,"Heideläuferweg 69, 12353 Berlin/Buckow",12353.0,47.99,Schicker neuer Dachaufbau mit Fußbodenheizung und offener Küche,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77701-0403-1001/,7100%2F77701%2F0403%2F1001,2022-11-21 15:40:01.738923,ZIP_BLACKLISTED,
+gewobag,"Heideläuferweg 69, 12353 Berlin/Buckow",12353.0,33.69,Schicker neuer Dachaufbau mit Fußbodenheizung und offener Küche – WBS bis 180 erforderlich!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77701-0403-1003/,7100%2F77701%2F0403%2F1003,2022-11-21 15:40:01.739963,TOO_SMALL,
+gewobag,"Heideläuferweg 69, 12353 Berlin/Buckow",12353.0,34.39,Schicker neuer Dachaufbau mit Fußbodenheizung und offener Küche – WBS bis180 erforderlich!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77701-0403-1002/,7100%2F77701%2F0403%2F1002,2022-11-21 15:40:01.741230,TOO_SMALL,
+gewobag,"Reichweindamm 13, 13627 Berlin/Charlottenburg",13627.0,46.28,"Gepflegte 1,5 Zimmerwohnung im 4. OG ( ohne Aufzug ) WBS 100 mit besonderem Wohnbedarf erforderlich",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01629-1402-0124/,0100%2F01629%2F1402%2F0124,2022-11-21 15:41:19.375742,ZIP_BLACKLISTED,
+adler,Perleberger Str. 17 (Tiergarten (Tiergarten)),10559.0,78.71,Gem&uuml;tliche 3-ZI-Wohnung mit Tageslichtbad!!,https://www.adler-group.com/expose/137999135?cHash=184cf4bebcff5eaded5e4d9c1a76d24e,137999135,2022-11-21 15:53:51.421797,OK,
+gewobag,"Zillertalstr. 59, 13187 Berlin/Pankow",13187.0,71.61,Hochparterre mit Dielenboden,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02550-0102-0022/,0100%2F02550%2F0102%2F0022,2022-11-21 15:54:02.708437,OK,
+adler,Kolberger Str. 14 (Wedding (Wedding)),13357.0,49.94,2-Zimmer-Wohnung auf 49m&sup2;,https://www.adler-group.com/expose/137999146?cHash=5f5b3a2ac008ba916c980dab649f6fcc,137999146,2022-11-21 16:04:35.928218,OK,
+adler,Luise-Zietz-Str. 107 (Marzahn (Marzahn)),12681.0,47.45,SELBSTGESTALTER aufgepasst - gem&uuml;tliche 2-Zimmer-Whg auf 47 m&sup2; mit Balkon,https://www.adler-group.com/expose/138002160?cHash=699214ba12c9fc636fa80ac5625e5003,138002160,2022-11-21 16:50:42.648609,ZIP_NOT_WHITELISTED,
+gewobag,"Schwielowseestr. 38, 13599 Berlin/Haselhorst",13599.0,88.09,Schickes Dachgeschoss mit Wasserblick sucht netten Nachmieter ab Februar,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01032-0501-0117/,0100%2F01032%2F0501%2F0117,2022-11-21 21:01:16.671064,ZIP_NOT_WHITELISTED,
+gewobag,"Nogatstraße 23, 12051 Berlin/Neukölln",12051.0,39.8,WBS erforderlich. Für Singles im Körner-Kiez,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00602-0102-0039/,1000%2F00602%2F0102%2F0039,2022-11-22 08:46:12.794742,WBS_REQUIRED,
+degewo,Walter-Franck-Zeile 9 | Neukölln,12353.0,67.75,2-Zimmerwohnung - mit WBS!,https://immosuche.degewo.de/de/properties/W1140-00649-0123-0401,W1140.00649.0123-0401,2022-11-22 12:11:26.802754,WBS_REQUIRED,
+degewo,Osloer Straße 105B | Mitte,13359.0,77.52,Wohnung im Erdgeschoss mit großer Küche für WBS Inhaber!,https://immosuche.degewo.de/de/properties/W1500-00784-0085-0102,W1500.00784.0085-0102,2022-11-22 13:00:08.659006,WBS_REQUIRED,
+gewobag,"Strünckweg 9, 13627 Berlin/Charlottenburg",13627.0,61.32,"Gepflegte 2 Zimmerwohnung im EG, WBS für 2 Räume erforderlich, frei ab sofort",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01609-1302-0473/,0100%2F01609%2F1302%2F0473,2022-11-22 15:02:08.102788,WBS_REQUIRED,
+gewobag,"Klausingring 15, 13627 Berlin/Charlottenburg",13627.0,77.16,"Gepflegte 3 Zimmerwohnung im 1.OG, WBS 100 für 3 Räume erforderlich, frei ab sofort",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01607-0201-0048/,0100%2F01607%2F0201%2F0048,2022-11-22 15:02:08.103771,WBS_REQUIRED,
+gewobag,"Heilmannring 26A, 13627 Berlin/Charlottenburg",13627.0,53.12,"Renovierungsbedürftige 2 Zimmerwohnung im 1.OG, WBS100  für 2 Räume erforderlich, frei ab sofort",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01602-1002-0340/,0100%2F01602%2F1002%2F0340,2022-11-22 15:02:08.104736,WBS_REQUIRED,
+gewobag,"Kiefholzstr. 403 A, 12435 Berlin/Alt-Treptow",12435.0,46.55,1 Zimmerwohnung im Neubau sucht neunen Mieter ab sofort,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02551-0102-0029/,0100%2F02551%2F0102%2F0029,2022-11-22 15:37:12.518903,ZIP_NOT_WHITELISTED,
+gewobag,"Reichweindamm 24, 13627 Berlin/Charlottenburg",13627.0,78.32,"Renovierungsbedürftige 3 Zimmerwohnung im 2. OG, frei ab sofort",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01611-1901-0721/,0100%2F01611%2F1901%2F0721,2022-11-22 15:41:46.543979,ZIP_NOT_WHITELISTED,
+gewobag,"Schluchseestr. 13, 13469 Berlin/Waidmannslust",13469.0,88.28,Familienwohnung in Waidmannslust zu vermieten,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01241-0501-0112/,0100%2F01241%2F0501%2F0112,2022-11-22 16:21:24.002886,ZIP_NOT_WHITELISTED,
+gewobag,"Titiseestr. 41, 13469 Berlin/Waidmannslust",13469.0,41.22,Singlewohnung in Waidmannslust zu vermieten,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01239-0402-0076/,0100%2F01239%2F0402%2F0076,2022-11-22 16:27:29.375660,ZIP_NOT_WHITELISTED,
+gewobag,"Schluchseestr. 71, 13469 Berlin/Waidmannslust",13469.0,64.05,Gut geschnittene Wohnung in Waidmannslust zu vermieten,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01238-0210-0427/,0100%2F01238%2F0210%2F0427,2022-11-22 16:42:43.120367,ZIP_NOT_WHITELISTED,
+gewobag,"Schluchseestr. 77, 13469 Berlin/Waidmannslust",13469.0,43.6,Singlewohnung in Waidmannslust sucht Mieter,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01238-0303-0628/,0100%2F01238%2F0303%2F0628,2022-11-22 16:47:17.315803,ZIP_NOT_WHITELISTED,
+gewobag,"Steegerstr. 18a, 13359 Berlin/Wedding",13359.0,54.06,Zweizimmerwohnung mit Dielen im Wedding – WBS erforderlich,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02101-0502-0183/,0100%2F02101%2F0502%2F0183,2022-11-22 16:51:51.424320,WBS_REQUIRED,
+gewobag,"Zabel-Krüger-Damm 24, 13469 Berlin/Waidmannslust",13469.0,75.44,Familienwohnung an WBS Inhaber zu vermieten,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01242-0102-0031/,0100%2F01242%2F0102%2F0031,2022-11-22 17:07:06.118034,WBS_REQUIRED,
+gewobag,"Schloßstr. 2H, 14059 Berlin/Charlottenburg",14059.0,69.77,Zweizimmerwohnung mit kleiner Terrasse – Nachmieter zum 01.12. gesucht,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-76120-0106-0071/,7100%2F76120%2F0106%2F0071,2022-11-22 17:22:26.502977,ZIP_NOT_WHITELISTED,
+degewo,Lipschitzallee 45 | Neukölln,12353.0,93.65,Kleine Familie gesucht!,https://immosuche.degewo.de/de/properties/W1100-12104-0113-1301,W1100.12104.0113-1301,2022-11-23 09:19:21.142003,ZIP_NOT_WHITELISTED,
+adler,Ernst-Bumm-Weg 4a (Charlottenburg (Charlottenburg)),14059.0,41.9,Helle 2-Zimmer-Wohnung mit Balkon in ruhiger Lage am Schloss Charlottenburg,https://www.adler-group.com/expose/138041174?cHash=9c76d10a34c1b001a27f1246fd889303,138041174,2022-11-23 13:27:31.939028,ZIP_NOT_WHITELISTED,
+adler,Babelsberger Str. 50 (Wilmersdorf (Wilmersdorf)),10715.0,65.16,Charmante Altbauwohnung am Bayerischen Platz,https://www.adler-group.com/expose/138041682?cHash=30be0c38ee95d122b431900ae96ca4fa,138041682,2022-11-23 13:27:31.939035,OK,
+adler,Flemmingstr. 7 (Steglitz (Steglitz)),12163.0,52.42,Die Einkaufsmeile Schlo&szlig;stra&szlig;e direkt um die Ecke,https://www.adler-group.com/expose/138042140?cHash=bd6a4c15918a2342150815d75e5908e8,138042140,2022-11-23 13:27:31.939047,ZIP_BLACKLISTED,
+gewobag,"Bülowstr. 95, 10783 Berlin/Schöneberg",10783.0,45.45,WBS erforderlich. Seniorenwohnung für Mieter*innen ab 60 Jahre,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-77007-0101-0026/,7100%2F77007%2F0101%2F0026,2022-11-23 15:02:26.547547,WBS_REQUIRED,
+gewobag,"Dolgenseestr. 8c, 10319 Berlin/Friedrichsfelde",10319.0,67.97,Barrierefrei ins 9.OG an der S3,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02571-0104-0231/,0100%2F02571%2F0104%2F0231,2022-11-23 16:41:37.114194,ZIP_NOT_WHITELISTED,
+gewobag,"Belßstr. 2- 4, 12277 Berlin/Marienfelde",12277.0,28.44,Singlebude in Marienfelde sucht Nachmieter für sofort,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-76400-0101-0060/,7100%2F76400%2F0101%2F0060,2022-11-24 12:21:49.050322,ZIP_NOT_WHITELISTED,
+gewobag,"Steegerstr. 15c, 13359 Berlin/Wedding",13359.0,55.54,Zweizimmerwohnung im Wedding – WBS erforderlich,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02101-0204-0103/,0100%2F02101%2F0204%2F0103,2022-11-24 15:17:35.146458,WBS_REQUIRED,
+gewobag,"Müllerstr. 160, 13353 Berlin/Wedding",13353.0,76.78,Zentral im Wedding – WBS erforderlich,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-79016-0101-0007/,7100%2F79016%2F0101%2F0007,2022-11-24 15:17:35.147492,WBS_REQUIRED,
+gewobag,"Klausenerplatz 6, 14059 Berlin/Charlottenburg",14059.0,73.41,Altbauwohnung am Klausenerplatz,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-75915-0102-0016/,7100%2F75915%2F0102%2F0016,2022-11-24 15:17:35.148358,ZIP_NOT_WHITELISTED,
+gewobag,"Meydenbauerweg 49, 13593 Berlin/Staaken",13593.0,65.9,Gut geschnittene Wohnung mit Dusche ab sofort frei,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01936-0401-0260/,0100%2F01936%2F0401%2F0260,2022-11-24 15:26:44.422715,ZIP_NOT_WHITELISTED,
+gewobag,"Simon-Bolivar-Str. 42B, 13055 Berlin/Alt-Hohenschönhausen",13055.0,38.45,Hochparterrewohnung mit Balkon in Alt-Hohenschönhausen ab sofort zu vermieten – WBS erforderlich !,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02520-0802-0485/,0100%2F02520%2F0802%2F0485,2022-11-24 17:16:33.909626,WBS_REQUIRED,
+gewobag,"Karl-Marx-Allee 74, 10243 Berlin/Friedrichshain",10243.0,71.03,"Friedrichshainer ""Stalinbau"" sucht neuen Mieter noch vor Weihnachten – WBS erforderlich !",https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-02509-0102-0029/,0100%2F02509%2F0102%2F0029,2022-11-24 17:16:33.910656,WBS_REQUIRED,
+gewobag,"Landsberger Allee 81, 10407 Berlin/Prenzlauer Berg",10407.0,55.25,Wohnung in Prenzlauer Berg bereits VORZEITIG ab SOFORT neu zu vermieten – WBS erforderlich !,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/1000-00182-0103-0142/,1000%2F00182%2F0103%2F0142,2022-11-24 17:16:33.911646,WBS_REQUIRED,
+gewobag,"Burscheider Weg 3B, 13599 Berlin/Haselhorst",13599.0,56.01,Großer Balkon – Nachmieter zum 01.01.23 gesucht – WBS-Berechtigung erforderlich,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01006-0303-0239/,0100%2F01006%2F0303%2F0239,2022-11-24 17:36:22.316302,WBS_REQUIRED,
+gewobag,"Winterfeldtstr. 70, 10781 Berlin/Schöneberg",10781.0,41.53,Schöne Seniorenwohnung für Mieter*innen ab 60 Jahre,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/7100-71600-0101-0005/,7100%2F71600%2F0101%2F0005,2022-11-24 18:16:11.166128,TOO_SMALL,
+adler,Pillnitzer Weg 39 (Staaken (Spandau)),13593.0,59.09,F&uuml;r Selbstgestalter - Schicke 2-Zimmer auf 59m&sup2; mit Balkon in Berlin-Spandau!,https://www.adler-group.com/expose/138077831?cHash=d6163c334b5b4d8bd90531a47c00a2d2,138077831,2022-11-25 10:10:06.440173,ZIP_NOT_WHITELISTED,
+adler,Loschwitzer Weg 4 (Staaken (Spandau)),13593.0,74.03,F&uuml;r Selbstgestalter - Perfekt geschnittene 3-Zimmer-Wohnung!,https://www.adler-group.com/expose/138077841?cHash=580bf99719d69af0f852222113895722,138077841,2022-11-25 10:10:06.440181,ZIP_NOT_WHITELISTED,
+adler,Cosmarweg 51 (Staaken (Spandau)),13591.0,87.42,"F&uuml;r Selbstgestalter - Gro&szlig;z&uuml;giger Schnitt! 4-Zimmer, 87m&sup2;, Balkon",https://www.adler-group.com/expose/138077846?cHash=23f8ea834b9f8a847169e9a24e0f3ca1,138077846,2022-11-25 10:10:06.440188,ZIP_NOT_WHITELISTED,
+adler,Pillnitzer Weg 39 (Staaken (Spandau)),13593.0,75.88,"F&uuml;r Selbstgestalter - Wohnen in Berlin-Spandau: 3ZI, 75m&sup2; mit Balkon!",https://www.adler-group.com/expose/138077855?cHash=e1b73a8fad6f0365e8ea09806feeb077,138077855,2022-11-25 10:10:06.440196,ZIP_NOT_WHITELISTED,
+gewobag,"Lichtenrader Damm 163, 12305 Berlin/Lichtenrade",12305.0,82.07,WBS erforderlich – Geräumige 3-Zimmer-Wohnung sucht neue Mieter,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01713-0101-0006/,0100%2F01713%2F0101%2F0006,2022-11-25 12:16:42.732797,WBS_REQUIRED,
+gewobag,"Ringstr. 72, 12105 Berlin/Mariendorf",12105.0,62.86,WBS-Berechtigung erforderlich – sanierte 2-Zimmer-Wohnung sucht neue Mieter,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01320-0211-0471/,0100%2F01320%2F0211%2F0471,2022-11-25 12:31:55.281089,WBS_REQUIRED,
+gewobag,"Bottroper Weg 12, 13507 Berlin/Tegel",13507.0,33.96,Über den Dächern von Tegel Süd mit Wohnberechtigungsschein,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01217-0101-0144/,0100%2F01217%2F0101%2F0144,2022-11-25 12:36:29.110638,WBS_REQUIRED,
+gewobag,"Schwielowseestr. 38, 13599 Berlin/Haselhorst",13599.0,73.84,Gut geschnittene Wohnung mit Fußbodenheizung und Wasserlage,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01032-0501-0111/,0100%2F01032%2F0501%2F0111,2022-11-25 13:02:23.985930,ZIP_NOT_WHITELISTED,
+adler,Hedwig-Porschütz-Straße 14 (Tiergarten (Tiergarten)),10557.0,100.49,"Fantastische 3-Zimmer-Wohnung auf 100m&sup2; mit zwei sch&ouml;nen Balkonen, EBK und Tageslichtbad",https://www.adler-group.com/expose/138081769?cHash=350b94877aab236c3dd053b58c5499cf,138081769,2022-11-25 13:13:05.112005,OK,
+gewobag,"Zweibrücker Str. 14, 13583 Berlin/Spandau",13583.0,54.02,Wohnen in freundlicher Umgebung! Nur mit WBS für min. 2 Räume oder WBS-Berechtigung!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01114-1001-0346/,0100%2F01114%2F1001%2F0346,2022-11-25 16:06:40.803381,WBS_REQUIRED,
+gewobag,"Pichelsdorfer Str. 129, 13595 Berlin/Wilhelmstadt",13595.0,56.0,Ihr neues Glück von den eigenen vier Wänden!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01926-0201-0016/,0100%2F01926%2F0201%2F0016,2022-11-25 16:06:40.804283,ZIP_NOT_WHITELISTED,
+gewobag,"Pichelsdorfer Str. 129, 13595 Berlin/Wilhelmstadt",13595.0,97.0,Die Familie unter einem Dach!,https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/0100-01926-0101-0001/,0100%2F01926%2F0101%2F0001,2022-11-25 16:06:40.805225,ZIP_NOT_WHITELISTED,
+covivio,"Kolonnenstr. 32, 10829 Berlin",10829,65.46,Zieh nach Schöneberg: Charmante 2-Zimmerwohnung ab sofort frei!,https://www.covivio.immo/objekt/zieh-nach-schoneberg-charmante-2-zimmerwohnung-ab-sofort-frei/,1638693,2022-11-27 20:35:00.343389,OK,749.0
+covivio,"Liebenwalder Str. 25, 13347 Berlin",13347,69.07,Wohnberechtigungsschein erforderlich! Wohnung sucht nettes Pärchen!,https://www.covivio.immo/objekt/wohnberechtigungsschein-erforderlich-wohnung-sucht-nettes-parchen/,1638591,2022-11-27 20:35:00.343437,WBS_REQUIRED,691.0
+covivio,"Zermatter Str. 3, 13407 Berlin",13407,109.34,Maisonette Wohnung in Reinickendorf,https://www.covivio.immo/objekt/maisonette-wohnung-in-reinickendorf/,1637680,2022-11-27 20:35:00.343457,ZIP_NOT_WHITELISTED,929.5
+covivio,"Schillerstr. 10b, 13156 Berlin",13156,70.01,3 Zimmer Altbauwohnung sucht neue Mieter mit Händchen für den letzten Feinschliff!!!,https://www.covivio.immo/objekt/3-zimmer-altbauwohnung-sucht-neue-mieter-mit-handchen-fur-den-letzten-feinschliff/,1627355,2022-11-27 20:35:00.343471,ZIP_NOT_WHITELISTED,819.0
+covivio,"Wattstr. 4a, 13629 Berlin",13629,75.48,Lichtdurchflutete 2-Zimmerwohnung mit traumhaften Wintergarten ab sofort frei!,https://www.covivio.immo/objekt/lichtdurchflutete-2-zimmerwohnung-mit-traumhaften-wintergarten-ab-sofort-frei/,1638731,2022-11-27 20:35:00.343493,ZIP_NOT_WHITELISTED,766.55
+covivio,"Schwatlostr. 10, 12207 Berlin",12207,63.6,Ruhe und Gelassenheit gehören zusammen wie Altbau und Dielenboden &#8211; hier gibt´s beides!,https://www.covivio.immo/objekt/ruhe-und-gelassenheit-gehoren-zusammen-wie-altbau-und-dielenboden-hier-gibts-beides/,1639192,2022-11-27 20:35:00.343506,ZIP_NOT_WHITELISTED,811.0
+covivio,"Lutherstr. 6, 13585 Berlin",13585,69.98,Sonnen auf der eigenen Terasse? &#8211; zieh in die Lutherstr. 6!,https://www.covivio.immo/objekt/sonnen-auf-der-eigenen-terasse-zieh-in-die-lutherstr-6/,1636400,2022-11-27 20:35:00.343527,ZIP_NOT_WHITELISTED,721.7

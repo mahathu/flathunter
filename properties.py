@@ -54,11 +54,12 @@ class Identity:
 
 
 class Property(object):
-    def __init__(self, company, address, zip_code, sqm, title, url, id) -> None:
+    def __init__(self, company, address, zip_code, sqm, rent, title, url, id) -> None:
         self.company = company
         self.address = address
         self.zip_code = zip_code
         self.sqm = sqm
+        self.rent = rent
         self.title = title
         self.url = url
         self.id = id
@@ -94,6 +95,7 @@ class Property(object):
             "address": self.address,
             "zip_code": self.zip_code,
             "sqm": self.sqm,
+            "rent": self.rent,
             "title": self.title,
             "url": self.url,
             "id": self.id,
@@ -102,7 +104,8 @@ class Property(object):
         }
 
     def __str__(self) -> str:
-        return f"{self.company.upper()}/{self.title[:80]}"
+        status_emoji = "✅" if self.filter_status=="OK" else "🥲"
+        return f"{status_emoji} {self.company.upper()}/{self.title[:80]}"
 
     def apply(self, identity: Identity) -> Tuple[int, str]:
         """Sends a single application to a given property and returns the status code

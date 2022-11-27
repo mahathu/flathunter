@@ -1,4 +1,4 @@
-from scrapers import AdlerScraper, DegewoScraper, GewobagScraper
+from scrapers import AdlerScraper, DegewoScraper, GewobagScraper, CovivioScraper
 from properties import Identity
 from util import log
 import time
@@ -19,7 +19,7 @@ parser.add_argument("-d", action="store_true", help="Enable debug mode")
 DEBUG_ENABLED = parser.parse_args().d
 
 if DEBUG_ENABLED:
-    config_path = "data/config-debug.yml"
+    # config_path = "data/config-debug.yml"
     print(colored("Debug mode is enabled", color="red", attrs=["bold"]))
 
 with open(config_path, "r") as config_file:
@@ -33,7 +33,9 @@ scrapers = [
     GewobagScraper(CONFIG["gewobag-search-url"]),
     DegewoScraper(CONFIG["degewo-search-url"]),
     AdlerScraper(CONFIG["adler-search-url"]),
+    CovivioScraper(CONFIG["covivio-search-url"]),
 ]
+
 
 seen_ads_df = pd.read_csv("data/seen_ads.csv")
 
@@ -99,8 +101,12 @@ while True:
     for property in new_properties:
         if property.filter_status != "OK":
             log(
-                f"Skipping {property} because: {property.filter_status} {property.zip_code}"
+                f"Skipping {property} because: {property.filter_status}"
             )
+            continue
+
+        if property.company == "covivio":
+            log(f"Skipping {property} (not implemented)")
             continue
 
         batch_apply(property, use_fakes=True)

@@ -37,16 +37,19 @@ class GewobagScraper(Scraper):
                     .split(" ")[0]
                     .replace(",", ".")
                 )
+                rent = 0
             except (IndexError, ValueError) as e:
-                log(f"EXCEPTION parsing sqm on gewobag property: {e}")
+                log(f"EXCEPTION parsing sqm or rent on gewobag property: {e}")
                 sqm = 1000  # when in doubt, just apply to it anyways
-
+                rent = 0
+                
             results.append(
                 WHProperty(
                     company="gewobag",
                     address=addr,
                     zip_code=zip,
                     sqm=sqm,
+                    rent=0,
                     title=property.find("h3", {"class": "angebot-title"}).text.strip(),
                     url=url,
                     id=id,
@@ -68,11 +71,33 @@ class DegewoScraper(Scraper):
                 address=property["address"],
                 zip_code=property["zipcode"],
                 sqm=property["living_space"],
+                rent=property["rent_cold"],
                 title=property["headline"],
                 url="https://immosuche.degewo.de" + property["property_path"],
                 id=property["id"].replace("-", ".", 2),
             )
             for property in immos
+        ]
+
+
+class CovivioScraper(Scraper):
+    # this will only parse the first results page.
+    # page is passed as a URL parameter. TODO: recursively request pages until 400
+    def find_properties(self):
+        response = requests.get(self.url)
+
+        return [
+            WHProperty(
+                company="covivio",
+                address=property["adresse"],
+                zip_code=property["adresse"].split()[-2],
+                sqm=property["wohnflaeche"],
+                rent=property["kaltmiete"],
+                title=property["title"]["rendered"],
+                url=property["link"],
+                id=property["id"],
+            )
+            for property in response.json()
         ]
 
 
@@ -100,6 +125,7 @@ class AdlerScraper(Scraper):
                     address=prop_addr,
                     zip_code=prop_zipcode,
                     sqm=property["livingSpace"],
+                    rent=property["price"],
                     title=property["title"],
                     url=property["link"],
                     id=property["isid"],
