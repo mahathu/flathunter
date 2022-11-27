@@ -19,6 +19,7 @@ Make sure that the IP of the VPS that the script is running on is whitelisted in
 - For gewobag, simply copy the URL from the search results page.
 - For degewo, open the network tools and copy the link to the `/search.json` request that is sent when running a search.
 - For adler, open the network tools and copy the second `immoscoutgrabber` link, the one that returns a `geodata` json object.
+- for covivio, get the json link but remove `&page=1` at the end.
 
 4) Run the script and detach so it will continue running in the background: `nohup python3.9 run.py &`
 5) To run the web server: `cd server && gunicorn -b 0.0.0.0:63333 app:app`
