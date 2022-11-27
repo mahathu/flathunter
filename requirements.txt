@@ -5,4 +5,5 @@ pyyaml
 flask
 termcolor
 black
-pandas
+pandas==1.5.1
+gunicorn
