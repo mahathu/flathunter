@@ -37,6 +37,7 @@ class GewobagScraper(Scraper):
                     .split(" ")[0]
                     .replace(",", ".")
                 )
+                rent = property.select("tr.angebot-kosten td")[0].text
             except (IndexError, ValueError) as e:
                 log(f"EXCEPTION parsing sqm or rent on gewobag property: {e}")
                 sqm = 1000  # when in doubt, just apply to it anyways
