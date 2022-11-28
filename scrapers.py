@@ -37,19 +37,21 @@ class GewobagScraper(Scraper):
                     .split(" ")[0]
                     .replace(",", ".")
                 )
-                rent = 0
             except (IndexError, ValueError) as e:
                 log(f"EXCEPTION parsing sqm or rent on gewobag property: {e}")
                 sqm = 1000  # when in doubt, just apply to it anyways
                 rent = 0
-                
+            
+            print(rent)
+            exit()
+            
             results.append(
                 WHProperty(
                     company="gewobag",
                     address=addr,
                     zip_code=zip,
                     sqm=sqm,
-                    rent=0,
+                    rent=rent,
                     title=property.find("h3", {"class": "angebot-title"}).text.strip(),
                     url=url,
                     id=id,
