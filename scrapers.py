@@ -42,9 +42,6 @@ class GewobagScraper(Scraper):
                 sqm = 1000  # when in doubt, just apply to it anyways
                 rent = 0
             
-            print(rent)
-            exit()
-            
             results.append(
                 WHProperty(
                     company="gewobag",
