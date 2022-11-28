@@ -76,6 +76,7 @@ class Property(object):
             and "nicht" not in title.lower()
             and "kein wbs" not in title.lower()
             and "ohne wbs" not in title.lower()
+            and sqm > 55
         ):
             self.filter_status = "WBS_REQUIRED"
             return
