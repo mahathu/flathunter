@@ -8,7 +8,7 @@ adler-search-url: 'https://www.adler-group.com/index.php?tx_immoscoutgrabber_pi2
 covivio-search-url: 'https://www.covivio.immo/wp-json/wp/v2/objekt?anzahl_zimmer_max=10&anzahl_zimmer_min=2&distance=30&kaltmiete_max=1322&kaltmiete_min=375&lat=52.5200066&lng=13.404954&&objektart=wohnung&order=asc&orderby=distance&per_page=10&wohnflaeche_max=124&wohnflaeche_min=50'
 zip-prefixes-whitelist: [101, 102, 104, 105, 107, 108, 109, 120, 121, 1318, 133]
 zip-prefixes-blacklist: [10589, 10553, 10585, 10587, 10707, 10709, 10711, 10713, 12057, 12099, 12105, 12107, 12109, 12157, 12163, 12165, 12167, 12169, 13349, 13351]
-n-applications: 18
-min-sqm: 45
+n-applications: 21
+min-sqm: 35
 sleep-len: 90
 ...
