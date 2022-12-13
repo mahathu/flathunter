@@ -13,7 +13,7 @@ import random
 if __name__ != "__main__":
     exit()
 
-config_path = "data/config-prod.yml"
+CONFIG_PATH = "data/config-narrow.yml"
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", action="store_true", help="Enable debug mode")
 DEBUG_ENABLED = parser.parse_args().d
@@ -22,9 +22,9 @@ if DEBUG_ENABLED:
     # config_path = "data/config-debug.yml"
     print(colored("Debug mode is enabled", color="red", attrs=["bold"]))
 
-with open(config_path, "r") as config_file:
+with open(CONFIG_PATH, "r") as config_file:
     CONFIG = yaml.safe_load(config_file)
-    log(f"Loaded config from {config_path}")
+    log(f"Loaded config from {CONFIG_PATH}")
 
 SLEEP_LEN = CONFIG["sleep-len"]
 N_APPLICATIONS = CONFIG["n-applications"]  # applications per ad
@@ -44,12 +44,7 @@ def batch_apply(property, use_fakes=True):
     start_time = time.time()
 
     # generate a list of real and fake identities to apply with:
-    application_set = [
-#        Identity("Martin", "Hoffmann", "m.hoffmann@systemli.org"),
-#        Identity("Edwin", "Hoffmann", "edwinhoffmann49@t-online.de"),
-#        Identity("Martin", "Hoffmann", "martin.hoffmann@uni-potsdam.de"),
-#        Identity("Martin", "Hoffmann", "hoffmann47@uni-potsdam.de"),
-    ]
+    application_set = []
 
     for i in range(N_APPLICATIONS):
         email = f"martin.hoffmann98+{i+1}@systemli.org"
@@ -57,7 +52,7 @@ def batch_apply(property, use_fakes=True):
 
         if not use_fakes:
             continue
-        for _ in range(random.randint(0, 2)):
+        for _ in range(random.randint(0, 3)):
             application_set.append(Identity())  # add some fake identities
 
     # apply with the given identities:
