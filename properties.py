@@ -19,7 +19,7 @@ with open("data/secrets.yml", "r") as secrets_file:
         "https": PROXY_URL,
     }
 
-with open("data/config-prod.yml", "r") as config_file:
+with open("data/config-narrow.yml", "r") as config_file:
     config = yaml.safe_load(config_file)
     ZIP_WHITELIST = config["zip-prefixes-whitelist"]
     ZIP_BLACKLIST = config["zip-prefixes-blacklist"]
@@ -76,7 +76,6 @@ class Property(object):
             and "nicht" not in title.lower()
             and "kein wbs" not in title.lower()
             and "ohne wbs" not in title.lower()
-            and sqm > 55
         ):
             self.filter_status = "WBS_REQUIRED"
             return
