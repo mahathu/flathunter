@@ -13,7 +13,7 @@ import random
 if __name__ != "__main__":
     exit()
 
-CONFIG_PATH = "data/config-narrow.yml"
+CONFIG_PATH = "data/config-prod.yml"
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", action="store_true", help="Enable debug mode")
 DEBUG_ENABLED = parser.parse_args().d
