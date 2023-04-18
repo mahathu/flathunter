@@ -44,7 +44,11 @@ def batch_apply(property, use_fakes=True):
     start_time = time.time()
 
     # generate a list of real and fake identities to apply with:
-    application_set = []
+    application_set = [
+	Identity("Martin", "Hoffmann", "m.hoffmann@systemli.org"),
+	Identity("Martin", "Hoffmann", "m.hoffmann+92@systemli.org"),
+	Identity("Martin", "Hoffmann", "m.hoffmann+berlin@systemli.org"),
+    ]
 
     for i in range(N_APPLICATIONS):
         email = f"martin.hoffmann98+{i+1}@systemli.org"
