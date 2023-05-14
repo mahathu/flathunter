@@ -104,8 +104,8 @@ while True:
             )
             continue
 
-        if property.company == "covivio":
-            log(f"Skipping {property} (not implemented)")
+        if property.company in ["covivio", "adler"]:
+            log(f"Skipping {property} (not implemented {property.company})")
             continue
 
         batch_apply(property, use_fakes=True)
