@@ -20,21 +20,14 @@ with open("data/secrets.yml", "r") as secrets_file:
         "https": PROXY_URL,
     }
 
-with open("data/config-prod.yml", "r") as config_file:
+# TODO: 2 modules have the config path hardcoded
+with open("config.yml", "r") as config_file:
     config = yaml.safe_load(config_file)
-    ZIP_WHITELIST = config["zip-prefixes-whitelist"]
-    ZIP_BLACKLIST = config["zip-prefixes-blacklist"]
-    MIN_SQM = config["min-sqm"]
 
-TITLE_BLACKLIST = [  # TODO: can this be replaced by the "easier" WBS filter?
-    "Single",
-    "Senior",
-    "Erstbezug",
-    "im Grünen",
-    "Rollstuhlfahrer",
-    "Rollstuhlfahrer",
-    "Einkommen",  # "WBS-fähiges Einkommen"
-]
+ZIP_WHITELIST = config["zip-prefixes-whitelist"]
+ZIP_BLACKLIST = config["zip-prefixes-blacklist"]
+MIN_SQM = config["min-sqm"]
+TITLE_BLACKLIST = config["title-blacklist"]
 
 FIRST_NAMES = get_lines_as_list("data/firstnames.txt")
 LAST_NAMES = get_lines_as_list("data/lastnames.txt")
@@ -67,16 +60,17 @@ class Property(object):
 
         self.found_at = datetime.now()
         self.filter_status = "OK"
+
         # filter out if any of these conditions match:
-        # TODO: make is_desired an enum or something to differentiate between is_not_desired states
         if any([word.lower() in title.lower() for word in TITLE_BLACKLIST]):
-            self.filter_status = "Blacklisted title"
+            self.filter_status = "TITLE BLACKLISTED"
+            return
 
         if (
             ("wbs" in title.lower() or "wohnberechtigungsschein" in title.lower())
             and "nicht" not in title.lower()
-            and "kein wbs" not in title.lower()
-            and "ohne wbs" not in title.lower()
+            and "kein" not in title.lower()
+            and "ohne" not in title.lower()
         ):
             self.filter_status = "WBS_REQUIRED"
             return
@@ -88,7 +82,6 @@ class Property(object):
             return
         if sqm < MIN_SQM:
             self.filter_status = "TOO_SMALL"
-            return
 
     def as_dict(self) -> dict:
         return {

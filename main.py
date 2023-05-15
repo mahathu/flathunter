@@ -20,20 +20,27 @@ if __name__ != "__main__":
 logging.basicConfig(
     filename="logfile.log",
     encoding="utf-8",
-    level=logging.DEBUG,
+    level=logging.INFO,
     format="[%(asctime)s] %(message)s",
     datefmt="%m-%d-%Y %H:%M:%S",
 )
 logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
 
 
-CONFIG_PATH = "data/config-prod.yml"
 parser = argparse.ArgumentParser()
-parser.add_argument("-d", action="store_true", help="Enable debug mode")
-DEBUG_ENABLED = parser.parse_args().d
+parser.add_argument(
+    "-d", action="store_true", help="Enable debug mode (don't send applications)"
+)
+parser.add_argument("-c", "--config", help="Path to config file")
+
+args = parser.parse_args()
+DEBUG_ENABLED = args.d
+CONFIG_PATH = args.config or "config.yml"
 
 if DEBUG_ENABLED:
-    logging.info("Debug mode is enabled")
+    logging.getLogger().setLevel(logging.DEBUG)
+logging.debug("Debug mode is enabled")
+
 
 with open(CONFIG_PATH, "r") as config_file:
     CONFIG = yaml.safe_load(config_file)

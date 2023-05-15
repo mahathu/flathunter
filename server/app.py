@@ -12,7 +12,7 @@ def main():
     except FileNotFoundError:
         nohup_lines = []
 
-    df = pd.read_csv("../data/seen_ads.csv").drop(["id", "zip_code"], axis=1)
+    df = pd.read_csv("../data/seen_ads.csv").drop(["id", "zip_code"], axis=1).head(100)
 
     table_html = df.to_html(
         header="true", index=False, table_id="dataframe", na_rep="/", classes=["stripe"]

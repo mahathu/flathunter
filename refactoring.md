@@ -1,5 +1,5 @@
 refactoring:
-    - TODO: various places use the absolute path "/data/config-prod.yml", this should be changed
+    - TODO: Currently, two places use absolute path "/data/config-prod.yml", this should be changed
     - better config management
     - remove magic variables
         - config für adler, ...-Bewerbungen auslagern (-> Datei?)
