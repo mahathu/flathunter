@@ -2,6 +2,7 @@ import argparse
 import logging
 import sys
 from flathunter import Flathunter
+from server import server
 
 
 def setup_logging():
@@ -29,12 +30,17 @@ def parse_arguments():
     parser.add_argument(
         "-a", "--archive", default="seen_ads.csv", help="Path to archive file"
     )
+    parser.add_argument("-s", "--server", action="store_true", help="Run web frontend")
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     setup_logging()
     args = parse_arguments()
+
+    if args.server:
+        server.run()
+        # todo: this needs to be implemented using query as well i guess
 
     app = Flathunter(
         config_path=args.config, archive_path=args.archive, debug_enabled=args.debug

@@ -136,3 +136,85 @@
 [05-16-2023 01:17:12] Skipping ✅ ADLER/3 Zimmer Wohnung mit viel Potential.. (not implemented adler)
 [05-16-2023 01:17:12] Skipping 🥲 ADLER/2-Zimmer-Altbauwohnung mit Balkon zur freien Gestaltung nahe dem Rathaus Spandau because: ZIP_NOT_WHITELISTED
 [05-16-2023 01:17:12] Sleeping for 90 seconds.
+[05-16-2023 01:44:54] Loaded archive file seen_ads.csv (n=13.)
+[05-16-2023 01:44:54] App initialized. Debug: True
+[05-16-2023 01:44:54] App is running 🚀
+[05-16-2023 01:44:54] Found 13 ads (0 new).
+[05-16-2023 01:44:54] Sleeping for 90 seconds.
+[05-16-2023 01:52:44] Starting flask server...
+[05-16-2023 01:52:44] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8080
+[05-16-2023 01:52:44] [33mPress CTRL+C to quit[0m
+[05-16-2023 01:52:44]  * Restarting with stat
+[05-16-2023 01:52:45] Starting flask server...
+[05-16-2023 01:52:45]  * Debugger is active!
+[05-16-2023 01:52:45]  * Debugger PIN: 141-931-366
+[05-16-2023 01:53:00]  * Detected change in '/Users/martin/Developer/flathunter/server/server.py', reloading
+[05-16-2023 01:53:00]  * Restarting with stat
+[05-16-2023 01:53:01] Starting flask server!...
+[05-16-2023 01:53:02]  * Debugger is active!
+[05-16-2023 01:53:02]  * Debugger PIN: 141-931-366
+[05-16-2023 01:53:18] Starting flask server!...
+[05-16-2023 01:53:18] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8080
+[05-16-2023 01:53:18] [33mPress CTRL+C to quit[0m
+[05-16-2023 01:53:18]  * Restarting with stat
+[05-16-2023 01:53:19] Starting flask server!...
+[05-16-2023 01:53:19]  * Debugger is active!
+[05-16-2023 01:53:19]  * Debugger PIN: 141-931-366
+[05-16-2023 01:53:29] 127.0.0.1 - - [16/May/2023 01:53:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[05-16-2023 01:53:29] 127.0.0.1 - - [16/May/2023 01:53:29] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[05-16-2023 01:53:29] 127.0.0.1 - - [16/May/2023 01:53:29] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[05-16-2023 01:53:29] 127.0.0.1 - - [16/May/2023 01:53:29] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[05-16-2023 01:53:29] 127.0.0.1 - - [16/May/2023 01:53:29] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[05-16-2023 01:54:35] Starting flask server!...
+[05-16-2023 01:54:35] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[05-16-2023 01:54:35] [33mPress CTRL+C to quit[0m
+[05-16-2023 01:54:35]  * Restarting with stat
+[05-16-2023 01:54:36] Starting flask server!...
+[05-16-2023 01:54:36]  * Debugger is active!
+[05-16-2023 01:54:36]  * Debugger PIN: 141-931-366
+[05-16-2023 01:54:43] 127.0.0.1 - - [16/May/2023 01:54:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[05-16-2023 01:54:43] 127.0.0.1 - - [16/May/2023 01:54:43] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[05-16-2023 01:54:43] 127.0.0.1 - - [16/May/2023 01:54:43] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[05-16-2023 01:54:43] 127.0.0.1 - - [16/May/2023 01:54:43] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[05-16-2023 01:54:43] 127.0.0.1 - - [16/May/2023 01:54:43] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[05-16-2023 01:55:11]  * Detected change in '/Users/martin/Developer/flathunter/server/server.py', reloading
+[05-16-2023 01:55:11]  * Restarting with stat
+[05-16-2023 01:55:12] Starting flask server!...
+[05-16-2023 01:55:12]  * Debugger is active!
+[05-16-2023 01:55:12]  * Debugger PIN: 141-931-366
+[05-16-2023 01:55:13] 127.0.0.1 - - [16/May/2023 01:55:13] "GET / HTTP/1.1" 200 -
+[05-16-2023 01:55:50]  * Detected change in '/Users/martin/Developer/flathunter/server/server.py', reloading
+[05-16-2023 01:55:51]  * Restarting with stat
+[05-16-2023 01:55:51] Starting flask server!...
+[05-16-2023 01:55:51]  * Debugger is active!
+[05-16-2023 01:55:51]  * Debugger PIN: 141-931-366
+[05-16-2023 01:56:10]  * Detected change in '/Users/martin/Developer/flathunter/server/server.py', reloading
+[05-16-2023 01:56:10]  * Restarting with stat
+[05-16-2023 01:56:11] Starting flask server!...
+[05-16-2023 01:56:11]  * Debugger is active!
+[05-16-2023 01:56:11]  * Debugger PIN: 141-931-366
+[05-16-2023 01:56:24]  * Detected change in '/Users/martin/Developer/flathunter/server/server.py', reloading
+[05-16-2023 01:56:25]  * Restarting with stat
+[05-16-2023 01:56:25] Starting flask server!...
+[05-16-2023 01:56:25]  * Debugger is active!
+[05-16-2023 01:56:25]  * Debugger PIN: 141-931-366
+[05-16-2023 01:56:37] 127.0.0.1 - - [16/May/2023 01:56:37] "GET / HTTP/1.1" 200 -
+[05-16-2023 01:57:09] Starting flask server!...
+[05-16-2023 01:57:09] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[05-16-2023 01:57:09] [33mPress CTRL+C to quit[0m
+[05-16-2023 01:57:09]  * Restarting with stat
+[05-16-2023 01:57:10] Starting flask server!...
+[05-16-2023 01:57:10]  * Debugger is active!
+[05-16-2023 01:57:10]  * Debugger PIN: 141-931-366
+[05-16-2023 01:57:17] Loaded archive file seen_ads.csv (n=13.)
+[05-16-2023 01:57:17] App initialized. Debug: True
+[05-16-2023 01:57:17] App is running 🚀
+[05-16-2023 01:57:17] Loaded archive file seen_ads.csv (n=13.)
+[05-16-2023 01:57:17] App initialized. Debug: True
+[05-16-2023 01:57:17] App is running 🚀
+[05-16-2023 01:57:18] Found 13 ads (0 new).
+[05-16-2023 01:57:18] Sleeping for 90 seconds.
