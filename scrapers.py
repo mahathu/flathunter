@@ -7,6 +7,10 @@ from properties import Property, AdlerProperty, WHProperty
 
 
 class Scraper(ABC):
+    def __repr__(self) -> str:
+        # e.g. <GewobagScraper>
+        return f"<{self.__class__.__name__}>"
+
     def __init__(self, url) -> None:
         self.url = url
 

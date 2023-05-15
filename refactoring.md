@@ -10,6 +10,7 @@ refactoring:
 
 features:
     - eine Funktion, die sich auf eine Anzeige n mal in einem Zeitraum von m Stunden bewirbt (refactor batch_apply)
+        - use celery o.ä.
     - telegram bot integration (v1.0.1)
     - zip code visualizer
     - fake-emails, die auch ankommen

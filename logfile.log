@@ -25,3 +25,114 @@
 [05-15-2023 21:40:16] Starting new HTTPS connection (1): www.adler-group.com:443
 [05-15-2023 21:40:16] https://www.adler-group.com:443 "GET /index.php?tx_immoscoutgrabber_pi2%5B__referrer%5D%5B%40extension%5D=ImmoscoutGrabber&tx_immoscoutgrabber_pi2%5B__referrer%5D%5B%40controller%5D=ShowObjects&tx_immoscoutgrabber_pi2%5B__referrer%5D%5B%40action%5D=filterBig&tx_immoscoutgrabber_pi2%5B__referrer%5D%5Barguments%5D=YTowOnt9a8c432c5d610f7a127b9ad7b9927210c644a29e4&tx_immoscoutgrabber_pi2%5B__referrer%5D%5B%40request%5D=%7B%22%40extension%22%3A%22ImmoscoutGrabber%22%2C%22%40controller%22%3A%22ShowObjects%22%2C%22%40action%22%3A%22filterBig%22%7D4ebf6e4e8b6f5c9c62bef7783cc087171a7e8e77&tx_immoscoutgrabber_pi2%5B__trustedProperties%5D=%7B%22rent-costs-fallback%22%3A1%2C%22surface-fallback%22%3A1%2C%22rooms%22%3A1%2C%22search-for%22%3A1%2C%22page%22%3A1%2C%22geoscope%22%3A1%2C%22garage-type%22%3A1%2C%22action%22%3A1%2C%22sortby%22%3A1%7Db403267721ee804df832a2a65bb5a4486491af42&tx_immoscoutgrabber_pi2%5Brent-costs-fallback%5D=1400&tx_immoscoutgrabber_pi2%5Bsurface-fallback%5D=0&tx_immoscoutgrabber_pi2%5Brooms%5D=2&tx_immoscoutgrabber_pi2%5Bsearch-for%5D=apartmentrent&district=1276003001&type=4276906&L=0&tx_immoscoutgrabber_pi2%5Bpage%5D=1&tx_immoscoutgrabber_pi2%5Bgeoscope%5D=1276003001&tx_immoscoutgrabber_pi2%5Bgarage-type%5D=garage%2Cstreetparking&tx_immoscoutgrabber_pi2%5Baction%5D=searchForObjects&tx_immoscoutgrabber_pi2%5Bsearch-for%5D=apartmentrent&tx_immoscoutgrabber_pi2%5Bsortby%5D=firstactivation&search-page=&search-url-apartmentrent=https%3A%2F%2Fwww.adler-group.com%2Fsuche%2Fwohnung&search-url-office=https%3A%2F%2Fwww.adler-group.com%2Fsuche%2Fgewerbe&search-url-garagerent=https%3A%2F%2Fwww.adler-group.com%2Fsuche%2Fgarage-und-stellplatz HTTP/1.1" 200 4205
 [05-15-2023 21:40:16] Starting new HTTPS connection (1): www.covivio.immo:443
+[05-15-2023 23:14:51] Debug mode is enabled
+[05-15-2023 23:14:51] App initialized. Debug: True
+[05-15-2023 23:14:55] App initialized. Debug: False
+[05-15-2023 23:17:24] App initialized. Debug: False
+[05-15-2023 23:48:45] App initialized. Debug: False
+[05-15-2023 23:49:15] App initialized. Debug: False
+[05-15-2023 23:51:42] App initialized. Debug: False
+[05-15-2023 23:51:42] App is running 🚀
+[05-15-2023 23:51:42] Gewobag scraper: <Scraper: GewobagScraper>
+[05-15-2023 23:52:17] Found 24 ads (0 new).
+[05-15-2023 23:53:24] Initialized <Scraper: GewobagScraper>.
+[05-15-2023 23:53:24] Initialized <Scraper: DegewoScraper>.
+[05-15-2023 23:53:24] Initialized <Scraper: AdlerScraper>.
+[05-15-2023 23:53:24] Initialized <Scraper: CovivioScraper>.
+[05-15-2023 23:53:24] App initialized. Debug: False
+[05-15-2023 23:53:24] App is running 🚀
+[05-16-2023 00:12:08] App initialized. Debug: False
+[05-16-2023 00:12:08] Test.
+[05-16-2023 00:12:08] App is running 🚀
+[05-16-2023 00:13:42] App initialized. Debug: False
+[05-16-2023 00:13:42] Test.
+[05-16-2023 00:13:42] App is running 🚀
+[05-16-2023 00:13:44] Found 24 ads (0 new).
+[05-16-2023 00:13:44] Sleeping for 90 seconds.
+[05-16-2023 00:34:54] Provided archive file seen_ads.csv was empty.
+[05-16-2023 00:34:54] App initialized. Debug: True
+[05-16-2023 00:34:54] App is running 🚀
+[05-16-2023 00:36:56] Provided archive file seen_ads.csv was empty.
+[05-16-2023 00:36:56] App initialized. Debug: True
+[05-16-2023 00:36:56] App is running 🚀
+[05-16-2023 00:38:29] Provided archive file seen_ads.csv was empty.
+[05-16-2023 00:38:29] App initialized. Debug: True
+[05-16-2023 00:38:29] App is running 🚀
+[05-16-2023 00:46:35] Provided archive file seen_ads.csv was empty.
+[05-16-2023 00:46:35] App initialized. Debug: True
+[05-16-2023 00:46:35] App is running 🚀
+[05-16-2023 00:46:35] Found 13 ads (13 new).
+[05-16-2023 00:51:03] Provided archive file seen_ads.csv was empty.
+[05-16-2023 00:51:03] App initialized. Debug: True
+[05-16-2023 00:51:03] App is running 🚀
+[05-16-2023 00:51:03] Found 13 ads (13 new).
+[05-16-2023 00:51:03] Skipping 🥲 ADLER/Heimwerker aufgepasst! 2-Zimmer-Wohnung mit viel Potenzial zu vermieten! because: ZIP_NOT_WHITELISTED
+[05-16-2023 00:51:03] Skipping 🥲 ADLER/Schicke 3-Zimmerwohnung mit ger&auml;umigem Balkon wartet auf neue Mieter! Ab so because: ZIP_NOT_WHITELISTED
+[05-16-2023 00:51:03] Skipping 🥲 ADLER/Familienwohnung mit viel Potenzial zu vermieten! Ab sofort! because: ZIP_NOT_WHITELISTED
+[05-16-2023 00:51:03] Skipping 🥲 ADLER/Sonnige 2-Zimmerwohnung wartet auf SIE! Ab sofort. because: ZIP_NOT_WHITELISTED
+[05-16-2023 00:51:03] Skipping 🥲 ADLER/H&uuml;bsche 3-Zimmer-Wohnung in ruhiger Lage! ab sofort! because: ZIP_NOT_WHITELISTED
+[05-16-2023 00:51:03] Skipping ✅ ADLER/3-Zimmer-Altbauwohnung mit viel Potenzial in Neuk&ouml;lln zu vermieten! Ab sofo (not implemented adler)
+[05-16-2023 00:51:03] Skipping ✅ ADLER/Riesige Dachgeschosswohnung mit sonniger Terrasse zu vermieten! Ab sofort! (not implemented adler)
+[05-16-2023 00:51:03] Skipping 🥲 ADLER/4-Zimmer Wohnung in Staaken zur freien Gestaltung sucht SIE - Balkon &amp; Aufzu because: ZIP_NOT_WHITELISTED
+[05-16-2023 00:51:03] Skipping ✅ ADLER/Gepflegte zwei Zimmerwohnungen mit Einbauk&uuml;che sucht neue Mieter! Ab sofort (not implemented adler)
+[05-16-2023 00:51:03] Skipping 🥲 ADLER/Gepflegte 2-Zimmerwohnung zum kleinen Preis in ruhiger Lage zu vermieten! Ab sof because: ZIP_NOT_WHITELISTED
+[05-16-2023 00:51:03] Skipping 🥲 ADLER/2 Zimmer WBS Wohnung - Hoch hinaus.. because: WBS_REQUIRED
+[05-16-2023 00:51:03] Skipping ✅ ADLER/3 Zimmer Wohnung mit viel Potential.. (not implemented adler)
+[05-16-2023 00:51:03] Skipping 🥲 ADLER/2-Zimmer-Altbauwohnung mit Balkon zur freien Gestaltung nahe dem Rathaus Spandau because: ZIP_NOT_WHITELISTED
+[05-16-2023 00:51:03] Sleeping for 90 seconds.
+[05-16-2023 00:52:33] Found 13 ads (0 new).
+[05-16-2023 00:52:33] Sleeping for 90 seconds.
+[05-16-2023 00:54:03] Found 13 ads (0 new).
+[05-16-2023 00:54:03] Sleeping for 90 seconds.
+[05-16-2023 00:55:34] Found 13 ads (0 new).
+[05-16-2023 00:55:34] Sleeping for 90 seconds.
+[05-16-2023 00:57:04] Found 13 ads (0 new).
+[05-16-2023 00:57:04] Sleeping for 90 seconds.
+[05-16-2023 00:58:34] Found 13 ads (0 new).
+[05-16-2023 00:58:34] Sleeping for 90 seconds.
+[05-16-2023 01:00:04] Found 13 ads (0 new).
+[05-16-2023 01:00:04] Sleeping for 90 seconds.
+[05-16-2023 01:00:25] Provided archive file seen_ads.csv empty or does not exist.
+[05-16-2023 01:00:25] App initialized. Debug: True
+[05-16-2023 01:00:25] App is running 🚀
+[05-16-2023 01:11:10] Provided archive file seen_ads.csv empty or does not exist.
+[05-16-2023 01:11:10] App initialized. Debug: True
+[05-16-2023 01:11:10] App is running 🚀
+[05-16-2023 01:11:10] Found 13 ads (13 new).
+[05-16-2023 01:13:50] Provided archive file seen_ads.csv empty or does not exist.
+[05-16-2023 01:13:50] App initialized. Debug: True
+[05-16-2023 01:13:50] App is running 🚀
+[05-16-2023 01:13:51] Found 13 ads (13 new).
+[05-16-2023 01:14:15] Provided archive file seen_ads.csv empty or does not exist.
+[05-16-2023 01:14:15] App initialized. Debug: True
+[05-16-2023 01:14:15] App is running 🚀
+[05-16-2023 01:14:15] Found 13 ads (13 new).
+[05-16-2023 01:14:40] Provided archive file seen_ads.csv empty or does not exist.
+[05-16-2023 01:14:40] App initialized. Debug: True
+[05-16-2023 01:14:40] App is running 🚀
+[05-16-2023 01:14:40] Found 13 ads (13 new).
+[05-16-2023 01:15:04] Provided archive file seen_ads.csv empty or does not exist.
+[05-16-2023 01:15:04] App initialized. Debug: True
+[05-16-2023 01:15:04] App is running 🚀
+[05-16-2023 01:15:04] Found 13 ads (13 new).
+[05-16-2023 01:15:31] Loaded archive file seen_ads.csv (n=13.)
+[05-16-2023 01:15:31] App initialized. Debug: True
+[05-16-2023 01:15:31] App is running 🚀
+[05-16-2023 01:16:01] Loaded archive file seen_ads.csv (n=13.)
+[05-16-2023 01:16:01] App initialized. Debug: True
+[05-16-2023 01:16:01] App is running 🚀
+[05-16-2023 01:16:01] Found 13 ads (0 new).
+[05-16-2023 01:16:01] Sleeping for 90 seconds.
+[05-16-2023 01:16:46] Loaded archive file seen_ads.csv (n=13.)
+[05-16-2023 01:16:46] App initialized. Debug: True
+[05-16-2023 01:16:46] App is running 🚀
+[05-16-2023 01:16:46] Found 13 ads (0 new).
+[05-16-2023 01:16:46] Sleeping for 90 seconds.
+[05-16-2023 01:17:11] Loaded archive file seen_ads.csv (n=10.)
+[05-16-2023 01:17:11] App initialized. Debug: True
+[05-16-2023 01:17:11] App is running 🚀
+[05-16-2023 01:17:12] Found 13 ads (3 new).
+[05-16-2023 01:17:12] Skipping 🥲 ADLER/2 Zimmer WBS Wohnung - Hoch hinaus.. because: WBS_REQUIRED
+[05-16-2023 01:17:12] Skipping ✅ ADLER/3 Zimmer Wohnung mit viel Potential.. (not implemented adler)
+[05-16-2023 01:17:12] Skipping 🥲 ADLER/2-Zimmer-Altbauwohnung mit Balkon zur freien Gestaltung nahe dem Rathaus Spandau because: ZIP_NOT_WHITELISTED
+[05-16-2023 01:17:12] Sleeping for 90 seconds.
