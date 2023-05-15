@@ -62,6 +62,14 @@ seen_ads_df = pd.read_csv("data/seen_ads.csv")
 
 
 def batch_apply(property, use_fakes=True):
+    if property.filter_status != "OK":
+        logging.info(f"Skipping {property} because: {property.filter_status}")
+        return
+
+    if property.company in ["covivio", "adler"]:
+        logging.info(f"Skipping {property} (not implemented {property.company})")
+        return
+
     start_time = time.time()
 
     # generate a list of real and fake identities to apply with:
@@ -83,7 +91,7 @@ def batch_apply(property, use_fakes=True):
     # apply with the given identities:
     for id in application_set:
         status_code, status_text = property.apply(id)
-        logging.debug(f"{id} {property.id} {status_code} {status_text}")
+        logging.info(f"{id} {property.id} {status_code} {status_text}")
         time.sleep(random.randint(2, 5))
 
     delta = time.time() - start_time
@@ -97,36 +105,21 @@ while True:
         try:
             found_properties.extend(scraper.find_properties())
         except Exception as e:
-            logging.info(traceback.format_exc())
+            logging.error(f"Exception while scraping: {traceback.format_exc()}")
+
+    logging.info(f"{len(found_properties)} ads found")
 
     new_properties = [
         p for p in found_properties if p.url not in seen_ads_df["url"].values
     ]
-
-    if DEBUG_ENABLED:
-        print(f"The following {len(new_properties)} new properties were found:")
-        for p in new_properties:
-            print(p)
-        exit()
 
     seen_ads_df = seen_ads_df.append(
         [p.as_dict() for p in new_properties], ignore_index=True
     )
     seen_ads_df.to_csv("data/seen_ads.csv", index=False)
 
-    logging.info(
-        f"{len(found_properties)} ads found online (new: {len(new_properties)}, total: {len(seen_ads_df)})"
-    )
-
+    # process new properties:
     for property in new_properties:
-        if property.filter_status != "OK":
-            logging.info(f"Skipping {property} because: {property.filter_status}")
-            continue
-
-        if property.company in ["covivio", "adler"]:
-            logging.info(f"Skipping {property} (not implemented {property.company})")
-            continue
-
         batch_apply(property, use_fakes=True)
 
     logging.info(f"Sleeping for {SLEEP_LEN} seconds.")

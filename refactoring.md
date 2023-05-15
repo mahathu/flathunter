@@ -5,14 +5,11 @@ refactoring:
         - config für adler, ...-Bewerbungen auslagern (-> Datei?)
         - control applications through Celery o.ä.
             - Funktion, um bewerbungen über zeitraum zu verteilen (numpy? lol)
-    - better readme to match standards
     - data-Ordner umbenennen
-    - bessere Command-Line-Argumente statt magic values (click?)
-        - Auswahl der config
     - investigate bugs in nohup.out
 
 features:
-    - eine Funktion, die sich auf eine Anzeige n mal in einem Zeitraum von m Stunden bewirbt (change batch-apply)
+    - eine Funktion, die sich auf eine Anzeige n mal in einem Zeitraum von m Stunden bewirbt (refactor batch_apply)
     - telegram bot integration (v1.0.1)
     - zip code visualizer
     - fake-emails, die auch ankommen
