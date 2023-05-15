@@ -2,8 +2,8 @@
 
 1) Create a virtualenv, activate it and install prerequisites from `requirements.txt`:
 ```
-python3.9 -m venv <environment_name>
-source <environment_name>/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -21,6 +21,6 @@ Make sure that the IP of the VPS that the script is running on is whitelisted in
 - For adler, open the network tools and copy the second `immoscoutgrabber` link, the one that returns a `geodata` json object.
 - for covivio, get the json link but remove `&page=1` at the end.
 
-4) Run the script and detach so it will continue running in the background: `nohup python3.9 run.py &`
+4) Run the script and detach so it will continue running in the background: `./run.sh`
 5) To run the web server: `cd server && gunicorn -b 0.0.0.0:63333 app:app`
-(optional) Kill the script by finding out the process ID via `ps` and killing it through `kill -9 <pid>`
+(optional) Kill the script by finding out the process ID via `ps` and killing it through `kill -9 <pid>` or by running `./run.sh` again

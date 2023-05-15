@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 import requests
+import logging
 from bs4 import BeautifulSoup
 from typing import List
 from properties import Property, AdlerProperty, WHProperty
-from util import log
 
 
 class Scraper(ABC):
@@ -39,10 +39,10 @@ class GewobagScraper(Scraper):
                 )
                 rent = property.select("tr.angebot-kosten td")[0].text
             except (IndexError, ValueError) as e:
-                log(f"EXCEPTION parsing sqm or rent on gewobag property: {e}")
-                sqm = 1000  # when in doubt, just apply to it anyways
-                rent = 0
-            
+                logging.error(f"Error parsing sqm or rent on gewobag property: {e}")
+                sqm = 1000  # when in doubt, put a really high square footage so applications are sent anyways
+                rent = 0  # likewise for the
+
             results.append(
                 WHProperty(
                     company="gewobag",

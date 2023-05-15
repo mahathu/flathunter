@@ -4,8 +4,9 @@ import yaml
 from util import generate_fake_email, get_lines_as_list
 from urllib.parse import quote
 from typing import Tuple
-from util import log
+
 from termcolor import colored
+import logging
 import json
 import random
 from requests.exceptions import ProxyError
@@ -104,13 +105,13 @@ class Property(object):
         }
 
     def __str__(self) -> str:
-        status_emoji = "✅" if self.filter_status=="OK" else "🥲"
+        status_emoji = "✅" if self.filter_status == "OK" else "🥲"
         return f"{status_emoji} {self.company.upper()}/{self.title[:80]}"
 
     def apply(self, identity: Identity) -> Tuple[int, str]:
         """Sends a single application to a given property and returns the status code
         and status text of the final request."""
-        print("WARNING: apply should only be called on subclasses of Property")
+        logging.error("ERROR: apply should only be called on subclasses of Property.")
         raise NotImplementedError
 
 
@@ -124,7 +125,7 @@ class AdlerProperty(Property):
         try:
             response = requests.get(request_url, proxies=PROXIES)
         except ProxyError:
-            log("Proxy error")
+            logging.error("Proxy error")
             return 0, "Proxy error"
 
         return response.status_code, response.text
@@ -176,7 +177,7 @@ class WHProperty(Property):
                 proxies=PROXIES,
             )
         except ProxyError:
-            log("Proxy error")
+            logging.error("Proxy error")
             return 0, "Proxy error"
 
         return response.status_code, response.text

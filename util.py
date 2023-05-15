@@ -1,9 +1,4 @@
 import random
-import time
-
-
-def log(line):
-    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {line}", flush=True)
 
 
 def get_lines_as_list(filepath):
