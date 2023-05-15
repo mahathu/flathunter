@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import yaml
-from util import generate_fake_email, get_lines_as_list
 from urllib.parse import quote
 from typing import Tuple
 
@@ -20,7 +19,7 @@ with open("data/secrets.yml", "r") as secrets_file:
         "https": PROXY_URL,
     }
 
-# TODO: 2 modules have the config path hardcoded
+# TODO: config path shouldn't be hardcoded/used here at all!!!!
 with open("config.yml", "r") as config_file:
     config = yaml.safe_load(config_file)
 
@@ -29,8 +28,16 @@ ZIP_BLACKLIST = config["zip-prefixes-blacklist"]
 MIN_SQM = config["min-sqm"]
 TITLE_BLACKLIST = config["title-blacklist"]
 
-FIRST_NAMES = get_lines_as_list("data/firstnames.txt")
-LAST_NAMES = get_lines_as_list("data/lastnames.txt")
+
+# TODO: This can surely be improved a lot
+def read_file_as_list(filepath):
+    with open(filepath) as f:
+        return f.read().splitlines()
+
+
+FIRST_NAMES = read_file_as_list("data/firstnames.txt")
+LAST_NAMES = read_file_as_list("data/lastnames.txt")
+EMAIL_PROVIDERS = read_file_as_list("data/email-providers.txt")
 
 
 class Identity:
@@ -39,9 +46,18 @@ class Identity:
         randomly generated."""
         self.firstname = firstname if firstname else random.choice(FIRST_NAMES)
         self.lastname = lastname if lastname else random.choice(LAST_NAMES)
-        self.email = (
-            email if email else generate_fake_email(self.firstname, self.lastname)
+        self.email = email or self.generate_fake_email(self.firstname, self.lastname)
+
+    def generate_fake_email(self):
+        name_separator = "." if random.random() > 0.6 else ""
+        fn = (
+            self.firstname[0]
+            if name_separator and random.random() > 0.7
+            else self.firstname
         )
+        birth_year = random.randint(55, 99) if random.random() > 0.3 else ""
+        mail = f"{fn.lower()}{name_separator}{self.lastname.lower()}{birth_year}@{random.choice(EMAIL_PROVIDERS)}"
+        return mail.encode("ascii", "ignore").decode("ascii")
 
     def __str__(self) -> str:
         return f"{self.firstname} {self.lastname} <{self.email}>"
