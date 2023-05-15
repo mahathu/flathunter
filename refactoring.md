@@ -1,4 +1,5 @@
 refactoring:
+    - TODO: various places use the absolute path "/data/config-prod.yml", this should be changed
     - better config management
     - remove magic variables
         - config für adler, ...-Bewerbungen auslagern (-> Datei?)
@@ -9,7 +10,9 @@ refactoring:
     - bessere Command-Line-Argumente statt magic values (click?)
         - Auswahl der config
     - investigate bugs in nohup.out
+
 features:
+    - eine Funktion, die sich auf eine Anzeige n mal in einem Zeitraum von m Stunden bewirbt (change batch-apply)
     - telegram bot integration (v1.0.1)
     - zip code visualizer
     - fake-emails, die auch ankommen
