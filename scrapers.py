@@ -62,7 +62,7 @@ class GewobagScraper(Scraper):
 
 
 class DegewoScraper(Scraper):
-    # für den Link: Suche durchführen, im Netzwerk-Tab die URL des JSON-Requests kopieren.
+    # To get the link, run a search query and copy the URL of the JSON request from Network Tools.
     def find_properties(self):
         response = requests.get(self.url)
         immos = response.json()["immos"]
@@ -108,33 +108,31 @@ class AdlerScraper(Scraper):
         response = requests.get(self.url)
         properties = response.json()["geodata"]
 
-        results = []
-        for property in properties:
-            try:
-                addr = property["address"]
-                prop_addr = (
-                    f'{addr["street"]} {addr["houseNumber"]} ({addr["quarter"]})'
-                )
-                prop_zipcode = addr["postcode"]
+        return [self.parse_item(property) for property in properties]
 
-            except KeyError:
-                prop_addr = "Unknown address"
-                prop_zipcode = "00000"
-
-            results.append(
-                AdlerProperty(
-                    company="adler",
-                    address=prop_addr,
-                    zip_code=prop_zipcode,
-                    sqm=property["livingSpace"],
-                    rent=property["price"],
-                    title=property["title"],
-                    url=property["link"],
-                    id=property["isid"],
-                )
+    def parse_item(self, property):
+        try:
+            addr = property["address"]
+            district = addr["quarter"].split("(")[0]
+            prop_zipcode = addr["postcode"]
+            prop_addr = (
+                f'{addr["street"]} {addr["houseNumber"]}, {prop_zipcode} {district}'
             )
 
-        return results
+        except KeyError:
+            prop_addr = "Unknown address"
+            prop_zipcode = "00000"
+
+        return AdlerProperty(
+            company="adler",
+            address=prop_addr,
+            zip_code=prop_zipcode,
+            sqm=property["livingSpace"],
+            rent=property["price"],
+            title=property["title"],
+            url=property["link"],
+            id=property["isid"],
+        )
 
 
 class WBMScraper(Scraper):
@@ -160,5 +158,5 @@ def init_scraper(url):
         "gewobag.de": GewobagScraper,
     }
 
-    base_url = urlparse(url).netloc
+    base_url = urlparse(url).netloc.removeprefix("www.")
     return scraper_mapping[base_url](url)

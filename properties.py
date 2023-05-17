@@ -84,7 +84,7 @@ class Property(object):
 
     def __str__(self) -> str:
         status_emoji = "✅" if self.filter_status == "OK" else "🥲"
-        return f"<{status_emoji} {self.company}/{self.title[:40]}>"
+        return f"<{status_emoji} {self.company}/{self.address}>"
 
     def apply(self, identity: Identity) -> Tuple[int, str]:
         """Send a single application to a given property and return the status code
