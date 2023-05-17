@@ -16,8 +16,8 @@ class Archive:
     def __contains__(self, url):
         return url in self._df["url"].values
 
-    def append(self, new_properties):
-        new_ads_df = pd.DataFrame([p.as_dict() for p in new_properties])
+    def append(self, property):
+        new_ads_df = pd.DataFrame([property.as_dict()])
         self._df = pd.concat([self._df, new_ads_df])
 
         self._df.to_csv(self.path, index=False)  # Write to file

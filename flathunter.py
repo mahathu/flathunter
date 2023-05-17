@@ -6,10 +6,9 @@ import yaml
 
 from scrapers import init_scraper
 from archive import Archive
+from propertyfilter import PropertyFilter
 
 
-# TODO: vllt wird config-dict gar nicht mehr gebraucht, sondern direkt z.b. self.sleep statt self.config["sleep-len"]
-# TODO: filter-Funktion ggf. auslagern in eigene Klasse
 class Flathunter:
     def __init__(
         self, config_path="config.yml", archive_path="seen_ads.csv", debug_enabled=False
@@ -17,9 +16,16 @@ class Flathunter:
         self.debug = debug_enabled
         self.config = self.load_config(config_path)
         self.scrapers = [init_scraper(url) for url in self.config["search-urls"]]
+        self.filter = PropertyFilter(
+            zip_whitelist=self.config["zip-prefixes-whitelist"],
+            zip_blacklist=self.config["zip-prefixes-blacklist"],
+            title_blacklist=self.config["title-blacklist"],
+            min_sqm=self.config["min-sqm"],
+        )
         self.archive = Archive(archive_path)
 
-        logging.info(f"App initialized. Debug: {self.debug}")
+        log_str = f"App initialized with {len(self.scrapers)} scraper{'s' if len(self.scrapers) != 1 else ''}. Debug: {self.debug}"
+        logging.info(log_str)
 
     def load_config(self, config_path):
         with open(config_path, "r") as config_file:
@@ -27,7 +33,7 @@ class Flathunter:
 
     def schedule_applications(self, property, n_applications):
         if self.debug:
-            logging.info(f"Not applying to {property} because debug mode is enabled.")
+            logging.info(f"Not applying to {property} because debug=True")
             return
 
         raise NotImplementedError
@@ -43,33 +49,42 @@ class Flathunter:
             except Exception:
                 logging.error(f"Exception in {scraper}: {traceback.format_exc()}")
 
-        new_properties = [p for p in found_properties if p.url not in self.archive]
+        return found_properties
 
-        logging.info(f"Found {len(found_properties)} ads ({len(new_properties)} new).")
-        return new_properties
+    def process_property(self, property):
+        property.filter_status = self.filter.filter(property)
+        self.archive.append(property)
 
-    def process_new_properties(self, new_properties):
-        for property in new_properties:
-            if property.filter_status != "OK":
-                logging.info(f"Skipping {property} because: {property.filter_status}")
-                continue
-            if property.company in ["covivio", "adler"]:
-                logging.info(
-                    f"Skipping {property} (not implemented {property.company})"
-                )
-                continue
+        if property.filter_status != "OK":
+            logging.info(f"Skipping {property}: {property.filter_status}")
+            return
 
-            self.schedule_applications(property, self.config["n-applications"])
+        if property.company in ["covivio", "adler"]:
+            logging.info(f"Skipping {property}")
+            return
 
-    def run(self):
+        self.schedule_applications(property, self.config["n-applications"])
+
+    def run(self) -> None:
+        """Main loop of the app.
+
+        Running this function will search for and apply to new properties automatically.
+        """
         logging.info(f"App is running 🚀")
 
         while True:
-            new_properties = self.run_scrapers()
+            found_properties = self.run_scrapers()
+            new_properties = [p for p in found_properties if p.url not in self.archive]
 
-            if new_properties:
-                self.archive.append(new_properties)
-                self.process_new_properties(new_properties)
+            logging.info(
+                f"Found {len(found_properties)} ads ({len(new_properties)} new)."
+            )
+
+            for property in new_properties:
+                self.process_property(property)
+
+            if self.debug or self.config["sleep-len"] < 0:
+                return
 
             logging.info(f"Sleeping for {self.config['sleep-len']} seconds.")
             time.sleep(self.config["sleep-len"])

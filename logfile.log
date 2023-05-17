@@ -288,3 +288,139 @@ AttributeError: 'NoneType' object has no attribute 'find_properties'
 [05-17-2023 16:15:23] App is running 🚀
 [05-17-2023 16:15:25] Found 20 ads (0 new).
 [05-17-2023 16:15:25] Sleeping for 90 seconds.
+[05-17-2023 16:51:49] <GewobagScraper> intialized.
+[05-17-2023 16:51:49] <DegewoScraper> intialized.
+[05-17-2023 16:51:49] <AdlerScraper> intialized.
+[05-17-2023 16:51:49] <CovivioScraper> intialized.
+[05-17-2023 16:51:49] Loaded archive file seen_ads.csv (n=24.)
+[05-17-2023 16:51:49] App initialized. Debug: False
+[05-17-2023 16:51:49] App is running 🚀
+[05-17-2023 16:51:52] Found 21 ads (1 new).
+[05-17-2023 16:51:52] Skipping 🥲 ADLER/Gro&szlig;z&uuml;gige Dachgeschosswohnung mit Balkon wartet auf neue Mieter! Ab : ZIP_BLACKLISTED
+[05-17-2023 16:51:52] Sleeping for 90 seconds.
+[05-17-2023 16:53:29] <GewobagScraper> intialized.
+[05-17-2023 16:53:29] Provided archive file seen_ads.csv empty or does not exist.
+[05-17-2023 16:53:29] App initialized. Debug: False
+[05-17-2023 16:53:29] App is running 🚀
+[05-17-2023 16:53:30] Found 2 ads (2 new).
+[05-17-2023 16:53:30] Skipping 🥲 GEWOBAG/Gemütliche 3-Zimmer-Wohnung im grünen Buckow sucht neuen Mieter für sofort: TITLE BLACKLISTED
+[05-17-2023 16:53:30] Skipping 🥲 GEWOBAG/WBS-Berechtigung erforderlich – Charmante 3-Zimmer-Wohnung im Herzen Neuköllns s: WBS_REQUIRED
+[05-17-2023 16:53:30] Sleeping for 90 seconds.
+[05-17-2023 16:56:03] <GewobagScraper> intialized.
+[05-17-2023 16:56:03] Provided archive file seen_ads.csv empty or does not exist.
+[05-17-2023 16:56:03] App initialized. Debug: True
+[05-17-2023 16:56:03] App is running 🚀
+[05-17-2023 16:56:04] Found 2 ads (2 new).
+[05-17-2023 16:56:04] Not applying to 🥲 GEWOBAG/Gemütliche 3-Zimmer-Wohnung im grünen Buckow sucht neuen Mieter für sofort because debug mode is enabled.
+[05-17-2023 16:56:04] Not applying to 🥲 GEWOBAG/WBS-Berechtigung erforderlich – Charmante 3-Zimmer-Wohnung im Herzen Neuköllns s because debug mode is enabled.
+[05-17-2023 16:56:04] Sleeping for 90 seconds.
+[05-17-2023 16:57:54] <GewobagScraper> intialized.
+[05-17-2023 16:57:54] Provided archive file seen_ads.csv empty or does not exist.
+[05-17-2023 16:57:54] App initialized. Debug: True
+[05-17-2023 16:57:54] App is running 🚀
+[05-17-2023 16:57:55] Found 2 ads (2 new).
+[05-17-2023 16:57:55] Not applying to 🥲 GEWOBAG/Gemütliche 3-Zimmer-Wohnung im grünen Buckow sucht neuen Mieter für sofort because debug mode is enabled.
+[05-17-2023 16:57:55] Not applying to 🥲 GEWOBAG/WBS-Berechtigung erforderlich – Charmante 3-Zimmer-Wohnung im Herzen Neuköllns s because debug mode is enabled.
+[05-17-2023 16:57:55] Sleeping for 90 seconds.
+[05-17-2023 17:43:34] <GewobagScraper> intialized.
+[05-17-2023 17:44:22] <GewobagScraper> intialized.
+[05-17-2023 17:44:22] Provided archive file seen_ads.csv empty or does not exist.
+[05-17-2023 17:44:22] App initialized. Debug: True
+[05-17-2023 17:44:22] App is running 🚀
+[05-17-2023 17:44:23] Found 0 ads (0 new).
+[05-17-2023 17:44:23] Sleeping for 90 seconds.
+[05-17-2023 17:47:28] <GewobagScraper> intialized.
+[05-17-2023 17:47:28] <DegewoScraper> intialized.
+[05-17-2023 17:47:28] <AdlerScraper> intialized.
+[05-17-2023 17:47:28] <CovivioScraper> intialized.
+[05-17-2023 17:47:28] Provided archive file seen_ads.csv empty or does not exist.
+[05-17-2023 17:47:28] App initialized. Debug: True
+[05-17-2023 17:47:28] App is running 🚀
+[05-17-2023 17:47:30] Found 19 ads (19 new).
+[05-17-2023 17:47:30] Not processing <🥲 adler/Heimwerker aufgepasst! 2-Zimmer-Wohnung > because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 adler/Schicke 3-Zimmerwohnung mit ger&auml;umi> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 adler/Familienwohnung mit viel Potenzial zu ve> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 adler/Sonnige 2-Zimmerwohnung wartet auf SIE! > because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 adler/H&uuml;bsche 3-Zimmer-Wohnung in ruhiger> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 adler/3-Zimmer-Altbauwohnung mit viel Potenzia> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 adler/4-Zimmer Wohnung in Staaken zur freien G> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 adler/Gepflegte zwei Zimmerwohnungen mit Einba> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 adler/2-Zimmer-Altbauwohnung mit Balkon zur fr> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 adler/Gepflegte 2-Zimmer-Wohnung mit Wintergar> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 adler/Siemensstadt sucht neue Mieter> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 adler/Gro&szlig;z&uuml;gige Dachgeschosswohnun> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 covivio/Endlich Zuhause: sanierte 2-Zimmerwhg. m> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 covivio/Familien aufgepasst- 3-Zimmerwohnung in > because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 covivio/Wand sucht Pinsel: preiswertes Zuhause z> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 covivio/Wohnen am Boulevard in Steglitz> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 covivio/Coming soon: Gepflegte Erdgeschosswohnun> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 covivio/Sanierte Erdgeschosswohnung unweit der S> because debug mode is enabled.
+[05-17-2023 17:47:30] Not processing <🥲 covivio/Renovierungszuschuss: Zuhause für Kreati> because debug mode is enabled.
+[05-17-2023 17:49:07] <GewobagScraper> intialized.
+[05-17-2023 17:49:07] <DegewoScraper> intialized.
+[05-17-2023 17:49:07] <AdlerScraper> intialized.
+[05-17-2023 17:49:07] <CovivioScraper> intialized.
+[05-17-2023 17:49:07] Provided archive file seen_ads.csv empty or does not exist.
+[05-17-2023 17:49:07] App initialized. Debug: True
+[05-17-2023 17:49:07] App is running 🚀
+[05-17-2023 17:49:08] Found 15 ads (15 new).
+[05-17-2023 17:49:08] Not processing <🥲 adler/4-Zimmer Wohnung in Staaken zur freien G> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 adler/2-Zimmer-Altbauwohnung mit Balkon zur fr> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 adler/Gepflegte 2-Zimmer-Wohnung mit Wintergar> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 adler/Siemensstadt sucht neue Mieter> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 adler/Gro&szlig;z&uuml;gige Dachgeschosswohnun> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 adler/Tolle 2-Zimmerwohnung mit Dachterrasse z> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 adler/3-Zimmerwohnung mit Balkon wartet auf SI> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 adler/Hoch hinaus! 2 Zimmer mit toller Aussich> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 covivio/Endlich Zuhause: sanierte 2-Zimmerwhg. m> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 covivio/Familien aufgepasst- 3-Zimmerwohnung in > because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 covivio/Wand sucht Pinsel: preiswertes Zuhause z> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 covivio/Wohnen am Boulevard in Steglitz> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 covivio/Coming soon: Gepflegte Erdgeschosswohnun> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 covivio/Sanierte Erdgeschosswohnung unweit der S> because debug mode is enabled.
+[05-17-2023 17:49:08] Not processing <🥲 covivio/Renovierungszuschuss: Zuhause für Kreati> because debug mode is enabled.
+[05-17-2023 17:49:22] <GewobagScraper> intialized.
+[05-17-2023 17:49:22] Provided archive file seen_ads.csv empty or does not exist.
+[05-17-2023 17:49:22] App initialized. Debug: True
+[05-17-2023 17:49:22] App is running 🚀
+[05-17-2023 17:49:23] Found 0 ads (0 new).
+[05-17-2023 17:51:53] Provided archive file seen_ads.csv empty or does not exist.
+[05-17-2023 17:51:53] App initialized with 1 scrapers. Debug: True
+[05-17-2023 17:51:53] App is running 🚀
+[05-17-2023 17:51:54] Found 0 ads (0 new).
+[05-17-2023 17:52:01] Provided archive file seen_ads.csv empty or does not exist.
+[05-17-2023 17:52:01] App initialized with 1 scraper. Debug: True
+[05-17-2023 17:52:01] App is running 🚀
+[05-17-2023 17:52:02] Found 0 ads (0 new).
+[05-17-2023 17:52:12] Provided archive file seen_ads.csv empty or does not exist.
+[05-17-2023 17:52:12] App initialized with 1 scraper. Debug: True
+[05-17-2023 17:52:12] App is running 🚀
+[05-17-2023 17:52:12] Found 8 ads (8 new).
+[05-17-2023 17:52:12] Not processing <🥲 adler/4-Zimmer Wohnung in Staaken zur freien G> because debug mode is enabled.
+[05-17-2023 17:52:12] Not processing <🥲 adler/2-Zimmer-Altbauwohnung mit Balkon zur fr> because debug mode is enabled.
+[05-17-2023 17:52:12] Not processing <🥲 adler/Gepflegte 2-Zimmer-Wohnung mit Wintergar> because debug mode is enabled.
+[05-17-2023 17:52:12] Not processing <🥲 adler/Siemensstadt sucht neue Mieter> because debug mode is enabled.
+[05-17-2023 17:52:12] Not processing <🥲 adler/Gro&szlig;z&uuml;gige Dachgeschosswohnun> because debug mode is enabled.
+[05-17-2023 17:52:12] Not processing <🥲 adler/Tolle 2-Zimmerwohnung mit Dachterrasse z> because debug mode is enabled.
+[05-17-2023 17:52:12] Not processing <🥲 adler/3-Zimmerwohnung mit Balkon wartet auf SI> because debug mode is enabled.
+[05-17-2023 17:52:12] Not processing <🥲 adler/Hoch hinaus! 2 Zimmer mit toller Aussich> because debug mode is enabled.
+[05-17-2023 17:55:13] Provided archive file seen_ads.csv empty or does not exist.
+[05-17-2023 17:55:13] App initialized with 1 scraper. Debug: True
+[05-17-2023 17:55:13] App is running 🚀
+[05-17-2023 17:55:13] Found 8 ads (8 new).
+[05-17-2023 17:56:25] Provided archive file seen_ads.csv empty or does not exist.
+[05-17-2023 17:56:25] App initialized with 1 scraper. Debug: True
+[05-17-2023 17:56:25] App is running 🚀
+[05-17-2023 17:56:25] Found 8 ads (8 new).
+[05-17-2023 17:56:25] Skipping <🥲 adler/4-Zimmer Wohnung in Staaken zur freien G>: ZIP_NOT_WHITELISTED
+[05-17-2023 17:56:25] Skipping <🥲 adler/2-Zimmer-Altbauwohnung mit Balkon zur fr>: ZIP_NOT_WHITELISTED
+[05-17-2023 17:56:25] Skipping <🥲 adler/Gepflegte 2-Zimmer-Wohnung mit Wintergar>: ZIP_NOT_WHITELISTED
+[05-17-2023 17:56:25] Skipping <🥲 adler/Siemensstadt sucht neue Mieter>: ZIP_NOT_WHITELISTED
+[05-17-2023 17:56:25] Skipping <🥲 adler/Gro&szlig;z&uuml;gige Dachgeschosswohnun>: ZIP_NOT_WHITELISTED
+[05-17-2023 17:56:25] Skipping <🥲 adler/Tolle 2-Zimmerwohnung mit Dachterrasse z>: ZIP_NOT_WHITELISTED
+[05-17-2023 17:56:25] Skipping <🥲 adler/3-Zimmerwohnung mit Balkon wartet auf SI>: ZIP_NOT_WHITELISTED
+[05-17-2023 17:56:25] Skipping <🥲 adler/Hoch hinaus! 2 Zimmer mit toller Aussich>: ZIP_NOT_WHITELISTED
+[05-17-2023 17:56:36] Loaded archive file seen_ads.csv (n=8.)
+[05-17-2023 17:56:36] App initialized with 1 scraper. Debug: True
+[05-17-2023 17:56:36] App is running 🚀
+[05-17-2023 17:56:37] Found 8 ads (0 new).

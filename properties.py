@@ -19,15 +19,6 @@ with open("data/secrets.yml", "r") as secrets_file:
         "https": PROXY_URL,
     }
 
-# TODO: config path shouldn't be hardcoded/used here at all!!!!
-with open("config.yml", "r") as config_file:
-    config = yaml.safe_load(config_file)
-
-ZIP_WHITELIST = config["zip-prefixes-whitelist"]
-ZIP_BLACKLIST = config["zip-prefixes-blacklist"]
-MIN_SQM = config["min-sqm"]
-TITLE_BLACKLIST = config["title-blacklist"]
-
 
 # TODO: This can surely be improved a lot
 def read_file_as_list(filepath):
@@ -75,29 +66,7 @@ class Property(object):
         self.id = id
 
         self.found_at = datetime.now()
-        self.filter_status = "OK"
-
-        # filter out if any of these conditions match:
-        if any([word.lower() in title.lower() for word in TITLE_BLACKLIST]):
-            self.filter_status = "TITLE BLACKLISTED"
-            return
-
-        if (
-            ("wbs" in title.lower() or "wohnberechtigungsschein" in title.lower())
-            and "nicht" not in title.lower()
-            and "kein" not in title.lower()
-            and "ohne" not in title.lower()
-        ):
-            self.filter_status = "WBS_REQUIRED"
-            return
-        if not any([zip_code.startswith(str(p)) for p in ZIP_WHITELIST]):
-            self.filter_status = "ZIP_NOT_WHITELISTED"
-            return
-        if any([zip_code.startswith(str(p)) for p in ZIP_BLACKLIST]):
-            self.filter_status = "ZIP_BLACKLISTED"
-            return
-        if sqm < MIN_SQM:
-            self.filter_status = "TOO_SMALL"
+        self.filter_status = "unfiltered"
 
     def as_dict(self) -> dict:
         return {
@@ -115,10 +84,10 @@ class Property(object):
 
     def __str__(self) -> str:
         status_emoji = "✅" if self.filter_status == "OK" else "🥲"
-        return f"{status_emoji} {self.company.upper()}/{self.title[:80]}"
+        return f"<{status_emoji} {self.company}/{self.title[:40]}>"
 
     def apply(self, identity: Identity) -> Tuple[int, str]:
-        """Sends a single application to a given property and returns the status code
+        """Send a single application to a given property and return the status code
         and status text of the final request."""
         logging.error("ERROR: apply should only be called on subclasses of Property.")
         raise NotImplementedError
@@ -203,26 +172,3 @@ class SULProperty(Property):
         response = requests.get(url)
         soup = BeautifulSoup(response.text, "lxml")
         csrf_token = soup.find("input", {"name": "form-token"})["value"]
-
-
-if __name__ == "__main__":
-    for zip_code in [10409, 10100, 10247, 13350]:
-        assert Property("", "", str(zip_code), 100, "", "", "").is_desired
-    for zip_code in [10303, 12057]:  # (1) wrong prefix (2) blacklisted
-        assert not Property("", "", str(zip_code), 100, "", "", "").is_desired
-    for title in ["kein WBS erforderlich", "WBS nicht erforderlich", "ohne WBS", ""]:
-        assert Property("", "", "10409", 100, title, "", "").is_desired
-    for title in [
-        "für Singles",
-        "im Erdgeschoss, WBS 100 erforderlich",
-        "nur mit WBS",
-        "WBS",
-        "WBS zwingend erforderlich",
-        "Mieter mit WBS-fähigem Einkommen",
-    ]:
-        assert not Property("", "", "10409", 100, title, "", "").is_desired
-
-    # test square footage:
-    assert Property("", "", "10409", 50, "", "", "").is_desired
-    assert not Property("", "", "10409", 35, "", "", "").is_desired
-    print(colored("All tests passed!", "green"))

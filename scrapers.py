@@ -14,7 +14,6 @@ class Scraper(ABC):
 
     def __init__(self, url) -> None:
         self.url = url
-        logging.info(f"{self} intialized.")
 
     @abstractmethod
     def find_properties(self) -> List[Property]:
@@ -153,12 +152,13 @@ class StadtUndLandScraper(Scraper):
 
 
 def init_scraper(url):
+    # TODO: don't mix data and code
     scraper_mapping = {
         "adler-group.com": AdlerScraper,
         "covivio.immo": CovivioScraper,
         "immosuche.degewo.de": DegewoScraper,
         "gewobag.de": GewobagScraper,
     }
+
     base_url = urlparse(url).netloc
-    print(base_url)
     return scraper_mapping[base_url](url)

@@ -21,7 +21,7 @@ def parse_arguments():
         "-d",
         "--debug",
         action="store_true",
-        help="Enable debug mode (don't send applications)",
+        help="Enable debug mode (don't send applications and don't save ads to archive)",
     )
     parser.add_argument(
         "-c", "--config", default="config.yml", help="Path to config file"
