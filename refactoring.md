@@ -1,11 +1,12 @@
 refactoring:
+    - TODO: archive.py, batch_apply_backup.py, flathunter.py, properties.py, propertyfilter.py, scrapers.py
     - TODO: Currently, two places use absolute path "/data/config-prod.yml", this should be changed
-    - better config management
     - remove magic variables
         - config für adler, ...-Bewerbungen auslagern (-> Datei?)
         - control applications through Celery o.ä.
             - Funktion, um bewerbungen über zeitraum zu verteilen (numpy? lol)
     - data-Ordner umbenennen
+    - refactor request_data.json, vor allem das weirde "gewobag_formdata" unten
     - investigate bugs in nohup.out
 
 features:
@@ -21,6 +22,11 @@ info (angeblich, laut adler-Mitarbeiterin):
     - Anzeigen bleiben online, auch nachdem die Einladungen schon verschickt wurden
     - ca 18 (rechtliche) Personen werden eingeladen
     --> poisson-Verteilung?
+
+===========================
+
+Bewerbungen:
+adler: lediglich GET-request an Adresse
 
 ===========================
 

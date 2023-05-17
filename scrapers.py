@@ -1,9 +1,10 @@
 from abc import ABC, abstractmethod
 import requests
 import logging
+from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from typing import List
-from properties import Property, AdlerProperty, WHProperty
+from properties import Property, AdlerProperty, WohnungsheldenProperty
 
 
 class Scraper(ABC):
@@ -13,6 +14,7 @@ class Scraper(ABC):
 
     def __init__(self, url) -> None:
         self.url = url
+        logging.info(f"{self} intialized.")
 
     @abstractmethod
     def find_properties(self) -> List[Property]:
@@ -45,7 +47,7 @@ class GewobagScraper(Scraper):
                 rent = 0  # likewise for the
 
             results.append(
-                WHProperty(
+                WohnungsheldenProperty(
                     company="gewobag",
                     address=addr,
                     zip_code=zip,
@@ -67,7 +69,7 @@ class DegewoScraper(Scraper):
         immos = response.json()["immos"]
 
         return [
-            WHProperty(
+            WohnungsheldenProperty(
                 company="degewo",
                 address=property["address"],
                 zip_code=property["zipcode"],
@@ -88,7 +90,7 @@ class CovivioScraper(Scraper):
         response = requests.get(self.url)
 
         return [
-            WHProperty(
+            WohnungsheldenProperty(
                 company="covivio",
                 address=property["adresse"],
                 zip_code=property["adresse"].split()[-2],
@@ -148,3 +150,15 @@ class StadtUndLandScraper(Scraper):
     # https://stackoverflow.com/a/70640134/2349901
     def find_properties(self):
         raise NotImplementedError
+
+
+def init_scraper(url):
+    scraper_mapping = {
+        "adler-group.com": AdlerScraper,
+        "covivio.immo": CovivioScraper,
+        "immosuche.degewo.de": DegewoScraper,
+        "gewobag.de": GewobagScraper,
+    }
+    base_url = urlparse(url).netloc
+    print(base_url)
+    return scraper_mapping[base_url](url)

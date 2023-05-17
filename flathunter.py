@@ -4,7 +4,7 @@ import logging
 import time
 import yaml
 
-from scrapers import AdlerScraper, DegewoScraper, GewobagScraper, CovivioScraper
+from scrapers import init_scraper
 from archive import Archive
 
 
@@ -16,15 +16,8 @@ class Flathunter:
     ):
         self.debug = debug_enabled
         self.config = self.load_config(config_path)
+        self.scrapers = [init_scraper(url) for url in self.config["search-urls"]]
         self.archive = Archive(archive_path)
-        # self.archive_path = archive_path
-        # self.seen_ads_df = self.load_seen_ads(archive_path)
-        self.scrapers = [
-            AdlerScraper(self.config["adler-search-url"]),
-            # CovivioScraper(self.config["covivio-search-url"]),
-            # DegewoScraper(self.config["degewo-search-url"]),
-            # GewobagScraper(self.config["gewobag-search-url"]),
-        ]
 
         logging.info(f"App initialized. Debug: {self.debug}")
 
@@ -32,7 +25,7 @@ class Flathunter:
         with open(config_path, "r") as config_file:
             return yaml.safe_load(config_file)
 
-    def batch_apply(self, property, n_applications, use_fakes=True):
+    def schedule_applications(self, property, n_applications):
         if self.debug:
             logging.info(f"Not applying to {property} because debug mode is enabled.")
             return
@@ -50,9 +43,7 @@ class Flathunter:
             except Exception:
                 logging.error(f"Exception in {scraper}: {traceback.format_exc()}")
 
-        new_properties = [
-            p for p in found_properties if p.url not in self.archive._df["url"].values
-        ]
+        new_properties = [p for p in found_properties if p.url not in self.archive]
 
         logging.info(f"Found {len(found_properties)} ads ({len(new_properties)} new).")
         return new_properties
@@ -67,7 +58,8 @@ class Flathunter:
                     f"Skipping {property} (not implemented {property.company})"
                 )
                 continue
-            self.batch_apply(property, self.config["n-applications"], use_fakes=True)
+
+            self.schedule_applications(property, self.config["n-applications"])
 
     def run(self):
         logging.info(f"App is running 🚀")
