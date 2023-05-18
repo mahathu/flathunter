@@ -1,5 +1,6 @@
-from properties import Property
 from termcolor import colored
+
+from .properties import Property
 
 
 class PropertyFilter:
@@ -15,7 +16,7 @@ class PropertyFilter:
         ):
             return "TITLE_BLACKLISTED"
 
-        if self.wbs_required(property):
+        if self._wbs_required(property):
             return "WBS_REQUIRED"
 
         if not any([property.zip_code.startswith(str(p)) for p in self.zip_whitelist]):
@@ -29,15 +30,17 @@ class PropertyFilter:
 
         return "OK"
 
-    def wbs_required(self, property: Property) -> bool:
-        return (
-            (
-                "wbs" in property.title.lower()
-                or "wohnberechtigungsschein" in property.title.lower()
-            )
-            and "nicht" not in property.title.lower()
-            and "kein" not in property.title.lower()
-            and "ohne" not in property.title.lower()
+    def _wbs_required(self, property: Property) -> bool:
+        """Tries to determine if a property requires a WBS
+        (Wohnberechtigungsschein) based on it's title.
+
+        Args:
+            property (Property): The property to check.
+        """
+        title = property.title.lower()
+
+        return any(w in title for w in ["wbs", "wohnberechtigungsschein"]) and not any(
+            w in title for w in ["nicht", "kein", "ohne"]
         )
 
 

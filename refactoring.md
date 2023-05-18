@@ -1,5 +1,5 @@
 refactoring:
-    - TODO: archive.py, properties.py, propertyfilter.py, scrapers.py
+    - TODO: properties.py, scrapers.py
     - TODO: Currently, two places use absolute path "/data/config-prod.yml", this should be changed
     - remove magic variables
         - config für adler, ...-Bewerbungen auslagern (-> Datei?)
@@ -27,8 +27,7 @@ info (angeblich, laut adler-Mitarbeiterin):
 
 Bewerbungen:
 adler: lediglich GET-request an Adresse
-
-===========================
-
-DONE:
-- moved to standard library logging instead of using a custom log function.
+degewo:
+gewobag:
+stadt und land:
+wbm:

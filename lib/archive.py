@@ -1,5 +1,5 @@
-import pandas as pd
 import logging
+import pandas as pd
 
 
 class Archive:

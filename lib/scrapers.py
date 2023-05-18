@@ -1,10 +1,12 @@
-from abc import ABC, abstractmethod
-import requests
 import logging
-from urllib.parse import urlparse
-from bs4 import BeautifulSoup
+from abc import ABC, abstractmethod
 from typing import List
-from properties import Property, AdlerProperty, WohnungsheldenProperty
+from urllib.parse import urlparse
+
+import requests
+from bs4 import BeautifulSoup
+
+from .properties import Property, AdlerProperty, WohnungsheldenProperty
 
 
 class Scraper(ABC):

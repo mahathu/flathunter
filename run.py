@@ -1,6 +1,7 @@
 import argparse
 import logging
 import sys
+
 from celery import Celery
 from flathunter import Flathunter
 

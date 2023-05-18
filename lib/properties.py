@@ -1,15 +1,15 @@
-import logging
-import json
 from datetime import datetime
+import json
+import logging
+from typing import Tuple
 
 import requests
 from requests.exceptions import ProxyError
 from bs4 import BeautifulSoup
 from urllib.parse import quote
-from typing import Tuple
 import yaml
 
-from identity import Identity
+from .identity import Identity
 
 # TODO: Remove hardcoded reference to secrets.yml
 with open("data/secrets.yml", "r") as secrets_file:

@@ -4,10 +4,10 @@ import logging
 import time
 import yaml
 
-from scrapers import init_scraper
-from archive import Archive
-from propertyfilter import PropertyFilter
-from properties import Property
+from lib.scrapers import init_scraper
+from lib.archive import Archive
+from lib.propertyfilter import PropertyFilter
+from lib.properties import Property
 
 
 class Flathunter:
