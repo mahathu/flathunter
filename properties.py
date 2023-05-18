@@ -1,16 +1,17 @@
-import requests
-from bs4 import BeautifulSoup
-import yaml
-from urllib.parse import quote
-from typing import Tuple
-
-from termcolor import colored
 import logging
 import json
-import random
-from requests.exceptions import ProxyError
 from datetime import datetime
 
+import requests
+from requests.exceptions import ProxyError
+from bs4 import BeautifulSoup
+from urllib.parse import quote
+from typing import Tuple
+import yaml
+
+from identity import Identity
+
+# TODO: Remove hardcoded reference to secrets.yml
 with open("data/secrets.yml", "r") as secrets_file:
     secrets = yaml.safe_load(secrets_file)
     PROXY_URL = secrets["proxy-url"]
@@ -18,40 +19,6 @@ with open("data/secrets.yml", "r") as secrets_file:
         "http": PROXY_URL,
         "https": PROXY_URL,
     }
-
-
-# TODO: This can surely be improved a lot
-def read_file_as_list(filepath):
-    with open(filepath) as f:
-        return f.read().splitlines()
-
-
-FIRST_NAMES = read_file_as_list("data/firstnames.txt")
-LAST_NAMES = read_file_as_list("data/lastnames.txt")
-EMAIL_PROVIDERS = read_file_as_list("data/email-providers.txt")
-
-
-class Identity:
-    def __init__(self, firstname=None, lastname=None, email=None) -> None:
-        """Create a new identity. If no name or email is given, it is
-        randomly generated."""
-        self.firstname = firstname if firstname else random.choice(FIRST_NAMES)
-        self.lastname = lastname if lastname else random.choice(LAST_NAMES)
-        self.email = email or self.generate_fake_email(self.firstname, self.lastname)
-
-    def generate_fake_email(self):
-        name_separator = "." if random.random() > 0.6 else ""
-        fn = (
-            self.firstname[0]
-            if name_separator and random.random() > 0.7
-            else self.firstname
-        )
-        birth_year = random.randint(55, 99) if random.random() > 0.3 else ""
-        mail = f"{fn.lower()}{name_separator}{self.lastname.lower()}{birth_year}@{random.choice(EMAIL_PROVIDERS)}"
-        return mail.encode("ascii", "ignore").decode("ascii")
-
-    def __str__(self) -> str:
-        return f"{self.firstname} {self.lastname} <{self.email}>"
 
 
 class Property(object):

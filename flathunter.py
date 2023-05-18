@@ -7,6 +7,7 @@ import yaml
 from scrapers import init_scraper
 from archive import Archive
 from propertyfilter import PropertyFilter
+from properties import Property
 
 
 class Flathunter:
@@ -27,21 +28,20 @@ class Flathunter:
         log_str = f"App initialized with {len(self.scrapers)} scraper{'s' if len(self.scrapers) != 1 else ''}. Debug: {self.debug}"
         logging.info(log_str)
 
-    def load_config(self, config_path):
+    def load_config(self, config_path: str) -> dict:
         with open(config_path, "r") as config_file:
             return yaml.safe_load(config_file)
 
-    def schedule_applications(self, property, n_applications):
+    def schedule_applications(self, property: Property, n_applications: int) -> None:
         if self.debug:
             logging.info(f"Not applying to {property} because debug=True")
             return
 
         raise NotImplementedError
 
-    def run_scrapers(self):
+    def run_scrapers(self) -> list[Property]:
         found_properties = []
 
-        # TODO: exceptions should probably be handled within the scrapers
         for scraper in self.scrapers:
             try:
                 results = scraper.find_properties()
@@ -51,7 +51,7 @@ class Flathunter:
 
         return found_properties
 
-    def process_property(self, property):
+    def process_property(self, property: Property) -> None:
         property.filter_status = self.filter.filter(property)
         self.archive.append(property)
 
@@ -60,7 +60,7 @@ class Flathunter:
             return
 
         if property.company in ["covivio", "adler"]:
-            logging.info(f"Skipping {property}")
+            logging.info(f"Skipping {property} (not implemented)")
             return
 
         self.schedule_applications(property, self.config["n-applications"])

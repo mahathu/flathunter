@@ -42,3 +42,16 @@
 [05-17-2023 18:31:56] Skipping <🥲 covivio/Bergstraße 78/79, 12169 Berlin>: WBS_REQUIRED
 [05-17-2023 18:31:56] Skipping <🥲 covivio/Lepsiusstr. 18, 12163 Berlin>: ZIP_BLACKLISTED
 [05-17-2023 18:31:56] Skipping <🥲 covivio/Kuhnertstraße 6, 13595 Berlin>: WBS_REQUIRED
+[05-17-2023 19:52:40] Loaded archive file seen_ads.csv (n=18.)
+[05-17-2023 19:52:40] App initialized with 4 scrapers. Debug: True
+[05-17-2023 19:52:40] App is running 🚀
+[05-17-2023 19:52:44] Found 19 ads (1 new).
+[05-17-2023 19:52:44] Skipping <🥲 adler/Karl-Marx-Straße 156, 12043 Neukölln >: TOO_SMALL
+[05-18-2023 00:12:59] Loaded archive file seen_ads.csv (n=19.)
+[05-18-2023 00:12:59] App initialized with 4 scrapers. Debug: True
+[05-18-2023 00:12:59] App is running 🚀
+[05-18-2023 00:13:01] Found 19 ads (0 new).
+[05-18-2023 19:12:45] Loaded archive file seen_ads.csv (n=19.)
+[05-18-2023 19:12:45] App initialized with 4 scrapers. Debug: True
+[05-18-2023 19:12:45] App is running 🚀
+[05-18-2023 19:12:49] Found 17 ads (0 new).

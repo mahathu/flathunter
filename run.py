@@ -1,6 +1,7 @@
 import argparse
 import logging
 import sys
+from celery import Celery
 from flathunter import Flathunter
 
 
@@ -31,6 +32,14 @@ def parse_arguments():
     )
     parser.add_argument("-s", "--server", action="store_true", help="Run web frontend")
     return parser.parse_args()
+
+
+celery_app = Celery("run", broker="pyamqp://guest@localhost//")
+
+
+@celery_app.task
+def add(x, y):
+    return x + y
 
 
 if __name__ == "__main__":

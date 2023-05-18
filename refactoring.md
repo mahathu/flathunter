@@ -1,5 +1,5 @@
 refactoring:
-    - TODO: archive.py, batch_apply_backup.py, flathunter.py, properties.py, propertyfilter.py, scrapers.py
+    - TODO: archive.py, properties.py, propertyfilter.py, scrapers.py
     - TODO: Currently, two places use absolute path "/data/config-prod.yml", this should be changed
     - remove magic variables
         - config für adler, ...-Bewerbungen auslagern (-> Datei?)
