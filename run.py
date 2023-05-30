@@ -1,8 +1,8 @@
 import argparse
+import locale
 import logging
 import sys
 
-from celery import Celery
 from flathunter import Flathunter
 
 
@@ -35,18 +35,12 @@ def parse_arguments():
     return parser.parse_args()
 
 
-celery_app = Celery("run", broker="pyamqp://guest@localhost//")
-
-
-@celery_app.task
-def add(x, y):
-    return x + y
-
-
 if __name__ == "__main__":
     args = parse_arguments()
     setup_logging()
-
+    locale.setlocale(
+        locale.LC_TIME, "de_DE"
+    )  # Set locale to Germany to properly parse date strings
     app = Flathunter(
         config_path=args.config, archive_path=args.archive, debug_enabled=args.debug
     )

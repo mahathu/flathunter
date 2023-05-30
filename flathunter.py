@@ -25,6 +25,14 @@ class Flathunter:
         )
         self.archive = Archive(archive_path)
 
+        # TODO: Remove hardcoded reference to secrets.yml
+        with open("secrets.yml", "r") as secrets_file:
+            secrets = yaml.safe_load(secrets_file)
+            self.proxies = {
+                "http": secrets["proxy-url"],
+                "https": secrets["proxy-url"],
+            }
+
         log_str = f"App initialized with {len(self.scrapers)} scraper{'s' if len(self.scrapers) != 1 else ''}. Debug: {self.debug}"
         logging.info(log_str)
 

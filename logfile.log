@@ -55,3 +55,7 @@
 [05-18-2023 19:12:45] App initialized with 4 scrapers. Debug: True
 [05-18-2023 19:12:45] App is running 🚀
 [05-18-2023 19:12:49] Found 17 ads (0 new).
+[05-18-2023 21:16:40] Loaded archive file seen_ads.csv (n=19.)
+[05-18-2023 21:16:40] App initialized with 4 scrapers. Debug: True
+[05-18-2023 21:16:40] App is running 🚀
+[05-18-2023 21:16:43] Found 17 ads (0 new).

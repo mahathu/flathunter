@@ -27,40 +27,39 @@ class GewobagScraper(Scraper):
         response = requests.get(self.url)
         soup = BeautifulSoup(response.text, "lxml")
 
-        results = []
-        for property in soup.select(".filtered-mietangebote article"):
-            addr = property.find("address").text.strip()
-            zip = addr.split(", ")[1].split(" ")[0]
-            url = property.select("table.angebot-info a")[0]["href"]
-            id = url.split("/")[-2].replace("-", "%2F")
+        props = soup.select(".filtered-mietangebote article")
+        return [self.parse_listing(p) for p in props]
 
-            try:
-                sqm = float(
-                    property.select("tr.angebot-area td")[0]
-                    .text.split("| ")[-1]
-                    .split(" ")[0]
-                    .replace(",", ".")
-                )
-                rent = property.select("tr.angebot-kosten td")[0].text
-            except (IndexError, ValueError) as e:
-                logging.error(f"Error parsing sqm or rent on gewobag property: {e}")
-                sqm = 1000  # when in doubt, put a really high square footage so applications are sent anyways
-                rent = 0  # likewise for the
+    def _parse_listing(self, property) -> WohnungsheldenProperty:
+        addr = property.find("address").text.strip()
+        zip = addr.split(", ")[1].split(" ")[0]
+        url = property.select("table.angebot-info a")[0]["href"]
+        id = url.split("/")[-2].replace("-", "%2F")
 
-            results.append(
-                WohnungsheldenProperty(
-                    company="gewobag",
-                    address=addr,
-                    zip_code=zip,
-                    sqm=sqm,
-                    rent=rent,
-                    title=property.find("h3", {"class": "angebot-title"}).text.strip(),
-                    url=url,
-                    id=id,
-                )
+        try:
+            sqm = float(
+                property.select("tr.angebot-area td")[0]
+                .text.split("| ")[-1]
+                .split(" ")[0]
+                .replace(",", ".")
             )
+            rent = property.select("tr.angebot-kosten td")[0].text
 
-        return results
+        except (IndexError, ValueError) as e:
+            logging.error(f"Error parsing sqm or rent on gewobag property: {e}")
+            sqm = 1000  # when in doubt, put a really high square footage so applications are sent anyways
+            rent = 0  # likewise for the
+
+        return WohnungsheldenProperty(
+            company="gewobag",
+            address=addr,
+            zip_code=zip,
+            sqm=sqm,
+            rent=rent,
+            title=property.find("h3", {"class": "angebot-title"}).text.strip(),
+            url=url,
+            id=id,
+        )
 
 
 class DegewoScraper(Scraper):
@@ -108,11 +107,11 @@ class CovivioScraper(Scraper):
 class AdlerScraper(Scraper):
     def find_properties(self):
         response = requests.get(self.url)
-        properties = response.json()["geodata"]
+        props = response.json()["geodata"]
 
-        return [self.parse_item(property) for property in properties]
+        return [self._parse_listing(property) for property in props]
 
-    def parse_item(self, property):
+    def _parse_listing(self, property):
         try:
             addr = property["address"]
             district = addr["quarter"].split("(")[0]

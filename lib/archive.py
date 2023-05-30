@@ -7,7 +7,7 @@ class Archive:
         self.path = path
         try:
             self._df = pd.read_csv(path)
-            logging.info(f"Loaded archive file {path} (n={len(self._df)}.)")
+            logging.info(f"Loaded archive file {path} (n={len(self._df)}).")
 
         except (FileNotFoundError, pd.errors.EmptyDataError):
             logging.warning(f"Provided archive file {path} empty or does not exist.")
