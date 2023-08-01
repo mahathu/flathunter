@@ -59,3 +59,31 @@
 [05-18-2023 21:16:40] App initialized with 4 scrapers. Debug: True
 [05-18-2023 21:16:40] App is running 🚀
 [05-18-2023 21:16:43] Found 17 ads (0 new).
+[08-01-2023 18:09:57] Loaded archive file seen_ads.csv (n=2041).
+[08-01-2023 18:09:57] App initialized with 4 scrapers. Debug: False
+[08-01-2023 18:09:57] App is running 🚀
+[08-01-2023 18:09:59] Found 19 ads (11 new).
+[08-01-2023 18:09:59] Skipping <🥲 degewo/Graunstraße 36 | Mitte>: WBS_REQUIRED
+[08-01-2023 18:09:59] Skipping <🥲 adler/Röbellweg 2, 13125 Buch >: ZIP_NOT_WHITELISTED
+[08-01-2023 18:09:59] Skipping <✅ adler/Hedwig-Porschütz-Straße 12, 10557 Tiergarten > (not implemented)
+[08-01-2023 18:09:59] Skipping <✅ adler/Hedwig-Porschütz-Straße 4, 10557 Tiergarten > (not implemented)
+[08-01-2023 18:09:59] Skipping <✅ adler/Hedwig-Porschütz-Straße 8, 10557 Tiergarten > (not implemented)
+[08-01-2023 18:09:59] Skipping <🥲 covivio/Prenzlauer Promenade 49, 13089 Berlin>: ZIP_NOT_WHITELISTED
+[08-01-2023 18:09:59] Skipping <🥲 covivio/Markstr. 3, 13409 Berlin>: ZIP_NOT_WHITELISTED
+[08-01-2023 18:09:59] Skipping <🥲 covivio/Sesselmannweg 9, 10709 Berlin>: ZIP_BLACKLISTED
+[08-01-2023 18:09:59] Skipping <🥲 covivio/Kühlebornweg 11, 12167 Berlin>: ZIP_BLACKLISTED
+[08-01-2023 18:09:59] Skipping <🥲 covivio/Leonorenstr. 100, 12247 Berlin>: ZIP_NOT_WHITELISTED
+[08-01-2023 18:10:00] Skipping <🥲 covivio/Frobenstr. 86, 12249 Berlin>: ZIP_NOT_WHITELISTED
+[08-01-2023 18:10:00] Sleeping for 90 seconds.
+[08-01-2023 18:11:32] Found 19 ads (0 new).
+[08-01-2023 18:11:32] Sleeping for 90 seconds.
+[08-01-2023 18:13:04] Found 19 ads (0 new).
+[08-01-2023 18:13:04] Sleeping for 90 seconds.
+[08-01-2023 18:14:36] Found 19 ads (0 new).
+[08-01-2023 18:14:36] Sleeping for 90 seconds.
+[08-01-2023 18:16:09] Found 19 ads (0 new).
+[08-01-2023 18:16:09] Sleeping for 90 seconds.
+[08-01-2023 18:17:41] Found 19 ads (0 new).
+[08-01-2023 18:17:41] Sleeping for 90 seconds.
+[08-01-2023 18:19:14] Found 19 ads (0 new).
+[08-01-2023 18:19:14] Sleeping for 90 seconds.
