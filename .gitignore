@@ -3,4 +3,5 @@ __pycache__/
 .vscode/
 nohup.out
 *.log
-data/secrets.yml
+secrets.yml
+refactoring.md

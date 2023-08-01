@@ -16,7 +16,7 @@ features:
 info (angeblich, laut adler-Mitarbeiterin):
     - Bewerbungen der ersten 1-2 Tage werden berücksichtigt, Schnelligkeit zählt nicht
     - Anzeigen bleiben online, auch nachdem die Einladungen schon verschickt wurden
-    - ca 18 (rechtliche) Personen werden eingeladen
+    - ca 18 (juristische) Personen werden eingeladen
     --> poisson-Verteilung?
 
 ===========================
