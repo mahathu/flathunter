@@ -1,46 +1,51 @@
 <!doctype html>
 <html>
-    <style>
-        body{
-            font-family: sans-serif;
-        }
-        .nohup-list{
-            font-family: monospace;
-            list-style-type: none;
-            margin-bottom: 32pt;
-        }
-    </style>
-    <head>
-        <title>flathunter web interface</title>
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
-    </head>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+
+    .nohup-list {
+        font-family: monospace;
+        list-style-type: none;
+        margin-bottom: 32pt;
+    }
+</style>
+
+<head>
+    <title>flathunter web interface</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+</head>
+
 </html>
+
 <body>
-    {% if nohup_lines %}
-        <h2>Last {{nohup_lines|length}} lines from nohup.out:</h1>
+    {% if log_lines %}
+    <h2>Last {{log_lines|length}} lines from logfile:</h1>
         <ul class="nohup-list">
-        {% for line in nohup_lines %}
-           <li>{{ line }}</li>
-        {% endfor %}
+            {% for line in log_lines %}
+            <li>{{ line }}</li>
+            {% endfor %}
         </ul>
-    {% endif %}
+        {% endif %}
 
-    <hr>
+        <hr>
 
-    {% if table %}
+        {% if table %}
         <h2>Seen properties:</h2>
         {{ table|safe }}
-    {% else %}
+        {% else %}
         <p>Table missing!</p>
-    {% endif %}
-    
-    <script type="text/javascript" charset="utf8" src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-    <script>
-        $(document).ready( function () {
-            $('#dataframe').DataTable({
-                order: [[5, 'desc']],
+        {% endif %}
+
+        <script type="text/javascript" charset="utf8" src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dataframe').DataTable({
+                    order: [[5, 'desc']],
+                });
             });
-        } );
-    </script>
+        </script>
 </body>

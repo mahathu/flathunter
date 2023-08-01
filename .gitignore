@@ -1,5 +1,7 @@
 __pycache__/
 .venv/
+.vscode/
 nohup.out
-data/secrets.yml
-seen_properties.txt
+*.log
+secrets.yml
+refactoring.md
