@@ -18,7 +18,7 @@ def main():
     except FileNotFoundError:
         log_lines = []
 
-    df = pd.read_csv("../seen_ads.csv").drop(["id", "zip_code"], axis=1).head(100)
+    df = pd.read_csv("../seen_ads.csv").drop(["id", "zip_code"], axis=1).tail(100)
 
     table_html = df.to_html(
         header="true", index=False, table_id="dataframe", na_rep="/", classes=["stripe"]
