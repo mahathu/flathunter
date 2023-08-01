@@ -5,3 +5,4 @@ nohup.out
 *.log
 secrets.yml
 refactoring.md
+logfile.log
